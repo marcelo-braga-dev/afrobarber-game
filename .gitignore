@@ -3,6 +3,7 @@
 
 # Excluir da regra: arquivos de documentação rastreados
 !.gitignore
+!README.md
 !CLAUDE.md
 !docs/
 !docs/**
