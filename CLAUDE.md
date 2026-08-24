@@ -75,6 +75,19 @@ Campos `[SerializeField]` que exigem wiring por NPC:
 
 Waiting area uses `ApproachPoint` (NavMesh-reachable floor) + `SitPoint` (exact body snap position) per seat.
 
+**Hierarquia recomendada da área de espera:**
+```
+WaitingArea
+└── Sofa_01 (componente SofaSeatGroup)
+    ├── Seat_01 (componente WaitingSeat)
+    │   ├── ApproachPoint   ← chão navegável, onde o NavMeshAgent chega
+    │   └── SitPoint        ← posição exata do corpo sentado (agent desativado aqui)
+    └── Seat_02
+        ├── ApproachPoint
+        └── SitPoint
+```
+`WaitingAreaManager` gerencia a reserva/liberação de assentos e é passado como parâmetro a `ClientNPC.InicializarNaCidade()`.
+
 ---
 
 ## Service Flow
@@ -533,6 +546,57 @@ Esses bônus são puramente aditivos/multiplicativos sobre os modificadores já 
 
 **Player levels** (`PlayerXPManager` — XP para avançar ao próximo nível):
 1 → "Aprendiz da Navalha" (500 XP) · 2 → "Barbeiro de Bairro" (1500) · 3 → "Profissional da Cadeira" (3500) · 4 → "Mestre do Degradê" (7000) · 5 → "Lenda AfroBarber" (max)
+
+---
+
+## NPC Social System
+
+Componentes por-NPC que enriquecem a narrativa e o diálogo contextual. Todos devem existir no mesmo GameObject quando usados juntos:
+
+| Componente | Arquivo | Responsabilidade |
+|---|---|---|
+| `NPCIdentity` | `NPC/NPCIdentity.cs` | Nome, id e identidade do NPC |
+| `NPCRelationshipMemory` | `NPC/NPCRelationshipMemory.cs` | Guarda memórias de interações (resultado de atendimentos, satisfação, eventos) |
+| `NPCSocialProfile` | `NPC/NPCSocialProfile.cs` | Personalidade e perfil social do NPC |
+| `NPCInteractionIndicator` | `NPC/NPCInteractionIndicator.cs` | Ícones visuais de interação acima do NPC |
+| `NPCConversationBrain` | `Dialogue/NPCConversationBrain.cs` | Auto-talk com memória; requer `NPCIdentity`, `NPCSocialProfile`, `NPCDialogueMemory`, `ClientNPC` e `ClientPatience` no mesmo GameObject |
+| `NPCDialogueMemory` | `Dialogue/NPCDialogueMemory.cs` | Cache de frases anteriores do NPC/jogador para citações contextuais |
+
+O `NPCConversationBrain` integra com `GlobalDialogueManager.AddNpcMessage(identity, text, context, isGroup)`.
+
+---
+
+## Hair Visual System
+
+`Characters/Clients/ClientHairVisualController.cs` — controla a troca visual de cabelo do cliente antes/depois do atendimento.
+
+**Fluxo:**
+1. Na inicialização do cliente → `ApplyInitialHair()` (baseado em `beforeHairId` do `ClientRequestData`)
+2. Ao concluir serviço (`MarkServiceCompleted()`) → `ApplyFinalHair()` (baseado em `afterHairId`)
+
+**Configuração no prefab:** criar GameObjects filhos para cada cabelo possível; desativar todos por padrão; registrar IDs em `ClientHairVisualController`; preencher `beforeHairId`/`afterHairId` no `ClientRequestData`.
+
+> `ClientHairDefinition.cs` e `HairAnchorBinder.cs` foram removidos na limpeza de código morto — não recriar.
+
+---
+
+## Product Databases
+
+Bancos de produtos por categoria em `ScriptableObjects/Products/Databases/`:
+
+| Asset | Categoria |
+|---|---|
+| `DB_MaquinasCorte.asset` | `MaquinaDeCorte` |
+| `DB_Tesouras.asset` | `Tesoura` |
+| `DB_Pentes.asset` | `Pente` |
+| `DB_Navalhas.asset` | `Navalha` |
+| `DB_Laminas.asset` | `Laminas` |
+| `DB_ProdutosCapilar.asset` | `ProdutoCapilar` |
+| `DB_Secador.asset` | `Secador` |
+| `DB_Mobilia.asset` | `Mobilia` |
+| `DB_Decoracao.asset` | `Decoracao` |
+
+`ProductDurabilitySystem.cs` — controla desgaste de itens duráveis (máquinas, tesouras, secadores). `InventoryManager` usa `ConsumeProductUsageByUniqueId` e `ConsumeDurableHoursByUniqueId` ao final de cada atendimento.
 
 ---
 
