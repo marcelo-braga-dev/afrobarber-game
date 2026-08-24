@@ -1,0 +1,8 @@
+# Ignorar tudo por padrão
+*
+
+# Excluir da regra: arquivos de documentação rastreados
+!.gitignore
+!CLAUDE.md
+!docs/
+!docs/**
