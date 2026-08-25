@@ -278,7 +278,7 @@ ScriptableObjects/Products/Databases/
 - `CulturalEventSystem` sem efeito real de gameplay (bônus calculados, nunca aplicados ao serviço)
 - `AchievementSystem` sem UI consumidora (funciona internamente, sem popup/tela)
 - HDRP/URP em mobile: materiais HDRP ficam rosa em build URP — validar em device antes de shippar
-- `ClientSpawner` ainda tenta subscrever `GlobalReputationSystem` (removido) — bloco `if (Instance != null)` silencia o erro
+- `npc_dialogue_memory_{npcId}` (NPCDialogueMemory) não segue a convenção `AFROBARBER_` nas chaves de PlayerPrefs — exceção documentada
 
 ---
 

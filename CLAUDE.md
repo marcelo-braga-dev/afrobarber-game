@@ -132,17 +132,15 @@ On success: calls `BarberWorkController.StartService()`, then `WaitClientSitThen
 
 ### Post-service calls (inside `BarbershopServiceManager`):
 
-**Fluxo avançado** (`HandleAdvancedServiceFinished` → `DistributeAdvancedServiceRewards`):
-- `FinanceManager.Instance.AddCashIncome(title, description, amount, origin)`
-- `PlayerXPManager.Instance.AddXP(xpAmount)`
-- `BarbershopRatingManager.Instance.AddReview(rating)`
-- `EducationProgressManager.Instance.UnlockCut(request.RequestId)`
+**Fluxo avançado:**
+- `DistributeAdvancedServiceRewards()` → `FinanceManager.Instance.AddCashIncome(...)`, `PlayerXPManager.Instance.AddXP(xpAmount)`, `BarbershopRatingManager.Instance.AddReview(rating)`
+- `CompleteCurrentServiceAfterAdvancedReward()` (etapa posterior) → `EducationProgressManager.Instance.UnlockCut(request.RequestId)`
 
 **Fluxo fallback** (`CompleteCurrentService`):
 - `FinanceManager.Instance.RegisterServiceIncome(request, clientName)`
 - `MissionSystem.Instance.RegisterServiceCompleted(...)` ← **só no fallback**; o fluxo avançado **não chama MissionSystem** (débito técnico conhecido)
 
-`NotificarSistemasExternos()` (chamado por ambos os fluxos): chama `ClientLoyaltySystem`, `CutMasterySystem`, `DailyChallengeSystem`, `NarrativeMissionSystem`, `BarberBookSystem`, `VIPClientSystem`, `BusinessReportManager`.
+`NotificarSistemasExternos()` (chamado por ambos os fluxos, nesta ordem): `ClientLoyaltySystem`, `CutMasterySystem`, `VIPClientSystem`, `BarberBookSystem`, `DailyChallengeSystem` (+ `RegistrarGanhoMaestria`), `NarrativeMissionSystem`, `FinanceMonthlyBillsManager.VerificarContasVencidas()`.
 
 ---
 
@@ -459,9 +457,9 @@ Esses bônus são puramente aditivos/multiplicativos sobre os modificadores já 
 |---|---|---|
 | `GameBootstrap` | `Core/GameBootstrap.cs` | `IsReady`, `Progress01` |
 | `GameTimeSystem` | `Core/GameTimeSystem.cs` | `AddMinutes(n)`, `AddHours(n)`, `AddServiceTime(n)`, `SetPause(bool)`, `RestUntilNextWorkdayStart(bool)`, `IsWithinBusinessHours`, `IsWorkDay`, `CurrentDateTime`, `DisplayedDateTime`, `TotalMinutesElapsed`, `CurrentDayIndex`, `CurrentTimeText`, `CurrentDateText`, `OnWorkDayStarted`, `OnDayChanged`, `OnTimeChanged`, `OnRestStarted` |
-| `BarbershopServiceManager` | `Barbershop/BarbershopServiceManager.cs` | `TryStartService(client)`, `HasActiveService`, `CurrentClient` |
-| `BarberQueueSystem` | `Queue/BarberQueueSystem.cs` | `AddClientToQueue()`, `TryGetNextWaitingClient(out c)`, `GetWaitingCount()`, `IsClientInQueue(client)`, `MarkClientAsBeingServed(client, value)`, `OnQueueChanged` |
-| `FinanceManager` | `Economy/FinanceManager.cs` | `AddCashIncome(title, desc, amount, origin)`, `RegisterServiceIncome(request, clientName)` (fallback only), `SpendMoney(amount, reason)`, `AddExpense(title, desc, origin, amount, date)`, `PayExpense(movementId)`, `GetOpenDebtTotal()`, `GetOverdueDebtTotal()`, `HasEnoughMoney(amount)`, `ResetCash(amount)`, `ClearHistory()`, `Movements`, `OnCashChanged`, `OnFinanceDataChanged` |
+| `BarbershopServiceManager` | `Barbershop/BarbershopServiceManager.cs` | `TryStartService(client)`, `HasActiveService`, `HasClientInService()`, `CurrentClient`, `CanOpenPlanningForCurrentClient()`, `TryOpenPlanningForCurrentClient()`, `DismissCurrentClientFromPlanning(client)`, `CallNextClientFromQueue()`, `CompleteCurrentService()`, `NotifyClientFinishedCashier(client)`, `WaitingForPlayerToOpenPlanning`, `CurrentClientWaitPatiencePercent`, `BarberChairWalkPoint`, `ExitPoint` |
+| `BarberQueueSystem` | `Queue/BarberQueueSystem.cs` | `AddClientToQueue()`, `TryGetNextWaitingClient(out c)`, `RemoveClientFromQueue(client)`, `GetClientData(client)`, `GetWaitingCount()`, `IsClientInQueue(client)`, `MarkClientAsBeingServed(client, value)`, `GetQueueOrderedByArrival()`, `GetQueueOrderedByUrgency()`, `WaitingClients`, `OnQueueChanged` |
+| `FinanceManager` | `Economy/FinanceManager.cs` | `AddCashIncome(title, desc, amount, origin)`, `AddMoney(amount, reason)`, `RegisterServiceIncome(request, clientName)` (fallback only), `RegisterShopPurchaseExpense(title, desc, amount, origin, spendNow)`, `SpendMoney(amount, reason)`, `AddExpense(title, desc, origin, amount, date)`, `AddAutoMonthlyExpense(def, year, month, minutes)`, `PayExpense(movementId)`, `GetOpenDebtTotal()`, `GetOverdueDebtTotal()`, `GetCurrentMonthDebtTotal()`, `HasEnoughMoney(amount)`, `HasAutoExpenseForMonth(sourceId, year, month)`, `GetStatementMonthGroups()`, `ResetCash(amount)`, `ClearHistory()`, `ClearAllData(bool)`, `Movements`, `OnCashChanged`, `OnFinanceDataChanged` |
 | `InventoryManager` | `Inventory/InventoryManager.cs` | `GetUsableItemsByCategory(cat)`, `ConsumeProductUsageByUniqueId(id, n)` |
 | `PlayerEnergySystem` | `Energy/PlayerEnergySystem.cs` | `CanStartService()`, `GetServiceTimeMultiplier()`, `OnEnergyChanged` |
 | `PlayerXPManager` | `Progression/PlayerXPManager.cs` | `AddXP(n)`, `CurrentLevel`, `CurrentXP`, `CurrentLevelName`, `XPToNextLevel`, `XPProgressNormalized`, `IsMaxLevel`, `GetCurrentLevelData()`, `ResetProgress()`, `OnLevelChanged`, `OnXPChanged`, `OnLevelNameChanged` |
@@ -470,7 +468,7 @@ Esses bônus são puramente aditivos/multiplicativos sobre os modificadores já 
 | `BarbershopRatingManager` | `Evaluation/BarbershopRatingManager.cs` | `AddReview(rating)`, `GlobalRating`, `TotalReviews` |
 | `ServiceHistorySystem` | `Reputation/ServiceHistorySystem.cs` | `AddEntry(entry)`, `RemoveEntry(entry)`, `ClearHistory()`, `Entries`, `OnHistoryChanged` — backs `uiHistoricoAtendimento`/`ServiceHistoryUI` |
 | `ClientEvaluationSystem` | `Evaluation/ClientEvaluationSystem.cs` | `EvaluateService(sessionData)` |
-| `BarbershopUpgradeSystem` | `Barbershop/BarbershopUpgradeSystem.cs` | `TentarComprar(def)`, `PodeComprar(def)`, `MultiplicadorAtracao`, `BonusRating` |
+| `BarbershopUpgradeSystem` | `Barbershop/BarbershopUpgradeSystem.cs` | `TentarComprar(def)`, `PodeComprar(def)`, `Possui(upgradeId)`, `GetTodasMelhorias()`, `GetMelhoriasPossuidas()`, `MultiplicadorAtracao`, `BonusRating`, `ReducaoEnergia`, `MultiplicadorXP`, `OnMelhoriaComprada`, `OnEstadoAlterado` |
 | `GlobalGameplayManagement` | `Gameplay/GlobalGameplayManagement.cs` | `CalculateFinalPriceForRequest(request)`, `CalculateSuggestedPriceForRequest(request)`, `GetPriceSatisfactionScore(finalPrice, suggestedPrice)`, `GetSpawnDemandMultiplierFromLastService(finalPrice, suggestedPrice)`, `GetOverworkEnergyMultiplier()`, `ApplySuggestedScheduleIfNeeded()`, `SetSuggestedBusinessHours(...)`, `SetAdjustmentForService(type, percent)`, `OnBusinessSettingsChanged`, `OnPricesChanged`, `OnScheduleChanged` |
 | `CulturalEventSystem` | `Core/CulturalEventSystem.cs` | `AplicarBonusXP(xpBase)→int`, `AplicarBonusDinheiro(base)→int` (retornam o valor multiplicado, não são setters — use o retorno!), `TemEventoAtivo`, `EventosAtivos`, `BonusXPAtual`, `BonusDinheiroAtual`, `OnEventoAtivado`, `OnEventoDesativado` |
 | `TutorialController` | `Core/TutorialController.cs` | `AvancarPasso()`, `PularTutorial()`, `TutorialConcluido` |
@@ -490,6 +488,7 @@ Esses bônus são puramente aditivos/multiplicativos sobre os modificadores já 
 | `CityWaypointSystem` | `City/CityWaypointSystem.cs` | `GetRandomWaypoint(exclude)`, `WaypointCount` |
 | `CutMasterySystem` | `Progression/CutMasterySystem.cs` | `RegistrarAtendimento(cutId, rating, difficulty)`, `GetMastery(cutId)`, `GetTier(cutId)`, `GetTierConfig(tier)`, `GetTierConfigForCut(cutId)`, `GetXPProgressNormalized(cutId)`, `GetXPToNextTier(cutId)`, `IsMaxTier(cutId)`, `GetCutsAtTierOrAbove(tier)`, `OnMasteryTierUp`, `OnMasteryXPGained` |
 | `PlayerNicknameManager` | `Core/PlayerNicknameManager.cs` | `Nickname`, `TemNicknamePersonalizado`, `SetNickname(nome)`, `OnNicknameChanged` |
+| `PlacedFurnitureManager` | `Barbershop/PlacedFurnitureManager.cs` | Gerencia posicionamento de móveis (`Mobilia`, `Decoracao`) em `FurniturePlacementPoint`. Persiste em `AFROBARBER_PLACED_FURNITURE` (JSON). |
 
 > **Single finance system**: `FinanceManager` is canonical (history + cash, persisted) and the only one — there is no `PlayerWallet` anymore (it was removed; the advanced workflow calls `FinanceManager.Instance.AddCashIncome(...)` directly). Do not add a second/third financial system.
 >
@@ -543,6 +542,24 @@ Esses bônus são puramente aditivos/multiplicativos sobre os modificadores já 
 
 **`MissionMetricType`** (`Missions/MissionSystem.cs`):
 `ClientesAtendidos, FaturamentoTotal, MinutosDeAtendimento, CortesEspecificos, AvaliacaoMedia, AtendimentosPerfeitosConsecutivos, DiasSemColapso`
+
+**`WeatherType`** (`Core/WeatherSystem.cs`):
+`Ensolarado, Nublado, Chuvoso, Tempestade`
+
+**`NPCType`** (`NPC/NPCIdentity.cs`):
+`Client, Resident, Artist, Merchant, Staff, Tutorial`
+
+**`NPCMood`** (`NPC/NPCIdentity.cs`):
+`Neutral, Happy, Impatient, Angry, Excited, Worried`
+
+**`FinanceMovementType`** (`Economy/FinanceModels.cs`):
+`Income, Expense, Transfer, Loan, Repayment`
+
+**`FinanceMovementOrigin`** (`Economy/FinanceModels.cs`):
+Used as parameter in `AddCashIncome`, `AddExpense`, `RegisterShopPurchaseExpense` — identifies the source of each financial movement.
+
+**`ServiceActionRating`** (`Services/Advanced/AdvancedServiceModels.cs`):
+Rating per-action inside an advanced service execution step.
 
 **Player levels** (`PlayerXPManager` — XP para avançar ao próximo nível):
 1 → "Aprendiz da Navalha" (500 XP) · 2 → "Barbeiro de Bairro" (1500) · 3 → "Profissional da Cadeira" (3500) · 4 → "Mestre do Degradê" (7000) · 5 → "Lenda AfroBarber" (max)
@@ -647,7 +664,7 @@ Never reuse these keys for new data:
 | `AFROBARBER_VIP_DIAS_SEM_VIP` | VIPClientSystem | int |
 | `AFROBARBER_LOYALTY_DATA` | ClientLoyaltySystem | JSON |
 | `AFROBARBER_NARRATIVE_PROGRESS` | NarrativeMissionSystem | JSON |
-| `AFROBARBER_ACHIEVEMENTS` | AchievementSystem | JSON |
+| `AFROBARBER_ACHIEVEMENTS` | AchievementSystem | pipe-delimited string de IDs |
 | `AFROBARBER_BUSINESS_REPORTS` | BusinessReportManager | JSON |
 | `AFROBARBER_WORKED_MINUTES_{year}_{month}` | FinanceMonthlyBillsManager | int |
 | `AFROBARBER_CUT_MASTERY_DATA` | CutMasterySystem | JSON |
@@ -656,6 +673,11 @@ Never reuse these keys for new data:
 | `AFROBARBER_MANAGEMENT_OPENING_HOUR` / `OPENING_MINUTE` / `CLOSING_HOUR` / `CLOSING_MINUTE` | BarbershopManagementSaveSystem | int |
 | `AFROBARBER_MANAGEMENT_MONDAY` até `SUNDAY` (7 chaves) | BarbershopManagementSaveSystem | int (0=fechado, 1=aberto) |
 | `AFROBARBER_MANAGEMENT_PRICE_ADJUSTMENT_{ServiceType}` | BarbershopManagementSaveSystem | float (uma chave por valor do enum `ServiceType`) |
+| `AFROBARBER_PLACED_FURNITURE` | PlacedFurnitureManager | JSON |
+| `AFROBARBER_SERVICE_SELECTION_{serviceId}_{reqId}` | ServiceSelectionMemory | string (productId selecionado) |
+| `AFROBARBER_SERVICE_SELECTION_INDEX` | ServiceSelectionMemory | pipe-delimited (índice das seleções) |
+| `AFROBARBER_ENERGY_DAYS_NO_COLLAPSE` | PlayerEnergySystem | int |
+| `npc_dialogue_memory_{npcId}` | NPCDialogueMemory | JSON (**sem** prefixo `AFROBARBER_` — exceção à convenção) |
 
 ---
 
@@ -717,7 +739,7 @@ Never reuse these keys for new data:
 - **`AchievementSystem` está totalmente implementado mas sem nenhuma UI consumidora**: `OnConquistaDesbloqueada` não tem listener nenhum (nem C#, nem Inspector) e não existe nenhum arquivo em `UI/` mencionando conquistas — a feature roda escondida, sem popup nem tela de lista. Não corrigido nesta rodada (é trabalho de construir UI nova, não limpeza).
 - **`CulturalEventSystem.AplicarBonusXP()`/`AplicarBonusDinheiro()` nunca são chamados em lugar nenhum**: eventos culturais ativam e calculam os bônus, mas nada em `FinanceManager`/`PlayerXPManager`/no fluxo de conclusão de serviço consulta esses valores — eventos culturais hoje não têm efeito real de gameplay. Decisão consciente de não conectar nesta rodada (é mudança de comportamento de maior escopo); registrado aqui pra decisão futura.
 - **Eventos "fire but nobody's home" (documentados, não corrigidos)**: `BarbershopServiceManager.OnAtendimentoConcluido`, os três eventos do `NarrativeMissionSystem` (`OnCapituloDesbloqueado`/`OnCapituloConcluido`/`OnPersonagemCompleto`), `BusinessReportManager.OnRelatorioGerado`, `GlobalGameplayManagement.OnPricesChanged`/`OnScheduleChanged` são disparados mas não têm nenhum assinante hoje. Deixados como estão — são pontos de extensão baratos que uma UI futura pode consumir, não atrapalham nada funcionando vazios.
-- **`GlobalReputationSystem` ainda referenciado em `ClientSpawner`**: após a consolidação de reputação, `ClientSpawner.OnEnable/OnDisable/Start` ainda tenta subscrever `GlobalReputationSystem.Instance.OnReputationChanged` — se o singleton não existir na cena, o bloco `if (GlobalReputationSystem.Instance != null)` silencia o erro mas a reputação inicial não alimenta `demandMultiplierFromReputation`. Confirmar se `GlobalReputationSystem` foi de facto removido da cena ou se permanece como stub.
+- **`GlobalReputationSystem` removido e substituído no `ClientSpawner`**: `ClientSpawner.OnEnable/OnDisable` subscrevem diretamente `BarbershopRatingManager.Instance.OnRatingChanged` — migração completa, sem referências ao sistema antigo.
 - **`MissionSystem` não é chamado no fluxo avançado**: `RegisterServiceCompleted` só existe em `CompleteCurrentService()` (fallback). Serviços pelo caminho avançado (padrão de produção) **não registram progresso de missão**. Wiring pendente em `HandleAdvancedServiceFinished` ou `NotificarSistemasExternos`.
 - **`PrestigeSystem.BonusXP10` sem efeito**: `PlayerXPManager.AddXP` não multiplica por `PrestigeSystem.Instance?.GetBonusXP()`. Perk existe no sistema mas não produz resultado. Wiring pendente.
 - **`CulturalEventSystem.AplicarBonusXP()`/`AplicarBonusDinheiro()` nunca são chamados**: eventos culturais ativam e calculam bônus, mas nada no fluxo de atendimento usa o retorno — efeito real de gameplay é zero. Wiring pendente.
