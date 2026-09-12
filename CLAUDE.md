@@ -133,14 +133,41 @@ On success: calls `BarberWorkController.StartService()`, then `WaitClientSitThen
 ### Post-service calls (inside `BarbershopServiceManager`):
 
 **Fluxo avançado:**
-- `DistributeAdvancedServiceRewards()` → `FinanceManager.Instance.AddCashIncome(...)`, `PlayerXPManager.Instance.AddXP(xpAmount)`, `BarbershopRatingManager.Instance.AddReview(rating)`
+- `DistributeAdvancedServiceRewards()` → aplica bônus cultural (`CulturalEventSystem.AplicarBonusDinheiro`) sobre `moneyReward` e `tipAmount`, chama `FinanceManager.Instance.AddCashIncome(...)`, `PlayerXPManager.Instance.AddXP(xpReward)`, `BarbershopRatingManager.Instance.AddReview(finalScore)`. Retorna `int moneyFinal` (pós-bônus) para o caller.
 - `CompleteCurrentServiceAfterAdvancedReward()` (etapa posterior) → `EducationProgressManager.Instance.UnlockCut(request.RequestId)`
 
-**Fluxo fallback** (`CompleteCurrentService`):
-- `FinanceManager.Instance.RegisterServiceIncome(request, clientName)`
-- `MissionSystem.Instance.RegisterServiceCompleted(...)` ← **só no fallback**; o fluxo avançado **não chama MissionSystem** (débito técnico conhecido)
+**Fluxo de minigame** (`useMinigame = true`, campo `[SerializeField]`):
+- Alternativa ao fluxo avançado por plano. `ExecutarMinigameEConcluir(client)` aciona `MinigameCortePerfeitoController`. O resultado do minigame é convertido em `ServiceFinalRating` e tratado por `HandleAdvancedServiceFinished` — mesmos callbacks de recompensa do fluxo avançado.
 
-`NotificarSistemasExternos()` (chamado por ambos os fluxos, nesta ordem): `ClientLoyaltySystem`, `CutMasterySystem`, `VIPClientSystem`, `BarberBookSystem`, `DailyChallengeSystem` (+ `RegistrarGanhoMaestria`), `NarrativeMissionSystem`, `FinanceMonthlyBillsManager.VerificarContasVencidas()`.
+**Fluxo fallback** (`CompleteCurrentService`, `autoCompleteServiceByTime = true`):
+- `FinanceManager.Instance.RegisterServiceIncome(request, clientName)`
+
+`NotificarSistemasExternos()` — chamado por **todos** os fluxos (avançado, minigame e fallback), nesta ordem:
+1. `OnAtendimentoConcluido` (event)
+2. `ClientLoyaltySystem.RegistrarVisita` (se não-VIP)
+3. `CutMasterySystem.RegistrarAtendimento`
+4. `BarberBookSystem.PublicarPosAtendimento` (se não-VIP)
+5. `VIPClientSystem.NotificarAtendimentoVip` (se VIP — inclui BarberBook viral + fidelidade com gorjeta real)
+6. `DailyChallengeSystem.RegistrarAtendimento` + `RegistrarGanhoMaestria`
+7. `NarrativeMissionSystem.RegistrarAtendimentoNarrativo` (se NPC narrativo)
+8. `MissionSystem.RegisterServiceCompleted`
+9. `FinanceMonthlyBillsManager.VerificarContasVencidas`
+
+---
+
+## Minigame de Serviço
+
+`Services/Minigame/MinigameCortePerfeitoController.cs` — mini-jogo de timing ativado quando `BarbershopServiceManager.useMinigame = true` (campo `[SerializeField]`, padrão habilitado).
+
+**Fluxo:**
+1. `BarbershopServiceManager` chama `ExecutarMinigameEConcluir(client)` em vez do plano avançado
+2. `MinigameCortePerfeitoController` exibe alvos (`MinigameHitTarget`) que o jogador deve acertar
+3. O resultado (acertos/erros) é convertido em `ServiceFinalRating`
+4. `HandleAdvancedServiceFinished` processa o resultado — mesmas recompensas do fluxo avançado
+
+**Wiring na cena:** campo `[SerializeField] MinigameCortePerfeitoController minigame` no `BarbershopServiceManager` no Inspector.
+
+> O minigame e o fluxo avançado por plano são mutuamente exclusivos. Se `useMinigame = true`, o `ServicePlanningUI` não é aberto.
 
 ---
 
@@ -281,7 +308,7 @@ Scheduled → WaitingToSpawn → Spawned → Completed
 - `GetFatorAluguel()` → 0.85f ou 1f
 - `GetReputacaoInicial()` → 3.5f ou 2f
 
-**Wiring pendente:** `PlayerXPManager.AddXP` deve multiplicar por `PrestigeSystem.Instance?.GetBonusXP() ?? 1f` — ainda não implementado; a perk `BonusXP10` não tem efeito real hoje (débito técnico conhecido).
+**Wiring implementado:** `PlayerXPManager.AddXP` aplica três multiplicadores em sequência: `upgradeXPMultiplier` (melhorias da barbearia) → `PrestigeSystem.Instance?.GetBonusXP() ?? 1f` → `CulturalEventSystem.AplicarBonusXP(amount)` (se evento ativo). A perk `BonusXP10` produz efeito real.
 
 ---
 
@@ -460,19 +487,19 @@ Esses bônus são puramente aditivos/multiplicativos sobre os modificadores já 
 | `BarbershopServiceManager` | `Barbershop/BarbershopServiceManager.cs` | `TryStartService(client)`, `HasActiveService`, `HasClientInService()`, `CurrentClient`, `CanOpenPlanningForCurrentClient()`, `TryOpenPlanningForCurrentClient()`, `DismissCurrentClientFromPlanning(client)`, `CallNextClientFromQueue()`, `CompleteCurrentService()`, `NotifyClientFinishedCashier(client)`, `WaitingForPlayerToOpenPlanning`, `CurrentClientWaitPatiencePercent`, `BarberChairWalkPoint`, `ExitPoint` |
 | `BarberQueueSystem` | `Queue/BarberQueueSystem.cs` | `AddClientToQueue()`, `TryGetNextWaitingClient(out c)`, `RemoveClientFromQueue(client)`, `GetClientData(client)`, `GetWaitingCount()`, `IsClientInQueue(client)`, `MarkClientAsBeingServed(client, value)`, `GetQueueOrderedByArrival()`, `GetQueueOrderedByUrgency()`, `WaitingClients`, `OnQueueChanged` |
 | `FinanceManager` | `Economy/FinanceManager.cs` | `AddCashIncome(title, desc, amount, origin)`, `AddMoney(amount, reason)`, `RegisterServiceIncome(request, clientName)` (fallback only), `RegisterShopPurchaseExpense(title, desc, amount, origin, spendNow)`, `SpendMoney(amount, reason)`, `AddExpense(title, desc, origin, amount, date)`, `AddAutoMonthlyExpense(def, year, month, minutes)`, `PayExpense(movementId)`, `GetOpenDebtTotal()`, `GetOverdueDebtTotal()`, `GetCurrentMonthDebtTotal()`, `HasEnoughMoney(amount)`, `HasAutoExpenseForMonth(sourceId, year, month)`, `GetStatementMonthGroups()`, `ResetCash(amount)`, `ClearHistory()`, `ClearAllData(bool)`, `Movements`, `OnCashChanged`, `OnFinanceDataChanged` |
-| `InventoryManager` | `Inventory/InventoryManager.cs` | `GetUsableItemsByCategory(cat)`, `ConsumeProductUsageByUniqueId(id, n)` |
-| `PlayerEnergySystem` | `Energy/PlayerEnergySystem.cs` | `CanStartService()`, `GetServiceTimeMultiplier()`, `OnEnergyChanged` |
-| `PlayerXPManager` | `Progression/PlayerXPManager.cs` | `AddXP(n)`, `CurrentLevel`, `CurrentXP`, `CurrentLevelName`, `XPToNextLevel`, `XPProgressNormalized`, `IsMaxLevel`, `GetCurrentLevelData()`, `ResetProgress()`, `OnLevelChanged`, `OnXPChanged`, `OnLevelNameChanged` |
+| `InventoryManager` | `Inventory/InventoryManager.cs` | `GetUsableItemsByCategory(cat)`, `ConsumeProductUsageByUniqueId(id, n)`, `ConsumeDurableHoursByUniqueId(uniqueId, hours)`, `GetProductDataById(productId)`, `RemoveAllUnusableItems()` |
+| `PlayerEnergySystem` | `Energy/PlayerEnergySystem.cs` | `CanStartService()`, `GetServiceTimeMultiplier()`, `ConsumeEnergy(float)`, `RecoverEnergy(float)`, `SetUpgradeEnergyReduction(float)` (chamado por `BarbershopUpgradeSystem`), `IsLowEnergy()`, `IsCriticalEnergy()`, `IsCollapsed`, `GetServiceQualityPenalty()`, `OnEnergyChanged`, `OnEnergyContextChanged`, `OnEnergyDepleted` |
+| `PlayerXPManager` | `Progression/PlayerXPManager.cs` | `AddXP(n)` (aplica 3 multiplicadores: upgrade → prestígio → evento cultural), `SetUpgradeXPMultiplier(float)` (chamado por `BarbershopUpgradeSystem`), `CurrentLevel`, `CurrentXP`, `CurrentLevelName`, `XPToNextLevel`, `XPProgressNormalized`, `IsMaxLevel`, `GetCurrentLevelData()`, `GetLevelData(level)`, `ResetProgress()`, `EmitCurrentState()`, `OnLevelChanged`, `OnXPChanged`, `OnLevelNameChanged` |
 | `GlobalDialogueManager` | `Dialogue/GlobalDialogueManager.cs` | `AddNpcMessage(identity, text, context, isGroup=false)`, `AddSystemMessage(text, context)`, `OnMessageAdded` |
 | `EducationProgressManager` | `Education/EducationProgressManager.cs` | `UnlockCut(cutId)`, `GetCutById(cutId)`, `IsUnlocked(cutId)`, `GetDailyFeaturedCut()`, `ToggleFavorite(cutId)`, `IsFavorite(cutId)`, `MarkAsSeen(cutId)`, `GetNewUnlockedCount()`, `OnCutUnlocked`, `OnLibraryStateChanged` |
-| `BarbershopRatingManager` | `Evaluation/BarbershopRatingManager.cs` | `AddReview(rating)`, `GlobalRating`, `TotalReviews` |
+| `BarbershopRatingManager` | `Evaluation/BarbershopRatingManager.cs` | `AddReview(float rating)`, `AddReview(float finalRating, float attendance, float structure, float experience)` (sobrecarga de 4 params usada pelo `BarbershopServiceManager` internamente via `RegistrarAvaliacaoPorCategoria`), `GlobalRating`, `TotalReviews`, `OnReviewAdded` |
 | `ServiceHistorySystem` | `Reputation/ServiceHistorySystem.cs` | `AddEntry(entry)`, `RemoveEntry(entry)`, `ClearHistory()`, `Entries`, `OnHistoryChanged` — backs `uiHistoricoAtendimento`/`ServiceHistoryUI` |
 | `ClientEvaluationSystem` | `Evaluation/ClientEvaluationSystem.cs` | `EvaluateService(sessionData)` |
-| `BarbershopUpgradeSystem` | `Barbershop/BarbershopUpgradeSystem.cs` | `TentarComprar(def)`, `PodeComprar(def)`, `Possui(upgradeId)`, `GetTodasMelhorias()`, `GetMelhoriasPossuidas()`, `MultiplicadorAtracao`, `BonusRating`, `ReducaoEnergia`, `MultiplicadorXP`, `OnMelhoriaComprada`, `OnEstadoAlterado` |
+| `BarbershopUpgradeSystem` | `Barbershop/BarbershopUpgradeSystem.cs` | `TentarComprar(def)`, `PodeComprar(def)`, `Possui(upgradeId)`, `GetTodasMelhorias()`, `GetMelhoriasPossuidas()`, `GetMelhoriaDisponiveisParaCompra()`, `MultiplicadorAtracao`, `BonusRating`, `ReducaoEnergia`, `MultiplicadorXP`, `OnMelhoriaComprada`, `OnEstadoAlterado` — ao comprar chama `AplicarEfeitosNosSistemas()` que propaga para `ClientSpawner.SetDemandMultiplierFromUpgrades`, `PlayerEnergySystem.SetUpgradeEnergyReduction`, `PlayerXPManager.SetUpgradeXPMultiplier`. Campo `[SerializeField] List<BarbershopUpgradeDefinition> todasMelhorias` — atribuir os 7 assets em `ScriptableObjects/Upgrades/` no Inspector. |
 | `GlobalGameplayManagement` | `Gameplay/GlobalGameplayManagement.cs` | `CalculateFinalPriceForRequest(request)`, `CalculateSuggestedPriceForRequest(request)`, `GetPriceSatisfactionScore(finalPrice, suggestedPrice)`, `GetSpawnDemandMultiplierFromLastService(finalPrice, suggestedPrice)`, `GetOverworkEnergyMultiplier()`, `ApplySuggestedScheduleIfNeeded()`, `SetSuggestedBusinessHours(...)`, `SetAdjustmentForService(type, percent)`, `OnBusinessSettingsChanged`, `OnPricesChanged`, `OnScheduleChanged` |
 | `CulturalEventSystem` | `Core/CulturalEventSystem.cs` | `AplicarBonusXP(xpBase)→int`, `AplicarBonusDinheiro(base)→int` (retornam o valor multiplicado, não são setters — use o retorno!), `TemEventoAtivo`, `EventosAtivos`, `BonusXPAtual`, `BonusDinheiroAtual`, `OnEventoAtivado`, `OnEventoDesativado` |
 | `TutorialController` | `Core/TutorialController.cs` | `AvancarPasso()`, `PularTutorial()`, `TutorialConcluido` |
-| `AchievementSystem` | `Progression/AchievementSystem.cs` | `EstaDesbloqueada(id)`, `TotalDesbloqueadas`, `TotalConquistas`, `IdsDesbloqueados`, `OnConquistaDesbloqueada` (UnityEvent\<ConquistaData\> — conquistas concedem XP e dinheiro ao desbloquear) |
+| `AchievementSystem` | `Progression/AchievementSystem.cs` | `EstaDesbloqueada(id)`, `GetTodasConquistas()→IReadOnlyList<ConquistaData>`, `TotalDesbloqueadas`, `TotalConquistas`, `IdsDesbloqueados`, `OnConquistaDesbloqueada` (UnityEvent\<ConquistaData\> — conquistas concedem XP e dinheiro ao desbloquear) |
 | `ClientMoodSystem` | `Characters/Clients/ClientMoodSystem.cs` | `GetHumor(client)`, `GetModificadorRating(client)`, `ClienteEstaIrritado(client)` |
 | `BusinessReportManager` | `Economy/BusinessReportManager.cs` | `ClientesHoje`, `ReceitaHoje`, `RatingMedioHoje`, `Historico`, `OnRelatorioGerado` |
 | `LoanSystem` | `Economy/LoanSystem.cs` | `TentarPegarEmprestimo(indice)`, `TentarPagarTudo(id)`, `TotalDevido`, `TemEmprestimoAtivo`, `Emprestimos`, `OnEmprestimoTomado`, `OnEmprestimoQuitado` |
@@ -489,6 +516,14 @@ Esses bônus são puramente aditivos/multiplicativos sobre os modificadores já 
 | `CutMasterySystem` | `Progression/CutMasterySystem.cs` | `RegistrarAtendimento(cutId, rating, difficulty)`, `GetMastery(cutId)`, `GetTier(cutId)`, `GetTierConfig(tier)`, `GetTierConfigForCut(cutId)`, `GetXPProgressNormalized(cutId)`, `GetXPToNextTier(cutId)`, `IsMaxTier(cutId)`, `GetCutsAtTierOrAbove(tier)`, `OnMasteryTierUp`, `OnMasteryXPGained` |
 | `PlayerNicknameManager` | `Core/PlayerNicknameManager.cs` | `Nickname`, `TemNicknamePersonalizado`, `SetNickname(nome)`, `OnNicknameChanged` |
 | `PlacedFurnitureManager` | `Barbershop/PlacedFurnitureManager.cs` | Gerencia posicionamento de móveis (`Mobilia`, `Decoracao`) em `FurniturePlacementPoint`. Persiste em `AFROBARBER_PLACED_FURNITURE` (JSON). |
+
+**Helpers não-singleton usados internamente:**
+
+| Helper | Arquivo | Uso |
+|---|---|---|
+| `ClientSpawnerLocator` | `Characters/Clients/ClientSpawnerLocator.cs` | `TryGet(out ClientSpawner spawner)` — evita `FindFirstObjectByType` em hot paths. `ClientSpawner` expõe: `SetDemandMultiplierFromUpgrades(float)`, `SetDemandMultiplierFromWeather(float)`, `SetDemandMultiplierFromLateFees(float)`, `UpdateDemandMultiplierFromServicePrice(int price, int suggested)`. |
+| `BootstrapUIBehaviour` | `Core/Loading/BootstrapUIBehaviour.cs` | Classe base para UI que aguarda `GameBootstrap.IsReady`. Sobrescreva `OnBootstrapInitialize()` em vez de `Start()`. |
+| `PersistentGameObject` | `Core/PersistentGameObject.cs` | `MakePersistent(gameObject)` — seta parent null + `DontDestroyOnLoad`. Chamado no `Awake` de todos os singletons. |
 
 > **Single finance system**: `FinanceManager` is canonical (history + cash, persisted) and the only one — there is no `PlayerWallet` anymore (it was removed; the advanced workflow calls `FinanceManager.Instance.AddCashIncome(...)` directly). Do not add a second/third financial system.
 >
@@ -706,11 +741,14 @@ Never reuse these keys for new data:
 | `uiBibliotecaCortes` | `OpenBibliotecaCortes()` | `EducationEncyclopediaUI.RefreshList()` |
 | `uiNotificacao` | `OpenNotificacao()` | — (pode coexistir com outros painéis: `notificationCanStayWithOtherUI = true`) |
 
+> **Conquistas:** `AchievementsPanelUI` e `AchievementPopupUI` (em `UI/Achievements/`) **não estão** registrados no `GameUIManager` — o painel de lista abre via `AchievementsPanelUI.Abrir()` diretamente e o popup é autônomo (assina `OnConquistaDesbloqueada` e auto-exibe). Wiring de GameObjects no Canvas pendente.
+
 **Métodos utilitários:** `IsAnyUIOpen()`, `IsBlockingUIOpen()`, `HideAll()`, `CloseUI(GameObject)`, `CurrentOpenUI` (property).
 
 **Padrão de subscrição de eventos em painéis UI:**
-- Use `bool eventosSuscritos` + método `TrySubscreverEventos()` chamado em `Start()`, `OnEnable()`, `Show()` e qualquer método de refresh — garante subscrição independente da ordem de inicialização
-- Use `DessubscreverEventos()` com métodos nomeados (nunca lambdas) em `OnDisable()` — lambdas criam novas instâncias e `RemoveListener` falha silenciosamente
+- Padrão recomendado e auditado como seguro: usar métodos nomeados com `OnDisable` para unsubscribe (ver `BarbershopManagementUI`, `QueueUIManager`), ou guards `isBound`/`isSubscribed` com `-=` antes de `+=` (ver `EnergyUI`, `WaitingCountUI`, `HudChatCardUI`).
+- Nunca usar lambdas com `+=` em métodos chamados repetidamente — lambda cria nova instância e `RemoveListener` falha silenciosamente.
+- `BootstrapUIBehaviour.cs` (`Core/Loading/`) — classe base para componentes de UI que precisam aguardar o `GameBootstrap.IsReady`. Sobrescreva `OnBootstrapInitialize()` em vez de `Start()` para garantir que managers estejam disponíveis.
 
 ---
 
@@ -729,23 +767,19 @@ Never reuse these keys for new data:
 
 - **VCS**: o projeto usa Plastic SCM (`.plastic/`) como controle de versão principal. Um repositório Git separado dentro de `Assets/Afrobarber/Scripts/.git` (espelho manual apontando para `github.com/marcelo-braga-dev/afrobarber`) existiu em algum momento, excluído do Plastic via `ignore.conf`, mas não está mais presente no checkout atual — se for recriado, trate-o como espelho manual, não como histórico confiável.
 - **Testes**: `Assets/Tests/` não tinha nenhum teste até esta rodada. Um scaffold mínimo (`Assets/Tests/EditMode/`) foi criado com 2 testes de exemplo cobrindo lógica estática pura — está longe de cobertura completa.
-- **Padrão `eventosSuscritos`**: seguido por poucos arquivos de UI (ver seção "UI Panels — GameUIManager"). O bug confirmado em `LoanPanelUI` (unsubscribe por lambda) foi corrigido; outros arquivos que se inscrevem em eventos sem esse padrão ainda não foram auditados/corrigidos — candidatos a regressão silenciosa de UI (inscrição duplicada a cada `OnEnable`).
-- **HDRP/URP em mobile**: `Core/Mobile/MobilePerformanceBootstrap.cs` troca o quality level em Android/iOS para um perfil cujo Render Pipeline Asset é URP, enquanto a esmagadora maioria dos materiais do projeto (`Assets/Afrobarber/Materials/`) foi autorada só com shader `HDRP/Lit`. Isso é um risco real de material quebrado/rosa em build mobile — **validar em device/build real antes de shippar mobile**; se confirmado, ou se cria um set de materiais `URP/Lit` equivalente, ou se para de trocar de pipeline em mobile.
+- **Padrão de subscrição de UI auditado**: `LoanPanelUI` (unsubscribe por lambda) foi corrigido. Todos os demais arquivos auditados usam métodos nomeados com `OnDisable` unsubscribe ou guards equivalentes — nenhum vazamento real encontrado.
+- **HDRP/URP em mobile**: `Core/Mobile/MobilePerformanceBootstrap.cs` troca o quality level em Android para um perfil URP, enquanto a esmagadora maioria dos materiais usa shader `HDRP/Lit`. Risco real de material rosa em build Android — **validar em device real antes de shippar**. iOS removido do `MobilePerformanceBootstrap` (sem suporte iOS ativo).
+- **Minigame de serviço integrado mas não documentado anteriormente**: `Services/Minigame/MinigameCortePerfeitoController.cs` e `MinigameHitTarget.cs` — controlados por `BarbershopServiceManager.useMinigame` (campo SerializeField). Ver seção "Minigame de Serviço".
 - **`BarbershopCashRegister` foi removido**: era inicializado pelo `GameBootstrap` e assinava `FinanceManager.OnCashChanged` de verdade, mas seu próprio evento de saída (`OnMoneyChanged`) não tinha nenhum consumidor — nem chamada em C#, nem listener no Inspector. Removido do código, do `GameBootstrap` e do GameObject `BarbershopManager` na cena (que mantém seus outros componentes, como `BarbershopRatingManager`, intactos). Quem alimenta a UI de dinheiro de verdade é `UI/Shop/ShopCashHeaderUI.cs` (confirmado conectado na cena) — **não** `Economy/MoneyTextBinder.cs`, que também acabou sendo removido na rodada seguinte de limpeza por estar igualmente órfão (corrige uma nota anterior deste arquivo que apontava `MoneyTextBinder` como o binder ativo).
 - **Limpeza de código morto (rodada de GUID cruzado com cenas/prefabs)**: removidos 22 arquivos com zero referência em `GameScene.unity`/`MainMenuScene.unity`/qualquer `.prefab`/`.asset` — `UI/ClockAdvancePanelUI.cs`, `UI/AnalogClockUI.cs` (duplicavam `UI/HUD/GameTimeUI.cs`, esse sim ativo), `Economy/MoneyTextBinder.cs`, `Barbershop/BarberChair/BarberChairSeat.cs`, `Characters/Clients/ClientHairDefinition.cs`, `Characters/Clients/HairAnchorBinder.cs`, `Education/CutEducationPreviewUI.cs`, `Services/InventoryDiscardBrokenButton.cs`, `Transito/ModelAligner.cs`, `UI/Education/EducationDailyCuriosityUI.cs`, `UI/Education/EducationLibraryNotificationBadge.cs`, `UI/Management/BarbershopManagementStatusHUD.cs`, `UI/Management/OpenManagementButton.cs`, `UI/Inventory/InventoryToggleUI.cs`, `UI/Missions/MissionOverviewStatsUI.cs`, `Services/DefaultServiceLibrary.cs`, `Services/ServiceLoadoutBuilder.cs` (auto-loadout antigo, superado pelo fluxo atual via `ServicePlanningUI` + `client.PreparedLoadout`), e 5 scripts de debug não anexados em `Utilities/Debug/`. Se algum comportamento sumir depois disso, comece a investigação por essa lista.
 - **`GlobalReputationSystem` foi removido (consolidação de reputação)**: era um segundo tracker de reputação 0-5 independente do `BarbershopRatingManager` (o canônico, usado por ~12 sistemas), alimentado só por `ServiceHistorySystem` e consumido só pelo `ClientSpawner` pra calcular demanda. Como ele começava em `0` (e a fórmula de demanda assume nota `3` como neutro), toda barbearia nova começava com demanda artificialmente baixa até a primeira review — bug que a consolidação corrigiu de brinde. `ClientSpawner` agora assina `BarbershopRatingManager.Instance.OnRatingChanged` diretamente.
 - **Bug corrigido — `ClientSpawner.demandMultiplierFromPrice` compartilhado por dois sistemas**: `FinanceMonthlyBillsManager` (penalidade de conta atrasada) e a satisfação de preço do último atendimento escreviam no mesmo campo, um apagando o outro. Agora são campos separados (`demandMultiplierFromPrice` e `demandMultiplierFromLateFees`), multiplicados juntos em `RecalcularDemanda()`. O método usado pelo `FinanceMonthlyBillsManager` foi renomeado de `SetDemandMultiplierFromPricing` para `SetDemandMultiplierFromLateFees`.
 - **Bug corrigido — agendamentos nunca eram marcados `Missed`**: `ClientAppointmentScheduler.ProcessAppointments` tentava ativar um agendamento a cada segundo indefinidamente; se o cliente nunca ficasse disponível, o agendamento ficava preso pra sempre em `WaitingToSpawn`. Agora, passado `missedAfterMinutes` (60min de jogo, configurável) do horário marcado sem spawnar, o agendamento é marcado `Missed` e removido da lista.
-- **`AchievementSystem` está totalmente implementado mas sem nenhuma UI consumidora**: `OnConquistaDesbloqueada` não tem listener nenhum (nem C#, nem Inspector) e não existe nenhum arquivo em `UI/` mencionando conquistas — a feature roda escondida, sem popup nem tela de lista. Não corrigido nesta rodada (é trabalho de construir UI nova, não limpeza).
-- **`CulturalEventSystem.AplicarBonusXP()`/`AplicarBonusDinheiro()` nunca são chamados em lugar nenhum**: eventos culturais ativam e calculam os bônus, mas nada em `FinanceManager`/`PlayerXPManager`/no fluxo de conclusão de serviço consulta esses valores — eventos culturais hoje não têm efeito real de gameplay. Decisão consciente de não conectar nesta rodada (é mudança de comportamento de maior escopo); registrado aqui pra decisão futura.
+- **`CulturalEventSystem` e `PrestigeSystem` agora conectados**: `PlayerXPManager.AddXP` aplica os 3 multiplicadores em sequência (upgrade → prestígio → evento cultural); `BarbershopServiceManager.DistributeAdvancedServiceRewards` aplica bônus de dinheiro cultural antes de registrar receita; `NotificarSistemasExternos` recebe o valor pós-bônus via retorno de `DistributeAdvancedServiceRewards`. `MissionSystem` registrado em `NotificarSistemasExternos` (cobre ambos os fluxos).
+- **`AchievementSystem` — UI criada** (`UI/Achievements/`): `AchievementPopupUI` (popup com fila e fade, assina `OnConquistaDesbloqueada`) e `AchievementsPanelUI` + `AchievementsItemUI` (painel de lista com progresso). **Wiring pendente**: adicionar `Panel_Conquistas` ao Canvas da HUD e `Popup_Conquista` ao Canvas overlay; registrar `uiConquistas` em `GameUIManager` se quiser integrar ao sistema de painéis exclusivos.
 - **Eventos "fire but nobody's home" (documentados, não corrigidos)**: `BarbershopServiceManager.OnAtendimentoConcluido`, os três eventos do `NarrativeMissionSystem` (`OnCapituloDesbloqueado`/`OnCapituloConcluido`/`OnPersonagemCompleto`), `BusinessReportManager.OnRelatorioGerado`, `GlobalGameplayManagement.OnPricesChanged`/`OnScheduleChanged` são disparados mas não têm nenhum assinante hoje. Deixados como estão — são pontos de extensão baratos que uma UI futura pode consumir, não atrapalham nada funcionando vazios.
-- **`GlobalReputationSystem` removido e substituído no `ClientSpawner`**: `ClientSpawner.OnEnable/OnDisable` subscrevem diretamente `BarbershopRatingManager.Instance.OnRatingChanged` — migração completa, sem referências ao sistema antigo.
-- **`MissionSystem` não é chamado no fluxo avançado**: `RegisterServiceCompleted` só existe em `CompleteCurrentService()` (fallback). Serviços pelo caminho avançado (padrão de produção) **não registram progresso de missão**. Wiring pendente em `HandleAdvancedServiceFinished` ou `NotificarSistemasExternos`.
-- **`PrestigeSystem.BonusXP10` sem efeito**: `PlayerXPManager.AddXP` não multiplica por `PrestigeSystem.Instance?.GetBonusXP()`. Perk existe no sistema mas não produz resultado. Wiring pendente.
-- **`CulturalEventSystem.AplicarBonusXP()`/`AplicarBonusDinheiro()` nunca são chamados**: eventos culturais ativam e calculam bônus, mas nada no fluxo de atendimento usa o retorno — efeito real de gameplay é zero. Wiring pendente.
 - **Componentes não-singleton sem documentação de wiring**: `WaitingAreaManager` (passado a `ClientNPC.InicializarNaCidade`), `FinanceHUDBinder` (substituto do `MoneyTextBinder` removido — conecta `OnCashChanged`/`OnFinanceDataChanged` a dois `TMP_Text`), `NPCConversationBrain`/`NPCDialogueMemory` (sistema de auto-talk por NPC, requer `NPCIdentity`+`NPCSocialProfile`+`ClientNPC`+`ClientPatience` no mesmo GameObject), `BarbershopManagementSaveSystem` (persiste horários e ajustes de preço, 14 chaves PlayerPrefs).
-- **`AchievementSystem` sem UI consumidora**: `OnConquistaDesbloqueada` sem nenhum listener. Feature funciona internamente, não exibe popup nem tela de lista.
-- **Triagem de `eventosSuscritos` incompleta**: ~21 arquivos de UI inscrevem-se em eventos sem o padrão `eventosSuscritos` — distinção entre "lambda sem unsubscribe = vazamento real" e "método nomeado sem guard = duplicação leve" não foi mapeada. Candidatos a regressão silenciosa a cada `OnEnable`.
+- **Triagem de `eventosSuscritos` auditada**: todos os arquivos de UI verificados usam métodos nomeados com `OnDisable` unsubscribe, ou guardas equivalentes (`isBound`, `isSubscribed`, `-=` antes de `+=`). Nenhum vazamento lambda real encontrado. A única lambda de `+=` em produção é em `MainMenuController.IniciarPreloadAposPAD` para o evento one-shot `OnPronto` do PAD — segura.
 
 ---
 

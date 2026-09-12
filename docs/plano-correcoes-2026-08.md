@@ -1,47 +1,94 @@
-# Plano de Correções — AfroBarber v1 (2026-08)
+# Plano de Correções — AfroBarber v1 (2026-08 / 2026-09)
 
-Registro histórico da rodada de correções feita a partir de uma análise profunda do projeto em 2026-08-08. Mantido para referência futura — se algo aqui já foi superado por mudanças posteriores, prefira o estado atual do código/`CLAUDE.md` a este documento.
+Registro histórico das duas rodadas de correções feitas a partir de análises profundas do projeto. Mantido para referência futura — prefira sempre o estado atual do código e do `CLAUDE.md` a este documento.
 
-## Contexto
+---
 
-A análise (código + `CLAUDE.md` + config de projeto + VCS) encontrou 3 bugs reais reproduzíveis, um sistema de precificação duplicado (um dos dois era código morto), documentação (`CLAUDE.md`) desatualizada em vários pontos, 29 arquivos `.cs` salvos em encoding errado (ISO-8859-1 em vez de UTF-8), e zero testes automatizados apesar de infraestrutura documentada para isso.
+## Rodada 1 — 2026-08-08
 
-## O que foi corrigido nesta rodada
+### Contexto
+Análise encontrou 3 bugs reais, um sistema de precificação duplicado (código morto), documentação desatualizada em vários pontos, 29 arquivos `.cs` em encoding ISO-8859-1 em vez de UTF-8, e zero testes.
 
-### Bugs
-- **`MobilePerformanceBootstrap.cs`**: adicionado o campo `iosQualityName`, que faltava e quebrava a compilação em build iOS (`#elif UNITY_IOS` referenciava um campo inexistente).
-- **`LoanPanelUI.cs`**: trocado o `AddListener`/`RemoveListener` por lambda (que nunca desinscrevia de fato) pelo padrão `eventosSuscritos` + métodos nomeados, igual ao já usado em `BarberBookPanelUI.cs`.
-
-### Higiene de código
-- 29 arquivos `.cs` convertidos de ISO-8859-1 para UTF-8 (conteúdo e quebras de linha CRLF preservados, só o encoding mudou). Lista completa no commit/diff desta mudança.
+### Bugs corrigidos
+- **`MobilePerformanceBootstrap.cs`**: campo `iosQualityName` adicionado para corrigir compilação em build iOS.
+- **`LoanPanelUI.cs`**: subscrição por lambda trocada por padrão `eventosSuscritos` + métodos nomeados.
 
 ### Arquitetura
-- Removido `DynamicPricingManager` (`Economy/DynamicPricingManager.cs` + GameObject correspondente em `GameScene.unity`): era um segundo sistema de precificação cujo método `AplicarMargem()` nunca era chamado por nenhum outro script. Quem calcula preço de verdade é `GlobalGameplayManagement` (`Gameplay/GlobalGameplayManagement.cs`), que não estava documentado no `CLAUDE.md` e agora está.
+- Removido `DynamicPricingManager` (código morto — `AplicarMargem()` nunca era chamado).
+- 29 arquivos convertidos de ISO-8859-1 para UTF-8.
 
-### Documentação (`CLAUDE.md`)
-- Seção "Biblioteca de Cortes" reescrita: dados de corte vivem em `ClientRequestData` (não mais em `AfroCutDatabase`, que está em `_Deprecated/` só para não quebrar o asset legado órfão `MainAfroCutDatabase.asset`).
-- `Post-service calls`: `UnlockCut(request.afroCutId)` → `UnlockCut(request.RequestId)` (incondicional).
-- `Narrative Mission System`: personagens corrigidos — `leo` → `leandro_leo`, `miguel` → `gabriel`.
-- Nota "Dual finance systems" corrigida: `PlayerWallet` não existe mais; nota de precificação duplicada substituída pela explicação do `GlobalGameplayManagement`.
-- `TryStartService`: removida a alegação falsa de checagem de loadout incompleto.
-- `Appointment System`: `CascadeDelayAppointments()` → `ApplyCascadeDelay(...)`; adicionada nota de que agendamentos não são persistidos e não há cancelamento público funcional.
-- `Finance Monthly Bills Manager`: `OnCriseFinanceira` corrigido para refletir o gatilho real (`FinanceManager.CurrentCash < 0`).
+### Documentação
+- Seção "Biblioteca de Cortes" reescrita (dados vivem em `ClientRequestData`, não em `AfroCutDatabase`).
+- `Narrative Mission System`: IDs corrigidos — `leo` → `leandro_leo`, `miguel` → `gabriel`.
+- `Finance Monthly Bills Manager`: gatilho de `OnCriseFinanceira` corrigido.
 - `Daily Challenge System`: adicionado `GanharMaestria` à tabela de tipos.
-- Nova seção "Estado do Repositório / Débito Técnico Conhecido" com o resumo dos itens abaixo.
+- Nova seção "Estado do Repositório / Débito Técnico Conhecido".
 
 ### Testes
-- Criado scaffold mínimo em `Assets/Tests/EditMode/` (assembly definition + 2 testes de exemplo sobre lógica estática pura), como ponto de partida.
+- Scaffold mínimo criado em `Assets/Tests/EditMode/` (2 testes de exemplo).
 
-## O que ficou como débito técnico (decisão consciente, não esquecimento)
+---
 
-- **Git aninhado em `Assets/Afrobarber/Scripts/.git`**: não foi tocado. Está desatualizado em relação ao disco (remoto `github.com/marcelo-braga-dev/afrobarber`) e deve ser tratado como espelho manual, não como histórico confiável, até alguém decidir resincronizá-lo ou descontinuá-lo.
-- **Padrão `eventosSuscritos` em UI**: só o bug confirmado (`LoanPanelUI`) foi corrigido. Outros arquivos de UI que se inscrevem em eventos sem esse padrão continuam como estavam — candidatos a uma passada dedicada futura.
-- **Risco HDRP/URP em mobile**: `MobilePerformanceBootstrap` continua trocando de quality level/pipeline em Android/iOS. A maioria dos materiais do projeto só tem shader `HDRP/Lit`. Não foi alterado nada aqui — precisa de validação em build/device real e de uma decisão de produção (duplicar materiais para URP ou parar de trocar de pipeline em mobile).
-- **Cobertura de testes**: o scaffold criado é só um ponto de partida, não cobertura real dos sistemas principais (maestria, fidelidade, narrativa, financeiro, etc.).
+## Rodada 2 — 2026-09-12
 
-## Verificação feita
+### Contexto
+Segunda análise profunda. Encontrou 10 bugs/débitos técnicos críticos e importantes, além de funcionalidades inteiras desconectadas dos sistemas que deveriam consumi-las.
 
-- Greps de sanidade confirmando que não sobrou nenhuma referência a `DynamicPricingManager` (código ou cena) nem fileID órfão na `GameScene.unity`.
-- Todos os 29 arquivos confirmados como `UTF-8 text` via `file`, com amostra de texto acentuado revisada visualmente.
-- Cada correção do `CLAUDE.md` foi conferida linha a linha contra o código-fonte citado.
-- Este ambiente não tem Unity Editor instalado, então a compilação e o teste em Play Mode **não foram verificados automaticamente**. Recomendação: abrir o projeto no Unity, deixar recompilar, abrir a `GameScene` e testar abrir/fechar o painel de empréstimos e checar o preço de um serviço antes de dar commit/push nesse estado.
+### Bugs corrigidos
+
+| # | Arquivo | Bug |
+|---|---|---|
+| 1 | `BarbershopServiceManager.cs` | `ClientId` volátil — `GetInstanceID()` trocado por `ClientNPC.ClientId` como chave de fidelidade |
+| 2 | `Economy/LoanSystem.cs` | `SpendMoney(valorPagamento)` antes do `Mathf.Min` — destruía dinheiro além do saldo devedor |
+| 3 | `BarbershopServiceManager.cs` | `MissionSystem.RegisterServiceCompleted` movido para `NotificarSistemasExternos` (cobre ambos os fluxos, não só o fallback) |
+| 4 | `Gameplay/VIPClientSystem.cs` | Gorjeta VIP calculada mas nunca registrada na fidelidade; `ClientLoyaltySystem.RegistrarVisita` adicionado com a gorjeta real |
+| 5 | `BarbershopServiceManager.cs` | Duplicação de registro de fidelidade para VIP — `NotificarSistemasExternos` agora pula `ClientLoyaltySystem` para VIPs (VIP registra via `NotificarAtendimentoVip`) |
+| 6 | `Appointment/ClientAppointmentScheduler.cs` | Leak de event handler — `Dictionary<ClientNPC, Action>` rastreia e remove o handler anterior antes de adicionar novo |
+| 7 | `Progression/PlayerXPManager.cs` | `PrestigeSystem.BonusXP10` sem efeito — `AddXP` agora aplica 3 multiplicadores em sequência: upgrade → prestígio → evento cultural |
+| 8 | `BarbershopServiceManager.cs` | `CulturalEventSystem.AplicarBonusDinheiro` nunca chamado — `DistributeAdvancedServiceRewards` aplica o bônus e retorna `moneyFinal`; `NotificarSistemasExternos` recebe o valor pós-bônus |
+
+### Funcionalidades desconectadas — agora conectadas
+
+- **BarbershopUpgradeSystem → sistemas externos**: `AplicarEfeitosNosSistemas()` propaga `MultiplicadorAtracao` → `ClientSpawner`, `ReducaoEnergia` → `PlayerEnergySystem`, `MultiplicadorXP` → `PlayerXPManager`.
+- **PrestigeSystem.GorjetaExtra20**: `ClientLoyaltySystem.GetMultiplicadorGorjeta` já multiplica por `PrestigeSystem.GetBonusGorjeta()` (era o único perk já conectado).
+
+### Correções de infraestrutura
+
+- `SettingsManager.cs`: `Screen.SetResolution()` e `Screen.fullScreen` não são chamados em `Application.isMobilePlatform` (corrige distorção de tela no Android).
+- `PlayAssetDeliveryLoader.cs`: APIs `.states`, `.GetAssetPackState()`, `.GetDownloadStatus()` removidas (CS1061) — usa apenas `isDone` com progresso animado.
+- `MobilePerformanceBootstrap.cs`: suporte a iOS removido (`#elif UNITY_IOS` e campo `iosQualityName` eliminados — projeto não tem alvo iOS ativo).
+- `AssetPackLoadingUI.cs`: `BloquearMenu(true)` movido de `Start()` para `Awake()` — botão Jogar não fica interativo antes do PAD terminar.
+
+### UI de Conquistas criada
+
+Scripts em `Assets/Afrobarber/Scripts/UI/Achievements/`:
+- `AchievementPopupUI.cs` — popup com fila e fade animado, assina `OnConquistaDesbloqueada`
+- `AchievementsPanelUI.cs` — painel de lista com progresso (Abrir/Fechar/RefreshUI)
+- `AchievementsItemUI.cs` — item individual com estado bloqueado/desbloqueado
+
+API adicionada: `AchievementSystem.GetTodasConquistas()→IReadOnlyList<ConquistaData>`.
+
+**Wiring pendente no Unity Editor**: criar `Popup_Conquista` (com `CanvasGroup`) e `Panel_Conquistas` (com ScrollView) no Canvas da HUD e referenciar os campos SerializeField.
+
+### Documentação (`CLAUDE.md`)
+- Seção "Service Flow" reescrita: fluxo de minigame documentado, ordem real de `NotificarSistemasExternos` corrigida (9 itens), `MissionSystem` adicionado à lista.
+- Prestige System: "Wiring pendente" corrigido para "Wiring implementado".
+- Quick Reference atualizada: `PlayerEnergySystem`, `PlayerXPManager`, `InventoryManager`, `BarbershopRatingManager`, `BarbershopUpgradeSystem` com métodos novos.
+- Nova seção "Minigame de Serviço".
+- Helpers não-singleton documentados: `ClientSpawnerLocator`, `BootstrapUIBehaviour`, `PersistentGameObject`.
+- Débito técnico atualizado para refletir o estado real.
+
+---
+
+## Débito técnico remanescente (2026-09-12)
+
+| Item | Status | Ação necessária |
+|---|---|---|
+| **BarbershopUpgradeSystem wiring na cena** | Pendente — requer Unity Editor | Criar filho de GameBootstrap, atribuir 7 assets de `ScriptableObjects/Upgrades/` |
+| **AchievementSystem UI wiring na cena** | Pendente — requer Unity Editor | Criar `Popup_Conquista` + `Panel_Conquistas` no Canvas da HUD |
+| **HDRP/URP em Android** | Não verificável sem device | Validar build real; se materiais ficarem rosas, criar set URP/Lit ou remover troca de pipeline |
+| **Cobertura de testes** | Scaffold existe, cobertura zero | Adicionar testes para sistemas principais (fidelidade, finanças, maestria) |
+| **Eventos sem assinante** | Documentado, não é bug | `OnAtendimentoConcluido`, eventos NarrativeMissionSystem, `OnRelatorioGerado` — pontos de extensão para UI futura |
+| **Sistema Transito** (`Transito/*.cs`) | Existe no código, não documentado | Confirmar se está ativo na cena; se sim, documentar; se não, avaliar remoção |
+| **Sistema de Diálogo contextual** (`Dialogue/DialogueContextOptionsProvider` etc.) | Existe no código, não documentado | Idem — confirmar uso na cena antes de documentar |
+| **Assembly Definitions** | Ausente | Criar `.asmdef` por pasta principal para reduzir tempo de recompilação |
