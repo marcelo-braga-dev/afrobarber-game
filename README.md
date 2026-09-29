@@ -256,10 +256,16 @@ ScriptableObjects/Products/Databases/
 
 Roadmap completo e matriz de funcionalidades em [docs/07-estado-atual-e-roadmap.md](docs/07-estado-atual-e-roadmap.md).
 
-**Curto prazo**
+**Curto prazo — bloqueios críticos (P0-A do 07)**
+- Barra de navegação na HUD (Loja, Inventário, Biblioteca e demais painéis) + kit inicial no inventário — hoje um save novo não consegue comprar ferramentas nem atender
+- Salvar e restaurar a data/hora do `GameTimeSystem` — hoje toda sessão volta a 10/04/2026
+- Contas mensais: não nascer vencidas, verificar atraso com `>=`, chamar `NotificarContaPaga` ao pagar
+- Pausar o tempo com painéis abertos e recalibrar paciência e agenda (hoje 90 min de paciência = 30 s reais)
+
+**Curto prazo — integração**
 - Colocar `CutMasterySystem` na `GameScene` (maestria hoje não roda)
 - Spawnar clientes VIP (`MarcarClienteComoVip` não é chamado) e preencher `narrativeCharacterId` nos NPCs dos arcos
-- Barra de botões da HUD para todos os painéis + painel de Conquistas + tela de Prestígio
+- Painel de Conquistas e tela de Prestígio
 - Corrigir IDs de cortes nos eventos culturais, conquistas inalcançáveis e escala de nota do minigame
 
 **Médio prazo**
@@ -274,6 +280,13 @@ Roadmap completo e matriz de funcionalidades em [docs/07-estado-atual-e-roadmap.
 
 Lista detalhada em [docs/07-estado-atual-e-roadmap.md](docs/07-estado-atual-e-roadmap.md#5-inconsistências-de-conteúdo-e-design). Principais:
 
+**Bloqueios críticos** ([07 §2](docs/07-estado-atual-e-roadmap.md#2-bloqueios-críticos)):
+- Nenhum botão/atalho da `GameScene` chama `OpenLoja`, `OpenInventario` ou `OpenBibliotecaCortes`, e o inventário começa vazio
+- `GameTimeSystem` não persiste data/hora
+- `FinanceMonthlyBillsManager`: contas de abril nascem vencidas; atraso verificado por igualdade; `NotificarContaPaga` sem chamador
+- Paciência e agenda em minutos de jogo a 3 min/s, sem pausa (`SetPause` sem chamadores)
+
+**Demais débitos:**
 - `CutMasterySystem`, `AchievementsPanelUI` ausentes da `GameScene`; VIP e arcos narrativos sem gatilho na cena; Prestígio sem UI
 - Eventos culturais desbloqueiam IDs de corte inexistentes (falta prefixo `req_`)
 - Conquistas `melhorias_10` e `maestria_lenda_25` inalcançáveis (7 reformas, 24 cortes)

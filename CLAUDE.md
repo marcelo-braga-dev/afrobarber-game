@@ -296,16 +296,16 @@ Scheduled → WaitingToSpawn → Spawned → Completed
 
 | Enum | Efeito |
 |---|---|
-| `BonusXP10` | +10% XP em todos os atendimentos |
-| `GorjetaExtra20` | +20% gorjeta — empilha com `ClientLoyaltySystem` |
+| `BonusXP10` | ✅ +10% XP em todo XP recebido |
+| `GorjetaExtra20` | ❌ **Sem efeito hoje.** Projetado: +20% gorjeta, empilhando com `ClientLoyaltySystem` — mas `GetMultiplicadorGorjeta` não é aplicado a nenhuma gorjeta real |
 | `ReputacaoInicial` | Ao prestigiar, redefine a reputação para 3.5 (a reputação padrão do jogo começa em 3.0; sem a perk, o prestígio não mexe na reputação) |
-| `AlugueMenor15` | -15% no valor do aluguel mensal |
-| `DinheiroInicial500` | +BM$500 ao recomeçar |
+| `AlugueMenor15` | ❌ **Sem efeito hoje.** Projetado: -15% no aluguel — `GetFatorAluguel()` não tem chamadores |
+| `DinheiroInicial500` | ✅ +BM$500 ao recomeçar |
 
-**API de modificadores** (consumida por outros sistemas):
-- `GetBonusXP()` → 1.10f ou 1f
-- `GetBonusGorjeta()` → 1.20f ou 1f
-- `GetFatorAluguel()` → 0.85f ou 1f
+**API de modificadores:**
+- `GetBonusXP()` → 1.10f ou 1f — ✅ consumido por `PlayerXPManager.AddXP`
+- `GetBonusGorjeta()` → 1.20f ou 1f — ❌ só via `GetMultiplicadorGorjeta`, que não afeta gorjetas
+- `GetFatorAluguel()` → 0.85f ou 1f — ❌ sem chamadores
 - `GetReputacaoInicial()` → 3.5f ou 2f (sem chamadores; o reset usa `ResetRatings()` + `AddReview(3.5f)` direto)
 
 **Wiring implementado:** `PlayerXPManager.AddXP` aplica três multiplicadores em sequência: `upgradeXPMultiplier` (melhorias da barbearia) → `PrestigeSystem.Instance?.GetBonusXP() ?? 1f` → `CulturalEventSystem.AplicarBonusXP(amount)` (se evento ativo). A perk `BonusXP10` produz efeito real.
@@ -384,7 +384,7 @@ NarrativeMissionSystem.Instance?.RegistrarAtendimentoNarrativo(
 | `Fiel` | 10–19 | 1.5× | 15 min | 18% |
 | `Lendario` | 20+ | 1.85× | 25 min | 30% |
 
-**Bônus de Prestígio:** `GetMultiplicadorGorjeta` multiplica pelo `PrestigeSystem.GetBonusGorjeta()` automaticamente.
+**Bônus de Prestígio (❌ sem efeito hoje):** `GetMultiplicadorGorjeta` multiplica pelo `PrestigeSystem.GetBonusGorjeta()`, mas o resultado não é aplicado a nenhuma gorjeta — só aparece no texto da fala de consulta de fidelidade.
 
 **Wiring (✅ implementado):** `BarbershopServiceManager` registra a visita (`RegistrarVisita`) ao concluir o serviço usando `ClientNPC.ClientId`. **Pendente (❌):** os bônus de gorjeta, paciência e elogio não são consumidos (só `GetMultiplicadorGorjeta` aparece, no texto do diálogo).
 

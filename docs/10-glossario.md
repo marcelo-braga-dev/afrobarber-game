@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | **Documento** | 10 · Glossário |
-| **Versão** | 1.2 — 29/09/2026 |
+| **Versão** | 1.4 — 29/09/2026 |
 | **Leitores** | Todos |
 
 ## Sumário
@@ -35,7 +35,8 @@
 | **Fidelidade** | Nível de relacionamento de um cliente pela quantidade de visitas: Novo, Conhecido, Regular, Fiel, Lendário. |
 | **VIP** | Cliente especial que paga mais, dá mais gorjeta e tem pouca paciência. |
 | **Personagem narrativo** | Morador com história em capítulos: Seu Ribeiro, Kemi, Gabriel, Dona Conceição, Leo. |
-| **Biblioteca de Cortes** | Enciclopédia dos 24 cortes, desbloqueados ao realizá-los. |
+| **Biblioteca de Cortes** | Enciclopédia dos 24 cortes, desbloqueados ao realizá-los. Nome usado na interface. |
+| **Enciclopédia Afro** | Outro nome da Biblioteca de Cortes, usado no tutorial e na conquista "Mestre da Enciclopédia Afro". Os nomes ainda serão unificados. |
 | **Maestria** | Domínio do jogador em um corte específico, em 5 níveis (até Lenda do Estilo). |
 | **Nível do barbeiro** | Progressão geral por XP: Aprendiz da Navalha → Lenda AfroBarber. |
 | **Missão** | Meta com três degraus (tiers) e recompensas resgatáveis. |

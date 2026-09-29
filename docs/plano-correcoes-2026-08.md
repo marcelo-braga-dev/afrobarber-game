@@ -52,7 +52,7 @@ Segunda análise profunda. Encontrou 10 bugs/débitos técnicos críticos e impo
 ### Funcionalidades desconectadas — agora conectadas
 
 - **BarbershopUpgradeSystem → sistemas externos**: `AplicarEfeitosNosSistemas()` propaga `MultiplicadorAtracao` → `ClientSpawner`, `ReducaoEnergia` → `PlayerEnergySystem`, `MultiplicadorXP` → `PlayerXPManager`.
-- **PrestigeSystem.GorjetaExtra20**: `ClientLoyaltySystem.GetMultiplicadorGorjeta` já multiplica por `PrestigeSystem.GetBonusGorjeta()` (era o único perk já conectado).
+- **PrestigeSystem.GorjetaExtra20** ❌ *(revisto em 2026-09-29: sem efeito real — ver tabela no fim)*: `ClientLoyaltySystem.GetMultiplicadorGorjeta` já multiplica por `PrestigeSystem.GetBonusGorjeta()` (era o único perk já conectado).
 
 ### Correções de infraestrutura
 

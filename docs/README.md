@@ -4,7 +4,7 @@
 |---|---|
 | **Projeto** | AfroBarber — simulador de barbearia afro-brasileira |
 | **Versão do jogo** | 0.1.0 (pré-alfa) |
-| **Versão da documentação** | 1.3 — 29/09/2026 |
+| **Versão da documentação** | 1.4 — 29/09/2026 |
 | **Motor** | Unity 6 (6000.3.10) |
 | **Idioma** | Português do Brasil |
 
@@ -99,8 +99,9 @@ Detalhes de cada item em [07 — Estado atual e roadmap](07-estado-atual-e-roadm
 |---|---|---|
 | 1.0 | 29/09/2026 | Criação dos documentos 01 a 07 a partir de análise do código, assets e cena. |
 | 1.1 | 29/09/2026 | Revisão geral; marcação de funções em integração; documento 08 (editais). |
-| 1.3 | 29/09/2026 | Incorporação de revisão externa, verificada no código: bloqueios críticos (acesso à Loja/Inventário/Biblioteca, data não salva, contas iniciais vencidas e verificação por igualdade, paciência em tempo real); seções de balanceamento e de precisão cultural/propriedade intelectual no 07; correções culturais no 06 (CROWN Act, Palenque, Malcolm X, Poetic Justice, Afropunk, datas); textos do 08 sem promessas além da build; README raiz, CLAUDE.md e plano de correções alinhados ao 07. |
 | 1.2 | 29/09/2026 | Análise profunda das regras: modificadores não aplicados, desgaste inativo, visual de cabelo não configurado, reputação inicial 3,0; padronização (cabeçalho, sumário, legenda de status); documentos 09 (arte, áudio e tecnologia) e 10 (glossário). |
+| 1.3 | 29/09/2026 | Incorporação de revisão externa, verificada no código: bloqueios críticos (acesso à Loja/Inventário/Biblioteca, data não salva, contas iniciais vencidas e verificação por igualdade, paciência em tempo real); seções de balanceamento e de precisão cultural/propriedade intelectual no 07; correções culturais no 06 (CROWN Act, Palenque, Malcolm X, Poetic Justice, Afropunk, datas); textos do 08 sem promessas além da build; README raiz, CLAUDE.md e plano de correções alinhados ao 07. |
+| 1.4 | 29/09/2026 | Ajustes da segunda revisão externa: status ❌ das perks GorjetaExtra20 e AlugueMenor15 no CLAUDE.md; bloqueios no topo do Roadmap e dos Débitos do README; Loja/Inventário como ⚠️ na matriz do 07; resumo do 07 diz "programado, jogável com intervenção no Editor"; duplicatas entre 07 §5 e §6 removidas; etapa 1 do cronograma do 08 começa pelos bloqueios; nomes de eventos atualizados no 04; aviso sobre pagamento de contas no 02; glossário com "Enciclopédia Afro". |
 
 ## 6. Como manter esta documentação
 
