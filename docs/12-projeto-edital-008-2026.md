@@ -103,7 +103,7 @@ Nome completo, usado no corpo do projeto: ***AfroBarber - Cada Corte, uma Histó
 
 ## D. Perfil do público-alvo e classificação indicativa
 
-> **Público principal:** crianças a partir de 12 anos, adolescentes e adultos que jogam no celular ou no computador.
+> **Público principal:** adolescentes a partir de 12 anos, jovens e adultos que jogam no celular ou no computador.
 >
 > **Públicos prioritários:**
 > - estudantes do ensino fundamental II e médio de escolas públicas de Ribeirão Preto e seus professores (História, Artes, Sociologia);
@@ -131,7 +131,7 @@ Nome completo, usado no corpo do projeto: ***AfroBarber - Cada Corte, uma Histó
 > - Distribuição digital: `[500]` downloads nos três primeiros meses após a publicação.
 > - Guia do professor: `[200]` downloads e `[40]` exemplares impressos entregues às escolas participantes.
 >
-> **Total estimado:** `[~700]` pessoas alcançadas diretamente durante a vigência do projeto.
+> **Total estimado:** `[~900]` pessoas alcançadas diretamente durante a vigência do projeto (80 + 120 presenciais, 500 downloads do jogo e 200 do guia).
 
 ## G. Plano de divulgação
 
@@ -147,7 +147,7 @@ Nome completo, usado no corpo do projeto: ***AfroBarber - Cada Corte, uma Histó
 ## H. Proposta de acessibilidade
 
 > **Comunicacional:**
-> - **No jogo:** os 120 capítulos do acervo têm **narração e texto na tela ao mesmo tempo**, atendendo pessoas surdas e pessoas com baixa visão ou dificuldade de leitura; textos em linguagem simples; todo o diálogo é escrito (não depende de áudio); indicadores de forma e ícone além da cor no minigame, pensando em pessoas daltônicas; opção de tamanho de fonte maior; modo sem pressão de tempo no minigame (janela de acerto ampliada), para pessoas com dificuldades motoras; jogável com teclado, mouse ou toque.
+> - **No jogo:** os 120 capítulos do acervo têm **narração e texto na tela ao mesmo tempo**: o texto atende pessoas surdas ou com deficiência auditiva, e a narração atende pessoas com baixa visão ou dificuldade de leitura; textos em linguagem simples; todo o diálogo é escrito (não depende de áudio); indicadores de forma e ícone além da cor no minigame, pensando em pessoas daltônicas; opção de tamanho de fonte maior; modo sem pressão de tempo no minigame (janela de acerto ampliada), para pessoas com dificuldades motoras; jogável com teclado, mouse ou toque.
 > - **Trailer:** janela de Libras, legendas e audiodescrição.
 > - **Guia do professor:** PDF acessível, compatível com leitores de tela.
 > - **Peças de divulgação:** texto alternativo em imagens, legendas em vídeos e linguagem simples.
