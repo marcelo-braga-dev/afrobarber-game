@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | **Documento** | 08 · Referência para inscrição em editais |
-| **Versão** | 1.2 — 29/09/2026 |
+| **Versão** | 1.3 — 29/09/2026 |
 | **Leitores** | Proponente, produção cultural, redatores de projeto |
 | **Relacionados** | [01 Visão geral](01-visao-geral-do-jogo.md) · [06 Universo cultural](06-universo-cultural.md) · [07 Estado atual](07-estado-atual-e-roadmap.md) · [09 Arte e tecnologia](09-arte-audio-e-tecnologia.md) |
 
@@ -55,7 +55,7 @@
 | **Plataformas** | Android (principal para acesso amplo) e PC (Windows) |
 | **Idioma** | Português do Brasil |
 | **Motor** | Unity 6 (6000.3.10) |
-| **Estágio atual** | Protótipo jogável avançado (pré-alfa) — versão 0.1.0; loop principal completo e jogável; parte dos sistemas de progressão em integração |
+| **Estágio atual** | Protótipo avançado (pré-alfa) — versão 0.1.0; ciclo principal programado de ponta a ponta; integração de interface, salvamento e sistemas de progressão em andamento |
 | **Início do desenvolvimento** | Março de 2026 `[CONFIRMAR]` |
 | **Classificação indicativa pretendida** | Livre `[CONFIRMAR com autoclassificação]` |
 | **Identificador Android** | `br.com.afrobarber.game` |
@@ -78,19 +78,19 @@
 ### 2.3 Resumo médio — 489 caracteres (cabe em campos de até 500)
 > AfroBarber é um jogo eletrônico de simulação e gestão ambientado numa barbearia afro de bairro. O jogador atende clientes, executa cortes por meio de um minigame de habilidade, administra o negócio e se relaciona com a comunidade. Cada um dos 24 estilos do jogo — de Tranças Nagô e Black Power a Sisterlocks e Skin Fade — traz sua história, época e significado cultural, formando uma biblioteca viva da estética negra. Um jogo brasileiro que celebra identidade, memória e empreendedorismo.
 
-### 2.4 Resumo longo — 1.001 caracteres com espaços (cortar uma palavra se o limite for 1.000)
-> AfroBarber é um jogo eletrônico brasileiro de simulação em terceira pessoa que coloca a barbearia afro — espaço histórico de encontro, autoestima e resistência da população negra — no centro da experiência. O jogador abre sua própria barbearia num bairro urbano, recebe moradores com personalidades e histórias próprias, planeja cada atendimento, executa o corte em um minigame de precisão e cuida das finanças, dos preços, da reputação e da própria energia.
+### 2.4 Resumo longo — 989 caracteres com espaços (cabe em campos de até 1.000)
+> AfroBarber é um jogo eletrônico brasileiro de simulação em terceira pessoa que coloca a barbearia afro — espaço histórico de encontro, autoestima e resistência da população negra — no centro da experiência. O jogador abre sua barbearia num bairro urbano, recebe moradores com personalidades e histórias próprias, planeja cada atendimento, executa o corte em um minigame de precisão e cuida das finanças, dos preços, da reputação e da energia.
 >
-> O diferencial é o conteúdo cultural integrado à jogabilidade: 24 cortes reais, com contexto histórico, significado e curiosidades, são desbloqueados à medida que o jogador os realiza, compondo uma Biblioteca de Cortes que percorre da ancestralidade africana à barbearia contemporânea. Um calendário cultural celebra datas como o Dia da Consciência Negra, e arcos narrativos tratam de autoestima, legado, racismo e pertencimento. O projeto une entretenimento, educação para as relações étnico-raciais e valorização da cultura afro-brasileira.
+> O diferencial é o conteúdo cultural integrado à jogabilidade: 24 cortes reais, com contexto histórico, significado e curiosidades, são desbloqueados à medida que o jogador os realiza, compondo uma Biblioteca de Cortes que vai da ancestralidade africana à barbearia contemporânea. Um calendário cultural celebra datas como o Dia da Consciência Negra, e arcos narrativos em desenvolvimento tratam de autoestima, legado, racismo e pertencimento. Une entretenimento, educação para as relações étnico-raciais e valorização da cultura afro-brasileira.
 
-### 2.5 Descrição completa — cerca de 2.440 caracteres (cabe em campos de até 2.500)
+### 2.5 Descrição completa — cerca de 2.415 caracteres (cabe em campos de até 2.500)
 > AfroBarber é um jogo eletrônico de simulação e gestão, desenvolvido no Brasil, em português, para celular (Android) e computador. O jogador assume o papel de um(a) jovem barbeiro(a) que abre a própria barbearia especializada em cortes afro num bairro urbano. Ali, recebe moradores que chegam por agendamento, esperam na sala de espera, conversam entre si e com o barbeiro, e depois de atendidos voltam para a cidade.
 >
-> Cada atendimento é um pequeno desafio: ler o pedido do cliente, escolher as ferramentas certas (máquinas, tesouras, pentes, navalhas, produtos capilares), montar as etapas do serviço e executar o corte em um minigame de precisão e ritmo. O resultado — de "Horrível" a "Perfeito" — define pagamento, gorjeta, reputação e experiência. Fora da cadeira, o jogador administra o negócio: compra equipamentos, define preços e horários, paga aluguel, luz e água, pode recorrer a empréstimos, investe em reformas (como painéis de arte afro-brasileira e som ambiente com afrobeat e soul) e precisa cuidar da própria energia para não chegar à exaustão.
+> Cada atendimento é um pequeno desafio: ler o pedido do cliente, escolher as ferramentas certas (máquinas, tesouras, pentes, navalhas, produtos capilares), montar as etapas do serviço e executar o corte em um minigame de precisão e ritmo. O resultado — de "Horrível" a "Perfeito" — define pagamento, gorjeta, reputação e experiência. Fora da cadeira, o jogador administra o negócio: compra equipamentos, define preços e horários, paga aluguel, luz e água, pode recorrer a empréstimos, investe em reformas que atraem clientes e reduzem o cansaço e precisa cuidar da própria energia para não chegar à exaustão.
 >
 > O coração do projeto é a valorização cultural. O jogo reúne 24 estilos de cabelo reais — entre eles Tranças Nagô, Cornrows, Turbante, Locs, Afro Natural, Black Power, Conk, Jheri Curl, Flat Top, Box Braids, Sisterlocks, Afro Degradê e Skin Fade — cada um com época, contexto histórico, significado cultural e curiosidade. Esse conteúdo é desbloqueado quando o jogador faz o corte, formando uma Biblioteca de Cortes que funciona como uma linha do tempo da estética negra, com referências que vão de Zumbi dos Palmares, Angela Davis e Malcolm X às Baianas de Acarajé, ao hip-hop e ao Afropunk.
 >
-> A narrativa aprofunda esse olhar por meio de personagens do bairro: um senhor que descobre que a barbearia ocupa o lugar da antiga barbearia de um amigo falecido; uma jovem designer que reconstrói a relação com o próprio cabelo depois do racismo sofrido na escola; um universitário da periferia que enfrenta preconceito no trabalho; uma professora aposentada que transforma a barbearia em espaço de roda de conversa; e um músico que encontra inspiração na cadeira do barbeiro. Um calendário cultural celebra o Carnaval, o Dia Nacional do Turbante e o Mês da Consciência Negra.
+> Em desenvolvimento, a narrativa aprofunda esse olhar por meio de personagens do bairro: um senhor que descobre que a barbearia ocupa o lugar da antiga barbearia de um amigo falecido; uma jovem designer que reconstrói a relação com o próprio cabelo depois do racismo sofrido na escola; um universitário da periferia que enfrenta preconceito no trabalho; uma professora aposentada que transforma a barbearia em espaço de roda de conversa; e um músico que encontra inspiração na cadeira do barbeiro. Um calendário cultural celebra o Carnaval, o Dia do Turbante e o Mês da Consciência Negra.
 >
 > Com isso, AfroBarber se propõe a ser, ao mesmo tempo, um jogo divertido, um produto da indústria criativa brasileira e uma ferramenta de educação para as relações étnico-raciais, alinhada à Lei 10.639/2003.
 
@@ -108,7 +108,7 @@ Use os parágrafos abaixo como base; combine-os conforme o foco do edital (cultu
 
 **3.4 Indústria criativa e desenvolvimento local.** O projeto é desenvolvido no Brasil, em português, com tecnologia profissional (Unity 6) e sistemas completos de simulação. O fomento permite transformar um protótipo avançado em produto publicado, gerando trabalho qualificado `[em (município/UF)]` e fortalecendo a produção nacional de jogos.
 
-**3.5 Maturidade do projeto.** O AfroBarber não parte do zero: já existe um protótipo jogável com o ciclo completo de atendimento, economia, progressão e todo o conteúdo cultural dos 24 cortes escrito e integrado. O recurso será aplicado em etapas claras — integração dos sistemas restantes, arte e áudio próprios, acessibilidade, testes com público e publicação —, o que reduz o risco de execução.
+**3.5 Maturidade do projeto.** O AfroBarber não parte do zero: já existe um protótipo com o ciclo completo de atendimento programado, economia, progressão e todo o conteúdo cultural dos 24 cortes escrito e integrado. O recurso será aplicado em etapas claras — integração dos sistemas restantes, arte e áudio próprios, acessibilidade, testes com público e publicação —, o que reduz o risco de execução.
 
 ---
 
@@ -148,7 +148,7 @@ Dados levantados do projeto em 29/09/2026:
 |---|---|
 | Código-fonte | ~206 scripts C# e ~33 mil linhas de código próprio |
 | Cenas | Menu principal e cena de jogo (barbearia + bairro) |
-| Ciclo de atendimento | Completo e jogável: chegada, espera, pedido, planejamento, minigame, avaliação, pagamento e saída |
+| Ciclo de atendimento | Programado de ponta a ponta: chegada, espera, pedido, planejamento, minigame, avaliação, pagamento e saída. Pendências de integração antes de testes com público: acesso à loja pela interface, salvamento da data e ritmo da paciência (ver [07 §2](07-estado-atual-e-roadmap.md#2-bloqueios-críticos)) |
 | Conteúdo cultural | **24 cortes** com época, história, significado e curiosidade, integrados à Biblioteca de Cortes |
 | Economia | Caixa, extrato, contas mensais, empréstimos, loja com 41 produtos, 7 reformas |
 | Progressão | 5 níveis, 8 missões, 6 tipos de desafio diário com ranking, 29 conquistas |
@@ -161,7 +161,7 @@ Dados levantados do projeto em 29/09/2026:
 | Qualidade | 28 arquivos de testes automatizados com ~357 casos |
 | Documentação | Documento de design completo (pasta `docs/`) e documentação técnica |
 
-**O que o recurso vai financiar:** ver objetivos específicos (seção 4.2), cronograma (seção 7) e a lista de pendências em [07-estado-atual-e-roadmap.md](07-estado-atual-e-roadmap.md#6-plano-de-ação-priorizado).
+**O que o recurso vai financiar:** ver objetivos específicos (seção 4.2), cronograma (seção 7) e a lista de pendências em [07-estado-atual-e-roadmap.md](07-estado-atual-e-roadmap.md#9-plano-de-ação-priorizado).
 
 ---
 
@@ -201,13 +201,13 @@ O desenvolvimento segue ciclos curtos (iterações) com build jogável ao fim de
 ### 9.1 O que o jogo já tem
 - Todo o diálogo é **em texto** (não depende de áudio para ser entendido).
 - Interface em **português**, com linguagem coloquial e acessível.
-- Pode ser jogado com **teclado/mouse, gamepad ou toque**.
+- Pode ser jogado com **teclado e mouse** ou **toque**; o gamepad move o personagem, mas ainda não interage nem joga o minigame (suporte completo previsto na seção 9.2).
 - Não há violência; tema adequado a todas as idades.
 
 ### 9.2 O que será implementado *(proposta)*
 - **Modo sem pressão de tempo** no minigame (janela de acerto maior ou execução automática), para pessoas com dificuldades motoras.
 - **Tamanho de fonte ajustável** e **modo de alto contraste**.
-- **Controles remapeáveis**.
+- **Controles remapeáveis** e **suporte completo a gamepad** (interação e minigame).
 - **Indicadores visuais além da cor** no minigame (formato/ícone), pensando em daltonismo.
 - **Legendas** nos vídeos de divulgação; **trailer com janela de Libras** e **audiodescrição**.
 - **Guia do professor** em formato acessível (PDF com leitura por leitor de tela).
@@ -239,7 +239,7 @@ O desenvolvimento segue ciclos curtos (iterações) com build jogável ao fim de
 | Imprensa | Kit de imprensa com release, imagens e trailer |
 | Comunidade | Barbearias parceiras com cartaz/QR code para baixar o jogo |
 
-O próprio calendário do jogo ajuda na divulgação: **Carnaval (fevereiro)**, **Dia Nacional do Turbante (25/09)** e **Mês da Consciência Negra (novembro)** já são eventos dentro do jogo.
+O próprio calendário do jogo ajuda na divulgação: **Carnaval**, **Dia do Turbante (25/09)** e **Mês da Consciência Negra (novembro)** já são eventos programados no jogo.
 
 ---
 
@@ -301,10 +301,12 @@ Editais costumam exigir declaração de titularidade dos direitos. Hoje o projet
 | AllSkyFree (céus) | Skybox | Conferir licença |
 | Casual Game Sounds U6 | Efeitos sonoros | Licença incluída no pacote (`license.pdf`) — conferir termos |
 | Versatile Studio Assets | Objetos de cena | Conferir licença |
-| Modelos de personagens (Sketchfab, Ready Player Me, modelos gerados por IA) | Clientes e barbeiro | Conferir licença de cada modelo; **substituir por personagens autorais** |
-| Veículos (Fusca, Opala, Jeep, Fox) | Trânsito | Conferir origem e licença; evitar marcas registradas |
+| Modelos de personagens (Sketchfab, Ready Player Me, modelos gerados por IA) | Clientes e barbeiro | Conferir licença de cada modelo e os termos e a continuidade do serviço Ready Player Me; **substituir por personagens autorais** |
+| Veículos (Fusca, Opala, Jeep, Fox) | Trânsito | Nomes e formas são **marcas registradas** — usar nomes e modelos genéricos |
 | Músicas "Elijah_K" (Cairo, Gorilla, Ice Cream) | Trilha | Conferir licença; **substituir por trilha original** |
-| Fonte Londrina Solid | Títulos | Google Fonts / SIL Open Font License `[confirmar]` |
+| Fontes Londrina Solid, Exo 2, Rajdhani, Marcellus | Interface | Google Fonts / SIL Open Font License `[confirmar cada uma]` |
+| Máscaras africanas (incl. Chokwe) e tambor djembê escaneados | Decoração | Conferir origem e licença; contextualizar culturalmente |
+| Nome "Fliperama Pac-Man" | Item da loja | **Marca da Bandai Namco** — renomear (ex.: "Fliperama Retrô") e trocar o visual |
 | Unity 6 | Motor | Conferir plano de licença conforme faturamento |
 
 ---
@@ -329,7 +331,8 @@ Editais costumam exigir declaração de titularidade dos direitos. Hoje o projet
 | **Lei 10.639/2003** (altera a LDB — ensino de história e cultura afro-brasileira) | Conteúdo da Biblioteca de Cortes e guia do professor |
 | **Lei 11.645/2008** (amplia para história e cultura indígena) | Possível expansão de conteúdo `[se aplicável]` |
 | **Estatuto da Igualdade Racial — Lei 12.288/2010** | Valorização da cultura e da identidade negra |
-| **Dia Nacional de Zumbi e da Consciência Negra (20/11)** | Evento dentro do jogo (XP em dobro) e janela de divulgação |
+| **Dia Nacional de Zumbi e da Consciência Negra (20/11)** — Lei 12.519/2011; feriado nacional pela **Lei 14.759/2023** | Evento dentro do jogo (XP em dobro) e janela de divulgação |
+| **Lei 12.987/2014** — Dia Nacional de Tereza de Benguela e da Mulher Negra (25/07) | Proposta de evento de julho no calendário do jogo |
 | **Marco Legal da Indústria de Jogos Eletrônicos — Lei 14.852/2024** | Reconhece os jogos como setor da economia criativa e da cultura |
 | **Política Nacional Aldir Blanc (PNAB) — Lei 14.399/2022** e editais estaduais/municipais derivados | Possível enquadramento em cultura digital / jogos |
 | **Lei Paulo Gustavo — LC 195/2022** | Editais de audiovisual e demais áreas `[conferir se ainda há ciclos abertos]` |
@@ -364,7 +367,7 @@ Porque ela é um espaço real e cotidiano da cultura negra — de sociabilidade,
 Os textos foram escritos a partir de fatos históricos e referências conhecidas, com tom de celebração. O projeto prevê consultoria especializada e testes com a comunidade antes da publicação.
 
 **O projeto é viável no prazo?**
-Sim. O ciclo principal do jogo já funciona e todo o conteúdo cultural está escrito e integrado. O recurso financia etapas bem definidas: integração, arte e áudio próprios, acessibilidade, testes, publicação e ações educativas.
+Sim. O ciclo principal do jogo já está programado, com cerca de 357 testes automatizados, e todo o conteúdo cultural está escrito e integrado. O recurso financia etapas bem definidas: integração, arte e áudio próprios, acessibilidade, testes, publicação e ações educativas.
 
 **Qual o diferencial em relação a outros simuladores?**
 A combinação de habilidade (minigame), gestão (economia completa) e conteúdo cultural brasileiro real, com personagens negros como protagonistas.

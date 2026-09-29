@@ -3,11 +3,11 @@
 | | |
 |---|---|
 | **Documento** | 06 · Universo cultural e conteúdo educativo |
-| **Versão** | 1.2 — 29/09/2026 |
+| **Versão** | 1.3 — 29/09/2026 |
 | **Leitores** | Educadores, roteiristas, consultores culturais, avaliadores |
 | **Relacionados** | [01 Visão geral](01-visao-geral-do-jogo.md) · [04 Progressão](04-progressao-e-objetivos.md) · [08 Editais](08-referencia-para-editais.md) |
 
-> O conteúdo cultural do jogo: identidade estética, os 24 cortes da Biblioteca (com história, significado e curiosidade), o calendário cultural, a rede social BarberBook, a linguagem dos personagens e o uso pedagógico. Todo o texto histórico abaixo é o mesmo que o jogador lê dentro do jogo.
+> O conteúdo cultural do jogo: identidade estética, os 24 cortes da Biblioteca (com história, significado e curiosidade), o calendário cultural, a rede social BarberBook, a linguagem dos personagens e o uso pedagógico. O texto histórico abaixo é o que o jogador lê dentro do jogo, com **seis curiosidades revisadas nesta versão** (marcadas ✎). Essas revisões ainda precisam ser aplicadas nos assets `Request_*.asset`; recomenda-se validação por consultoria em cultura afro-brasileira.
 
 ## Sumário
 1. [Identidade e referências](#1-identidade-e-referências)
@@ -29,12 +29,13 @@ AfroBarber mistura:
 - **Ancestralidade africana** — tranças, turbantes, locs, significados espirituais;
 - **Movimentos de afirmação** — Black is Beautiful, Black Power, movimento de cabelos naturais, Afropunk, Consciência Negra.
 
-Referências históricas citadas dentro do jogo: **Angela Davis, Malcolm X, Zumbi dos Palmares, Janet Jackson (*Poetic Justice*), Bob Marley, Michael Jackson (*Thriller*), Will Smith (*Um Maluco no Pedaço*), Bobby Brown, Kid 'n Play, Dra. JoAnne Cornwell, Jheri Redding, as Baianas de Acarajé de Salvador, o candomblé e a umbanda, o festival Afropunk** e a lei californiana de 2018 contra discriminação por penteado natural.
+Referências históricas citadas dentro do jogo: **Angela Davis, Malcolm X, Zumbi dos Palmares, Janet Jackson (*Poetic Justice*), Bob Marley, Michael Jackson (*Thriller*), Will Smith (*Um Maluco no Pedaço*), Bobby Brown, Kid 'n Play, Dra. JoAnne Cornwell, Jheri Redding, as Baianas de Acarajé de Salvador, o candomblé e a umbanda, o festival Afropunk** e o CROWN Act californiano (2019) contra discriminação por penteado natural.
 
 Princípios de conteúdo:
 1. **Precisão e respeito** — cortes reais, datas reais, significados contextualizados.
-2. **Celebração antes de lamento** — a dor histórica aparece (Conk, tranças como mapas de fuga), mas o tom final é de orgulho.
+2. **Celebração antes de lamento** — a dor histórica aparece (Conk, relatos de tranças como mapas de fuga), mas o tom final é de orgulho.
 3. **Brasil no centro** — referências afro-brasileiras (candomblé, Baianas, seleção brasileira, jovens da periferia) ao lado da diáspora americana e caribenha.
+4. **Fontes verificáveis** — tradições orais são apresentadas como relatos; citações vêm com a frase original.
 
 ---
 
@@ -82,12 +83,12 @@ Cada corte é também um **pedido de serviço**: tem preço, tempo, XP e dificul
 **Tranças Nagô** — *Ancestral–presente*
 - **História:** com raízes em sociedades africanas há milênios, as tranças rasteiras carregam significado social, espiritual e cultural profundo.
 - **Significado:** ancestralidade, memória coletiva, pertencimento e resistência cultural. Cada padrão de trança conta uma história.
-- **Curiosidade:** em algumas culturas africanas, as tranças eram usadas para esconder mapas de rotas de fuga durante a escravidão, tornando o cabelo um instrumento de sobrevivência.
+- **Curiosidade** ✎: segundo a tradição oral afro-colombiana de San Basilio de Palenque, ligada ao líder quilombola Benkos Biohó, mulheres escravizadas trançavam mapas de rotas de fuga nos cabelos — o cabelo como instrumento de sobrevivência.
 
 **Cornrows** — *Ancestral–presente*
 - **História:** um dos estilos de trança mais antigos do mundo, com registros em esculturas africanas de milênios atrás.
 - **Significado:** ancestralidade, resistência, identidade e criatividade. Cada padrão pode contar uma história diferente sobre quem o usa.
-- **Curiosidade:** em 2018, uma lei na Califórnia proibiu discriminação com base em penteados naturais como cornrows, reconhecendo essa proibição como forma de racismo.
+- **Curiosidade** ✎: em 2019, a Califórnia aprovou o **CROWN Act** (em vigor desde 2020), primeira lei dos EUA a proibir discriminação por penteados naturais como cornrows, reconhecendo essa discriminação como forma de racismo.
 
 **Dreads / Locs** — *Ancestral–presente*
 - **História:** locs aparecem em diferentes culturas ao redor do mundo, mas ganharam forte associação moderna com identidade negra e resistência cultural.
@@ -104,7 +105,7 @@ Cada corte é também um **pedido de serviço**: tem preço, tempo, XP e dificul
 **Conk** — *1920s–1960s*
 - **História:** um dos primeiros estilos amplamente adotados por homens negros nos EUA, usando mistura química à base de soda cáustica para alisar os fios; popular nos anos 1930–40.
 - **Significado:** a tensão entre adaptação e resistência e o impacto dos padrões eurocêntricos sobre a identidade negra. Sua rejeição tornou-se ato político de afirmação.
-- **Curiosidade:** Malcolm X descreve em sua autobiografia a dor do primeiro conk e, anos depois, o chama de "o primeiro grande passo na destruição da própria autoestima".
+- **Curiosidade** ✎: em sua autobiografia, Malcolm X descreve a dor do primeiro conk e o chama de *"my first really big step toward self-degradation"* — "meu primeiro grande passo rumo à autodegradação".
 
 **Afro Natural** — *1950s*
 - **História:** antes do Black Power, muitos negros já usavam o cabelo natural, sobretudo em ambientes domésticos e comunitários, longe da pressão do mundo do trabalho.
@@ -136,12 +137,12 @@ Cada corte é também um **pedido de serviço**: tem preço, tempo, XP e dificul
 **Box Braids** — *1990s–presente*
 - **História:** ganharam visibilidade internacional nos anos 90, especialmente após **Janet Jackson** usá-las em *Poetic Justice* (1993).
 - **Significado:** beleza, praticidade e orgulho da identidade afro; também um penteado protetor que respeita a saúde do cabelo natural.
-- **Curiosidade:** por anos ficaram conhecidas no mundo como "Janet Jackson braids".
+- **Curiosidade** ✎: por anos ficaram conhecidas como **"Poetic Justice braids"**, em referência ao filme.
 
 **Corte César** — *1990s–presente*
 - **História:** inspirado nos cabelos das esculturas romanas, tornou-se um dos cortes masculinos mais populares no Brasil e na América Latina.
 - **Significado:** praticidade, versatilidade e cuidado pessoal; no contexto afro-brasileiro, o homem negro que cuida da própria imagem com dignidade e estilo.
-- **Curiosidade:** Will Smith popularizou uma versão do César com degradê nos anos 90.
+- **Curiosidade** ✎: nos anos 1990, o César com degradê se espalhou pela cultura pop e pelo hip-hop. *(Atribuição a Will Smith, presente no texto do jogo, a confirmar com consultoria.)*
 
 **Fade Afro** — *1990s–presente*
 - **História:** consolidou-se como estilo central da barbearia negra moderna, unindo precisão técnica e orgulho do cabelo natural.
@@ -193,7 +194,7 @@ Cada corte é também um **pedido de serviço**: tem preço, tempo, XP e dificul
 **Moicano Afro** — *2010s–presente*
 - **História:** une a estética rebelde do moicano ao volume e à textura do cabelo afro.
 - **Significado:** ousadia, individualidade e a fusão de culturas de resistência.
-- **Curiosidade:** o festival **Afropunk** (Brooklyn, 2005, hoje com edição em São Paulo) tornou o Moicano Afro um de seus símbolos visuais.
+- **Curiosidade** ✎: o festival **Afropunk** (Brooklyn, 2005), que ganhou edição brasileira em Salvador (Afropunk Bahia — a confirmar), tornou o Moicano Afro um de seus símbolos visuais.
 
 **Twist Out** — *2010s–presente*
 - **História:** twists feitos no cabelo úmido e depois desfeitos, criando cachos definidos com volume natural.
@@ -215,11 +216,11 @@ Bônus de XP/dinheiro: Carnaval ×1,3/×1,4 · Julho ×1,2/×1,1 · Turbante ×1
 
 | Evento | Data | Mensagem de abertura (resumo) | Destaques |
 |---|---|---|---|
-| **Carnaval** | Fevereiro | "A festa mais colorida do Brasil chega à barbearia. Estilos criativos em alta — bônus de dinheiro ativado!" | Moicano Afro, Burst Fade, Afro Degradê |
-| **Mês da Cultura Afro-Latino-Americana** | Julho | "Bônus de XP em homenagem à diáspora africana nas Américas." | Corte César, Cornrows, Box Braids |
-| **Dia Nacional do Turbante** | 25/09 | "Celebre a ancestralidade africana com bônus especiais." | Turbante |
+| **Carnaval** | Fevereiro (no jogo) — a data real varia, e cai em março em alguns anos | "A festa mais colorida do Brasil chega à barbearia. Estilos criativos em alta — bônus de dinheiro ativado!" | Moicano Afro, Burst Fade, Afro Degradê |
+| **Julho afro-latino-americano** (nome a revisar: sugestão *25 de julho — Tereza de Benguela e Dia da Mulher Negra Latino-Americana e Caribenha*, Lei 12.987/2014, "Julho das Pretas") | Julho | "Bônus de XP em homenagem à diáspora africana nas Américas." | Corte César, Cornrows, Box Braids |
+| **Dia do Turbante** (sem lei federal identificada — confirmar a fonte) | 25/09 | "Celebre a ancestralidade africana com bônus especiais." | Turbante |
 | **Mês da Consciência Negra** | Novembro | "Bônus especiais ativados em homenagem à história e cultura afro-brasileira!" | Black Power Clássico, Tranças Nagô, Cornrows, Turbante |
-| **Dia da Consciência Negra** | 20/11 | "Em memória de Zumbi dos Palmares. DOBRO de XP e bônus máximo hoje!" | Dreads/Locs, Afro Natural, Conk |
+| **Dia da Consciência Negra** (feriado nacional pela Lei 14.759/2023) | 20/11 | "Em memória de Zumbi dos Palmares. DOBRO de XP e bônus máximo hoje!" | Dreads/Locs, Afro Natural, Conk |
 
 Em novembro também roda a missão anual **"Consciência em Ação"**: *"Cada corte afro é um ato de celebração da identidade, da história e da resistência cultural. Atenda seus clientes com orgulho e mostre que a barbearia é espaço de empoderamento."*
 
@@ -253,7 +254,7 @@ Depois de cada atendimento, o cliente pode **postar** sobre a experiência:
 
 - Faixas instrumentais em playlist (`MusicManager`): *Elijah_K — Cairo, Gorilla, Ice Cream* (licença a confirmar; trilha original planejada — ver [09](09-arte-audio-e-tecnologia.md#6-áudio)).
 - Efeitos de serviço gravados para cada ferramenta — máquina de corte, máquina de barba, tesoura, navalha e pente — e sons de interface.
-- A reforma **Som Ambiente** traz playlist de **afrobeat e soul** para dentro da barbearia.
+- A reforma **Som Ambiente** é descrita como uma playlist de **afrobeat e soul** na barbearia; hoje ela dá bônus, mas a trilha própria ainda não existe 🧩.
 
 ---
 
@@ -264,13 +265,13 @@ A Biblioteca foi escrita para funcionar também fora do jogo, em sala de aula e 
 | Tema escolar | Cortes e conteúdos do jogo |
 |---|---|
 | África antes da diáspora; ancestralidade | Tranças Nagô, Cornrows, Dreads/Locs, Turbante |
-| Escravidão e resistência | Tranças como mapas de fuga (Tranças Nagô) |
+| Escravidão e resistência; quilombos | Relatos de tranças como mapas de fuga (Tranças Nagô; Palenque e Benkos Biohó) |
 | Religiões de matriz africana | Turbante (ojá), Afro Natural (candomblé e umbanda) |
 | Padrões de beleza e racismo | Conk (Malcolm X), Jheri Curl, arco da Kemi |
 | Movimentos negros no século XX | Black Power Clássico (Angela Davis, *Black is Beautiful*) |
 | Cultura urbana e hip-hop | Flat Top, High Top Fade, Box Braids, Moicano Afro (Afropunk) |
 | Ciência e empreendedorismo negro | Sisterlocks (Dra. JoAnne Cornwell), a própria barbearia como negócio |
-| Direitos e legislação | Lei da Califórnia de 2018 (Cornrows); 20 de novembro (Zumbi dos Palmares) |
+| Direitos e legislação | CROWN Act, 2019 (Cornrows); 20 de novembro, Lei 14.759/2023 (Zumbi dos Palmares) |
 | Identidade contemporânea | Afro Degradê, Coily Puff (transição capilar), arco do Gabriel |
 
 **Sugestão de atividade (50 min):** jogar um expediente (10 min) → ler na Biblioteca os cortes atendidos → roda de conversa sobre o que cada estilo significa para a turma → pesquisa sobre uma referência citada. Um guia do professor completo está previsto (ver [08](08-referencia-para-editais.md)).
