@@ -43,7 +43,7 @@ Nome completo, usado no corpo do projeto: ***AfroBarber - Cada Corte, uma Histó
 >
 > O conhecimento vem da prática. O jogador assume o papel de um(a) jovem barbeiro(a) que abre a própria barbearia num bairro brasileiro, recebe moradores com personalidades e histórias próprias e executa os cortes em um minigame de precisão e ritmo. **Cada vez que pratica um corte, destrava um novo capítulo** do minidocumentário daquele estilo. Os clientes comentam na cadeira o que o jogador acabou de descobrir e, mais adiante, passam a pedir o corte pelo que ele significa ("quero algo que minha avó reconheceria"). Aprender a história passa a fazer parte do ofício.
 >
-> O projeto já conta com um protótipo avançado do jogo e com a base do conteúdo histórico dos 24 cortes, desenvolvidos com recursos próprios. Uma **versão demonstrativa (demo)** está publicada na Google Play exclusivamente para que os pareceristas possam verificar e visualizar o jogo: `[LINK DA DEMO]`. Este apoio financiará:
+> O projeto já conta com um protótipo avançado do jogo e com a base do conteúdo histórico dos 24 cortes, desenvolvidos com recursos próprios. O jogo pode ser visto pelos pareceristas em **vídeos de gameplay no YouTube** (`[LINKS]`) e numa **versão demonstrativa (demo) em acesso restrito** na Google Play, disponível apenas para verificação, não ao público. Este apoio financiará:
 > - o **roteiro, a validação cultural, as ilustrações, a narração e a trilha dos 120 capítulos**;
 > - a conclusão da versão 1.0 do jogo, livre de direitos de terceiros e acessível;
 > - a **publicação gratuita** para celular Android e computador;
@@ -273,19 +273,22 @@ Meses contados a partir do recebimento dos recursos.
 4. **AfroBarber - Cada Corte, uma História — o protótipo:**
    - capturas de tela (barbearia, pedido com resumo histórico, minigame, Biblioteca de Cortes);
    - **amostra do acervo:** roteiro completo de 1 minidocumentário (5 capítulos) e, se possível, 1 capítulo ilustrado e narrado como piloto;
-   - **link da demo na Google Play** `[LINK]`, com instruções rápidas de como jogar;
-   - link de vídeo de gameplay de 2 a 3 minutos (sem ativos de terceiros visíveis, ou com aviso de arte provisória);
+   - **vídeos no YouTube** (não listados, com legendas) `[LINKS]`:
+     1. visão geral do jogo (2–3 min);
+     2. um atendimento completo, do pedido ao caixa;
+     3. a Biblioteca de Cortes e, se possível, o capítulo-piloto do acervo;
+   - link da demo em acesso restrito na Google Play `[LINK]`, com o passo a passo de acesso;
    - números: 24 cortes com conteúdo histórico, ~206 scripts, ~357 testes automatizados, documentação de design em 10 volumes.
 5. **Outros trabalhos:** projetos de software, jogos, arte ou educação. `[LISTAR]`
 6. **Certificados** de cursos na área cultural ou de tecnologia. `[ANEXAR]`
 
 ## N. Demais informações
 
-> - **Versão demonstrativa.** Uma demo do protótipo está publicada na Google Play (`[LINK]`) com o objetivo exclusivo de permitir aos pareceristas verificar e visualizar o jogo. A obra objeto deste projeto é **inédita em sua versão final**: o acervo de 24 minidocumentários (120 capítulos narrados e ilustrados), a trilha original e a versão 1.0 do jogo ainda não existem e serão produzidos com o apoio do edital. Ao final, a versão 1.0 substitui a demo na mesma página da Google Play.
+> - **Versão demonstrativa.** Para verificação pelos pareceristas, o jogo pode ser visto em vídeos de gameplay no YouTube (`[LINKS]`) e numa demo do protótipo em acesso restrito na Google Play (`[LINK]`), não disponível ao público. A obra objeto deste projeto é **inédita em sua versão final**: o acervo de 24 minidocumentários (120 capítulos narrados e ilustrados), a trilha original e a versão 1.0 do jogo ainda não existem e serão produzidos com o apoio do edital. Ao final, a versão 1.0 substitui a demo na mesma página da Google Play.
 > - Não haverá monetização de nenhum tipo.
 > - Todos os recursos de terceiros usados no protótipo serão removidos ou substituídos por material autoral ou de licença aberta antes da publicação. Os créditos e licenças serão publicados junto ao jogo.
 > - O proponente declara que as referências a religiões de matriz africana presentes no jogo têm caráter exclusivamente histórico e cultural.
-> - Links: demo na Google Play `[LINK]` · vídeo do protótipo `[LINK]` · documentação de design `[LINK]` · cartas de anuência dos locais `[ANEXAR]`.
+> - Links: vídeos no YouTube `[LINKS]` · demo em acesso restrito `[LINK]` · documentação de design `[LINK]` · cartas de anuência dos locais `[ANEXAR]`.
 
 ---
 
@@ -310,6 +313,7 @@ Meses contados a partir do recebimento dos recursos.
 - [ ] Locais das ações confirmados como acessíveis; bairros conferidos no Anexo 11.
 - [ ] Portfólio comprova 2 anos de atuação cultural em Ribeirão Preto.
 - [ ] Vídeo e imagens sem ativos de terceiros visíveis.
-- [ ] **Demo na Google Play:** jogável num aparelho sem save anterior (acesso à loja/inventário ou kit inicial, sem os bloqueios do [07 §2](07-estado-atual-e-roadmap.md#2-bloqueios-críticos)); sem nomes, marcas ou músicas de terceiros (ex.: "Fliperama Pac-Man"); sem anúncios nem compras; descrição da loja informando que é uma demo em desenvolvimento, sem uso de marcas da Prefeitura ou do Governo Federal antes da contemplação.
+- [ ] **Vídeos no YouTube:** não listados, com legendas, mostrando a versão com os bugs corrigidos e sem nomes, marcas ou músicas de terceiros.
+- [ ] **Demo:** bugs corrigidos antes da inscrição, testada num aparelho sem save anterior (acesso à loja/inventário ou kit inicial — [07 §2.1](07-estado-atual-e-roadmap.md#21-save-novo-não-consegue-atender-soft-lock)); em acesso restrito (teste fechado); sem anúncios nem compras; sem marcas da Prefeitura ou do Governo Federal antes da contemplação.
 - [ ] Texto sem menção a venda, anúncios ou patrocínio de marcas.
 - [ ] Envio feito pelo menos 2 dias antes do prazo final.
