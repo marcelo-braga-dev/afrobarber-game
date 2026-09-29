@@ -2,6 +2,8 @@
 
 Registro histórico das duas rodadas de correções feitas a partir de análises profundas do projeto. Mantido para referência futura — prefira sempre o estado atual do código e do `CLAUDE.md` a este documento.
 
+> **Documento histórico.** O estado atual e as prioridades estão em [07-estado-atual-e-roadmap.md](07-estado-atual-e-roadmap.md). A tabela de débito no fim deste arquivo ganhou uma coluna de status em 29/09/2026; onde este registro e o 07 divergirem, vale o 07.
+
 ---
 
 ## Rodada 1 — 2026-08-08
@@ -82,13 +84,14 @@ API adicionada: `AchievementSystem.GetTodasConquistas()→IReadOnlyList<Conquist
 
 ## Débito técnico remanescente (2026-09-12)
 
-| Item | Status | Ação necessária |
-|---|---|---|
-| **BarbershopUpgradeSystem wiring na cena** | Pendente — requer Unity Editor | Criar filho de GameBootstrap, atribuir 7 assets de `ScriptableObjects/Upgrades/` |
-| **AchievementSystem UI wiring na cena** | Pendente — requer Unity Editor | Criar `Popup_Conquista` + `Panel_Conquistas` no Canvas da HUD |
-| **HDRP/URP em Android** | Não verificável sem device | Validar build real; se materiais ficarem rosas, criar set URP/Lit ou remover troca de pipeline |
-| **Cobertura de testes** | Scaffold existe, cobertura zero | Adicionar testes para sistemas principais (fidelidade, finanças, maestria) |
-| **Eventos sem assinante** | Documentado, não é bug | `OnAtendimentoConcluido`, eventos NarrativeMissionSystem, `OnRelatorioGerado` — pontos de extensão para UI futura |
-| **Sistema Transito** (`Transito/*.cs`) | Existe no código, não documentado | Confirmar se está ativo na cena; se sim, documentar; se não, avaliar remoção |
-| **Sistema de Diálogo contextual** (`Dialogue/DialogueContextOptionsProvider` etc.) | Existe no código, não documentado | Idem — confirmar uso na cena antes de documentar |
-| **Assembly Definitions** | Ausente | Criar `.asmdef` por pasta principal para reduzir tempo de recompilação |
+| Item | Status em 2026-09-12 | Ação necessária | Status em 2026-09-29 |
+|---|---|---|---|
+| **BarbershopUpgradeSystem wiring na cena** | Pendente — requer Unity Editor | Criar filho de GameBootstrap, atribuir 7 assets de `ScriptableObjects/Upgrades/` | ✅ Resolvido: sistema na `GameScene` com os 7 assets; bônus ativos. Objetos visuais das reformas ainda ausentes |
+| **AchievementSystem UI wiring na cena** | Pendente — requer Unity Editor | Criar `Popup_Conquista` + `Panel_Conquistas` no Canvas da HUD | ◐ Parcial: popup na cena; painel ausente |
+| **HDRP/URP em Android** | Não verificável sem device | Validar build real; se materiais ficarem rosas, criar set URP/Lit ou remover troca de pipeline | Aberto |
+| **Cobertura de testes** | Scaffold existe, cobertura zero | Adicionar testes para sistemas principais (fidelidade, finanças, maestria) | ✅ Resolvido: `Assets/Tests/Editor/` com 28 arquivos e ~357 casos EditMode; faltam testes PlayMode |
+| **Eventos sem assinante** | Documentado, não é bug | `OnAtendimentoConcluido`, eventos NarrativeMissionSystem, `OnRelatorioGerado` — pontos de extensão para UI futura | Sem mudança |
+| **Sistema Transito** (`Transito/*.cs`) | Existe no código, não documentado | Confirmar se está ativo na cena; se sim, documentar; se não, avaliar remoção | ✅ Ativo: `TrafficManager` na cena, veículos NPC em prefabs; documentado em 01 e 09 |
+| **Sistema de Diálogo contextual** (`Dialogue/DialogueContextOptionsProvider` etc.) | Existe no código, não documentado | Idem — confirmar uso na cena antes de documentar | ✅ Ativo: `DialogueGameplayActionRouter` na cena; opções e efeitos documentados em 02 §8 |
+| **Assembly Definitions** | Ausente | Criar `.asmdef` por pasta principal para reduzir tempo de recompilação | Aberto |
+| **GorjetaExtra20** (citado na Rodada 2 como "já conectado") | — | — | ❌ Sem efeito: depende de `GetMultiplicadorGorjeta`, que não é aplicado à gorjeta (ver 07 §4) |

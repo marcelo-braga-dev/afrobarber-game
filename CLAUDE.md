@@ -7,7 +7,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - **Unity 6000.3.10** — exact version required; do not upgrade
 - **Render pipelines**: HDRP 17.3.0 and URP 17.3.0 coexist — use HDRP Lit or URP Lit materials, never Standard
 - **Input**: New Input System 1.18.0 only — never `Input.GetKey()` / legacy API
-- **Language**: all code, comments, UI strings, and asset names are in **Portuguese**
+- **Language**: comments, UI strings, player-facing content and most method/field names are in **Portuguese** (e.g. `RegistrarAtendimento`, `diasGracePeriod`); class and file names are mostly **English** (e.g. `CutMasterySystem`, `Request_BlackPower.asset`). Follow the convention of the file you are editing.
 - **Do not touch**: `Assets/Afrobarber/Scripts/_Deprecated/` (contains `SofaSeats.cs`, `ShopPurchaseHandler.cs`) — isolated legacy code, never reference from active scenes
 - **Tests**: Unity Test Framework 1.6.0 — run via Window → General → Test Runner; test files go in `Assets/Tests/`
 
@@ -267,7 +267,7 @@ Scheduled → WaitingToSpawn → Spawned → Completed
 - Gorjeta 2.5× (`multiplicadorGorjetaVip`)
 - Post VIP no BarberBook ao ser atendido (via `NotificarAtendimentoVip`)
 
-**Wiring:** `ClientSpawner` deve verificar `VipAgendadoHoje` e chamar `MarcarClienteComoVip(cliente)` ao spawnar o cliente VIP.
+**Wiring (❌ pendente):** `ClientSpawner`/`ClientAppointmentScheduler` devem verificar `VipAgendadoHoje` e chamar `MarcarClienteComoVip(cliente)` ao spawnar o cliente VIP — hoje nada chama esse método, então nenhum VIP aparece. `AplicarMultiplicadorPreco`/`AplicarMultiplicadorGorjeta` também não têm chamadores.
 
 ---
 
@@ -298,7 +298,7 @@ Scheduled → WaitingToSpawn → Spawned → Completed
 |---|---|
 | `BonusXP10` | +10% XP em todos os atendimentos |
 | `GorjetaExtra20` | +20% gorjeta — empilha com `ClientLoyaltySystem` |
-| `ReputacaoInicial` | Começa com reputação 3.5 ao invés de 2.0 |
+| `ReputacaoInicial` | Ao prestigiar, redefine a reputação para 3.5 (a reputação padrão do jogo começa em 3.0; sem a perk, o prestígio não mexe na reputação) |
 | `AlugueMenor15` | -15% no valor do aluguel mensal |
 | `DinheiroInicial500` | +BM$500 ao recomeçar |
 
@@ -306,7 +306,7 @@ Scheduled → WaitingToSpawn → Spawned → Completed
 - `GetBonusXP()` → 1.10f ou 1f
 - `GetBonusGorjeta()` → 1.20f ou 1f
 - `GetFatorAluguel()` → 0.85f ou 1f
-- `GetReputacaoInicial()` → 3.5f ou 2f
+- `GetReputacaoInicial()` → 3.5f ou 2f (sem chamadores; o reset usa `ResetRatings()` + `AddReview(3.5f)` direto)
 
 **Wiring implementado:** `PlayerXPManager.AddXP` aplica três multiplicadores em sequência: `upgradeXPMultiplier` (melhorias da barbearia) → `PrestigeSystem.Instance?.GetBonusXP() ?? 1f` → `CulturalEventSystem.AplicarBonusXP(amount)` (se evento ativo). A perk `BonusXP10` produz efeito real.
 
@@ -325,11 +325,11 @@ Scheduled → WaitingToSpawn → Spawned → Completed
 | `AtenderNClientes` | Atender N clientes no dia |
 | `FaturarNReais` | Faturar BM$N no dia |
 | `FazerNPerfeitos` | Completar N serviços com rating Perfeito |
-| `SemServicoRuim` | Completar N serviços seguidos sem rating ≤ Ruim |
+| `SemServicoRuim` | "Dia Impecável": conta atendimentos do dia sem rating ≤ Ruim (meta 5). Um Ruim zera o progresso exibido, mas o contador `servicosSemRuimHoje` não é zerado — o próximo atendimento restaura a contagem. Regra a definir. |
 | `AtenderConsecutivos` | Atender N clientes consecutivos sem errar |
 | `GanharMaestria` | Acumular N pontos de maestria de corte no dia (ver seção "Cut Mastery System" / `CutMasterySystem.RegistrarAtendimento`) |
 
-**Integração:** `BarbershopServiceManager` deve chamar `DailyChallengeSystem.Instance?.RegistrarAtendimento(rating, valorRecebido)` ao finalizar cada serviço.
+**Integração (✅ implementada):** `BarbershopServiceManager.NotificarSistemasExternos` chama `DailyChallengeSystem.Instance?.RegistrarAtendimento(rating, valorRecebido)` ao finalizar cada serviço.
 
 **Persistência:** `DailyChallengeSaveWrapper` persiste desafios e progresso. O leaderboard NÃO é persistido — é regenerado com pontuações fictícias a cada sessão (design intencional para dar sensação de "ao vivo").
 
@@ -360,7 +360,7 @@ Scheduled → WaitingToSpawn → Spawned → Completed
 
 **Desbloqueio de capítulo:** requer `nivelJogadorNecessario` + capítulo anterior concluído (`capituloAnteriorId`).
 
-**Fluxo:** quando `ClientNPC` tem `narrativeCharacterId` configurado, ao finalizar serviço chamar:
+**Fluxo (✅ chamada implementada em `NotificarSistemasExternos`; ❌ nenhum NPC da cena/prefab tem `narrativeCharacterId` preenchido):** quando `ClientNPC` tem `narrativeCharacterId` configurado, ao finalizar serviço é chamado:
 ```csharp
 NarrativeMissionSystem.Instance?.RegistrarAtendimentoNarrativo(
     characterId, clienteNome, rating);
@@ -386,7 +386,7 @@ NarrativeMissionSystem.Instance?.RegistrarAtendimentoNarrativo(
 
 **Bônus de Prestígio:** `GetMultiplicadorGorjeta` multiplica pelo `PrestigeSystem.GetBonusGorjeta()` automaticamente.
 
-**Wiring:** `BarbershopServiceManager` deve registrar visita do cliente ao concluir serviço. `ClientNPC` deve expor `ClientId` (string única por prefab/personagem) para identificação.
+**Wiring (✅ implementado):** `BarbershopServiceManager` registra a visita (`RegistrarVisita`) ao concluir o serviço usando `ClientNPC.ClientId`. **Pendente (❌):** os bônus de gorjeta, paciência e elogio não são consumidos (só `GetMultiplicadorGorjeta` aparece, no texto do diálogo).
 
 ---
 
@@ -778,7 +778,8 @@ Never reuse these keys for new data:
 - **`CulturalEventSystem` e `PrestigeSystem` agora conectados**: `PlayerXPManager.AddXP` aplica os 3 multiplicadores em sequência (upgrade → prestígio → evento cultural); `BarbershopServiceManager.DistributeAdvancedServiceRewards` aplica bônus de dinheiro cultural antes de registrar receita; `NotificarSistemasExternos` recebe o valor pós-bônus via retorno de `DistributeAdvancedServiceRewards`. `MissionSystem` registrado em `NotificarSistemasExternos` (cobre ambos os fluxos).
 - **`AchievementSystem` — UI criada** (`UI/Achievements/`): `AchievementPopupUI` (popup com fila e fade, assina `OnConquistaDesbloqueada`) e `AchievementsPanelUI` + `AchievementsItemUI` (painel de lista com progresso). **Wiring pendente**: adicionar `Panel_Conquistas` ao Canvas da HUD e `Popup_Conquista` ao Canvas overlay; registrar `uiConquistas` em `GameUIManager` se quiser integrar ao sistema de painéis exclusivos.
 - **Eventos "fire but nobody's home" (documentados, não corrigidos)**: `BarbershopServiceManager.OnAtendimentoConcluido`, os três eventos do `NarrativeMissionSystem` (`OnCapituloDesbloqueado`/`OnCapituloConcluido`/`OnPersonagemCompleto`), `BusinessReportManager.OnRelatorioGerado`, `GlobalGameplayManagement.OnPricesChanged`/`OnScheduleChanged` são disparados mas não têm nenhum assinante hoje. Deixados como estão — são pontos de extensão baratos que uma UI futura pode consumir, não atrapalham nada funcionando vazios.
-- **Componentes não-singleton sem documentação de wiring**: `WaitingAreaManager` (passado a `ClientNPC.InicializarNaCidade`), `FinanceHUDBinder` (substituto do `MoneyTextBinder` removido — conecta `OnCashChanged`/`OnFinanceDataChanged` a dois `TMP_Text`), `NPCConversationBrain`/`NPCDialogueMemory` (sistema de auto-talk por NPC, requer `NPCIdentity`+`NPCSocialProfile`+`ClientNPC`+`ClientPatience` no mesmo GameObject), `BarbershopManagementSaveSystem` (persiste horários e ajustes de preço, 14 chaves PlayerPrefs).
+- **Componentes não-singleton sem documentação de wiring**: `WaitingAreaManager` (passado a `ClientNPC.InicializarNaCidade`), `FinanceHUDBinder` (substituto do `MoneyTextBinder` removido — conecta `OnCashChanged`/`OnFinanceDataChanged` a dois `TMP_Text`), `NPCConversationBrain`/`NPCDialogueMemory` (sistema de auto-talk por NPC, requer `NPCIdentity`+`NPCSocialProfile`+`ClientNPC`+`ClientPatience` no mesmo GameObject), `BarbershopManagementSaveSystem` (persiste horários e ajustes de preço, 18 chaves PlayerPrefs: 4 de horário + 7 dias + 7 tipos de `ServiceType`).
+- **Bloqueios críticos (auditoria 29/09/2026 — ver `docs/07-estado-atual-e-roadmap.md` §2)**: (1) nenhum botão/atalho da `GameScene` chama `OpenLoja`, `OpenInventario` ou `OpenBibliotecaCortes`, e o inventário começa vazio → save novo não consegue montar plano; (2) `GameTimeSystem` não persiste data/hora — toda sessão recomeça em 10/04/2026 08:00; (3) `FinanceMonthlyBillsManager` gera as contas de abril em 10/04 com aluguel já vencido, verifica atraso por igualdade (`diasAtraso == 1` / `== diasGracePeriod + 1`) e `NotificarContaPaga` não tem chamador (demanda não é restaurada ao pagar); (4) paciência e agenda usam minutos de jogo a 3 min/s e o tempo nunca pausa (`SetPause` sem chamadores) → 90 min de paciência = 30 s reais.
 - **Regras configuradas mas não consumidas (auditoria 29/09/2026)**: `VIPClientSystem.AplicarMultiplicadorPreco/AplicarMultiplicadorGorjeta`, `ClientLoyaltySystem.GetMultiplicadorGorjeta` (só usado no texto do diálogo), `GetBonusPacienciaMinutos`, `DeveElogiarEspontaneamente`, `ClientMoodSystem.GetModificadorRating`, `WeatherEffect.multiplicadorGorjeta/chanceHumorPositivo`, `PrestigeSystem.GetFatorAluguel` não têm chamadores. Com `useMinigame = true`, `AdvancedServiceOutcomeResolver` (nível, maestria, personalidade, urgência, ferramentas) não participa da nota. `ConsumeLoadoutItems` itera `request.requiredItems`, vazio nos 24 cortes → sem consumo/desgaste. `GlobalGameplayManagement.overrideRequestPriceTable = true` faz o preço vir de `MainServicePriceTable` por `ServiceType` (Corte = 35, Acabamento = 15, `Outro` sem entrada → Turbante = 0), ignorando `servicePrice` do corte. Os 7 `gameObjectNomeNaCena` das reformas não existem na `GameScene`. Detalhes e prioridades em `docs/07-estado-atual-e-roadmap.md`.
 - **Triagem de `eventosSuscritos` auditada**: todos os arquivos de UI verificados usam métodos nomeados com `OnDisable` unsubscribe, ou guardas equivalentes (`isBound`, `isSubscribed`, `-=` antes de `+=`). Nenhum vazamento lambda real encontrado. A única lambda de `+=` em produção é em `MainMenuController.IniciarPreloadAposPAD` para o evento one-shot `OnPronto` do PAD — segura.
 

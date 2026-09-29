@@ -20,6 +20,8 @@ AfroBarber Game é um jogo de simulação em terceira pessoa ambientado em uma b
 
 ## Loop de Gameplay
 
+> Status de cada etapa e das regras em [docs/07-estado-atual-e-roadmap.md](docs/07-estado-atual-e-roadmap.md). Antes de testar num save novo, veja os **bloqueios críticos** ([§2](docs/07-estado-atual-e-roadmap.md#2-bloqueios-críticos)): sem botão de Loja/Inventário e inventário inicial vazio, data do jogo não salva, contas iniciais vencidas e paciência de ~30 s reais.
+
 ```text
 1.  Cliente nasce no ponto de spawn
 2.  Cliente entra na barbearia (EntrancePoint)
@@ -29,17 +31,17 @@ AfroBarber Game é um jogo de simulação em terceira pessoa ambientado em uma b
 6.  Ícone de interação aparece sobre o cliente
 7.  Jogador clica → ClientRequestUI.Show() exibe pedido
 8.  Jogador aceita → CallForService() → BarbershopServiceManager.TryStartService()
-9.  Sistema valida: energia, ferramentas, ponto da cadeira
+9.  Sistema valida: nenhum atendimento ativo, pedido, energia ≥ 10, ponto da cadeira (ferramentas NÃO são validadas aqui)
 10. Cliente libera assento e vai até BarberChairWalkPoint
 11. Cliente snapa no BarberChairSitPoint (agent desativado)
 12. ServicePlanningUI abre (se useAdvancedServiceWorkflow = true)
-13. Jogador ordena/confirma etapas do atendimento
-14. Sistema executa etapas (Wash → Cut → Finish → Finalize)
-15. AdvancedServiceOutcomeResolver calcula resultado
+13. Jogador monta etapas e escolhe ferramentas (exige ferramenta compatível por etapa)
+14. Execução: minigame "Corte Perfeito" (useMinigame = true, padrão) OU execução por etapas
+15. Resultado: fator do minigame (padrão) OU AdvancedServiceOutcomeResolver (por etapas)
 16. Jogador recebe dinheiro, XP e avaliação
-17. Cabelo final aplicado visualmente (ClientHairVisualController)
+17. Cabelo final aplicado visualmente (ClientHairVisualController — sem variantes configuradas hoje)
 18. Conteúdo educativo desbloqueado (EducationProgressManager)
-19. Produtos/ferramentas consumidos (InventoryManager)
+19. Produtos/ferramentas consumidos (InventoryManager — depende de requiredItems, vazio nos 24 cortes)
 20. Cliente vai ao caixa (CashierPoint)
 21. Cliente sai da barbearia (ExitPoint)
 22. ClientSpawner libera o slot para novo cliente
@@ -53,16 +55,16 @@ AfroBarber Game é um jogo de simulação em terceira pessoa ambientado em uma b
 - XP → 5 níveis (Aprendiz → Barbeiro de Bairro → Profissional → Mestre do Degradê → Lenda AfroBarber)
 - Melhoria de reputação (afeta fluxo de clientes)
 - Desbloqueio de 24 cortes na Biblioteca Educativa
-- Maestria por corte (5 tiers, bônus de qualidade e recompensa)
-- Prestige System (New Game+ com perks permanentes após nível 5)
+- Maestria por corte (5 tiers, bônus de qualidade e recompensa) — `CutMasterySystem` ainda fora da cena
+- Prestige System (New Game+ com perks permanentes após nível 5) — sem tela ainda
 
 ## Decisões de Gestão
 
 - Quais produtos comprar e manter em estoque
 - Quando aceitar ou dispensar clientes (paciência limitada)
-- Priorizar clientes VIP (preço 3×, paciência reduzida)
+- Priorizar clientes VIP (preço 3×, paciência reduzida) — VIP ainda não é spawnado; multiplicadores não aplicados
 - Equilibrar qualidade, velocidade e lucro
-- Controlar energia do barbeiro (cansaço reduz qualidade)
+- Controlar energia do barbeiro (cansaço aumenta o tempo do serviço e bloqueia atendimento abaixo de 10)
 - Gerenciar empréstimos e contas mensais
 
 ---
@@ -102,8 +104,9 @@ ClientSpawner → ClientNPC (Wandering → GoingToBarbershop → GoingToEntrance
 → GoingToCashier → ReturningToCity)
 ```
 
-O fluxo de serviço tem dois caminhos (controlados por `useAdvancedServiceWorkflow`):
-- **Avançado** (`Services/Advanced/`): planejamento → execução passo a passo → resolução de resultado
+O fluxo de serviço tem três caminhos:
+- **Minigame** (padrão, `useMinigame = true`): planejamento → minigame "Corte Perfeito" → resultado por timing
+- **Avançado por etapas** (`Services/Advanced/`, `useMinigame = false`): planejamento → execução passo a passo → `AdvancedServiceOutcomeResolver`
 - **Fallback** (timer simples): `autoCompleteServiceByTime = true`
 
 ---
@@ -149,16 +152,16 @@ Assets/Afrobarber/Scripts/
 | `FinanceManager` | `Economy/` | Sistema financeiro canônico. Fluxo avançado usa `AddCashIncome`; fallback usa `RegisterServiceIncome` |
 | `PlayerXPManager` | `Progression/` | XP e 5 níveis de progressão do jogador |
 | `EducationProgressManager` | `Education/` | Biblioteca de 24 cortes afro: desbloqueio, favoritos, lore |
-| `CutMasterySystem` | `Progression/` | Maestria por corte (5 tiers × 24 cortes, bônus real de qualidade/recompensa) |
-| `ClientLoyaltySystem` | `Progression/` | Fidelidade de clientes (5 tiers, bônus de gorjeta e paciência) |
+| `CutMasterySystem` | `Progression/` | Maestria por corte (5 tiers × 24 cortes; bônus só no modo por etapas) — 🟡 fora da `GameScene` |
+| `ClientLoyaltySystem` | `Progression/` | Fidelidade de clientes (5 tiers); contagem ativa, bônus de gorjeta/paciência 🧩 não aplicados |
 | `DailyChallengeSystem` | `Gameplay/` | Desafios diários (tempo real) com ranking fictício |
 | `NarrativeMissionSystem` | `Missions/` | Arcos narrativos com 5 personagens fixos, 3 capítulos cada |
 | `MissionSystem` | `Missions/` | Missões por marcos/tiers (registra em todos os fluxos via `NotificarSistemasExternos`) |
 | `BarberBookSystem` | `Social/` | Rede social simulada pós-atendimento, posts virais |
 | `LoanSystem` | `Economy/` | Empréstimos com juros compostos semanais (4 opções) |
 | `PrestigeSystem` | `Gameplay/` | New Game+ com 5 perks permanentes |
-| `VIPClientSystem` | `Gameplay/` | Clientes VIP com preço 3× e gorjeta 2.5× |
-| `WeatherSystem` | `Core/` | Clima auto-dirigido que afeta demanda e gorjetas |
+| `VIPClientSystem` | `Gameplay/` | Clientes VIP (preço 3×, gorjeta 2,5×) — 🟡 sem spawn; multiplicadores não aplicados |
+| `WeatherSystem` | `Core/` | Clima auto-dirigido; afeta a demanda (gorjeta por clima 🧩 não aplicada) |
 | `ClientAppointmentScheduler` | `Appointment/` | Agendamentos multi-dia com detecção de Missed |
 | `GameTimeSystem` | `Core/` | Tempo de jogo, dias úteis, eventos de dia/semana |
 | `GlobalGameplayManagement` | `Gameplay/` | Precificação dinâmica, horários comerciais, ajustes |
@@ -231,7 +234,7 @@ ScriptableObjects/Products/Databases/
 | Cliente não anda | NavMesh baked; agente sobre NavMesh; destino alcançável; `agent.enabled = true` |
 | Cliente senta fora do sofá | `ApproachPoint` no chão; `SitPoint` na posição exata; `snapToSeatOnArrival = true` |
 | UI do pedido não abre | `ClientRequestUI.Instance` existe; Canvas + EventSystem presentes; cliente em `WaitingForService` |
-| Atendimento não inicia | Sem cliente em atendimento; pedido preenchido; energia OK; `barberChairWalkPoint` configurado; itens no inventário |
+| Atendimento não inicia | Sem cliente em atendimento; pedido preenchido; energia ≥ 10; `barberChairWalkPoint` configurado. Para o plano iniciar: ferramenta compatível em cada etapa (inventário) e etapa "Finalizar" |
 | Planejamento não abre | `useAdvancedServiceWorkflow = true`; `AdvancedServiceWorkflowManager` na cena; jogador perto da cadeira |
 | Produto comprado não aparece | Produto tem ID único; loja adiciona ao inventário; UI atualiza após compra |
 | Dinheiro não atualiza | UI ligada ao `FinanceManager` (único sistema canônico); `OnCashChanged` e `OnFinanceDataChanged` assinados |
@@ -241,7 +244,7 @@ ScriptableObjects/Products/Databases/
 ## Convenções
 
 - Scripts: `PascalCase.cs` | Assets: `Prefix_Name.asset`
-- Código, comentários e strings de UI: **português**
+- Comentários, strings de UI e muitos nomes de métodos e campos: **português**
 - Nomes de arquivo e classes: **inglês** (ex.: `CutMasterySystem`, não `SistemaDeMaestria`)
 - Input: **New Input System** — proibido `Input.GetKey()` / API legada
 - Materials: **HDRP Lit** ou **URP Lit** — nunca Standard
@@ -269,7 +272,7 @@ Roadmap completo e matriz de funcionalidades em [docs/07-estado-atual-e-roadmap.
 
 ## Débitos Técnicos Conhecidos
 
-Lista detalhada em [docs/07-estado-atual-e-roadmap.md](docs/07-estado-atual-e-roadmap.md#4-inconsistências-de-conteúdo-e-design). Principais:
+Lista detalhada em [docs/07-estado-atual-e-roadmap.md](docs/07-estado-atual-e-roadmap.md#5-inconsistências-de-conteúdo-e-design). Principais:
 
 - `CutMasterySystem`, `AchievementsPanelUI` ausentes da `GameScene`; VIP e arcos narrativos sem gatilho na cena; Prestígio sem UI
 - Eventos culturais desbloqueiam IDs de corte inexistentes (falta prefixo `req_`)

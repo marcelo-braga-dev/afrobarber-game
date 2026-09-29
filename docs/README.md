@@ -4,7 +4,7 @@
 |---|---|
 | **Projeto** | AfroBarber — simulador de barbearia afro-brasileira |
 | **Versão do jogo** | 0.1.0 (pré-alfa) |
-| **Versão da documentação** | 1.2 — 29/09/2026 |
+| **Versão da documentação** | 1.3 — 29/09/2026 |
 | **Motor** | Unity 6 (6000.3.10) |
 | **Idioma** | Português do Brasil |
 
@@ -56,6 +56,8 @@ Os documentos descrevem o jogo **como projetado**, mas sinalizam o que já funci
 
 Detalhes de cada item em [07 — Estado atual e roadmap](07-estado-atual-e-roadmap.md).
 
+> **Atenção:** há quatro **bloqueios críticos** na build atual — sem acesso à Loja e ao Inventário com inventário inicial vazio, data do jogo não salva, contas iniciais vencidas e paciência de ~30 s reais. Ver [07 §2](07-estado-atual-e-roadmap.md#2-bloqueios-críticos).
+
 ---
 
 ## 3. Números-chave
@@ -79,6 +81,7 @@ Detalhes de cada item em [07 — Estado atual e roadmap](07-estado-atual-e-roadm
 | Opções de empréstimo | 4 |
 | Perks de prestígio | 5 (até 3 prestígios) |
 | Código | ~206 scripts C#, ~33 mil linhas |
+| Testes automatizados | 28 arquivos, ~357 casos |
 
 ---
 
@@ -96,6 +99,7 @@ Detalhes de cada item em [07 — Estado atual e roadmap](07-estado-atual-e-roadm
 |---|---|---|
 | 1.0 | 29/09/2026 | Criação dos documentos 01 a 07 a partir de análise do código, assets e cena. |
 | 1.1 | 29/09/2026 | Revisão geral; marcação de funções em integração; documento 08 (editais). |
+| 1.3 | 29/09/2026 | Incorporação de revisão externa, verificada no código: bloqueios críticos (acesso à Loja/Inventário/Biblioteca, data não salva, contas iniciais vencidas e verificação por igualdade, paciência em tempo real); seções de balanceamento e de precisão cultural/propriedade intelectual no 07; correções culturais no 06 (CROWN Act, Palenque, Malcolm X, Poetic Justice, Afropunk, datas); textos do 08 sem promessas além da build; README raiz, CLAUDE.md e plano de correções alinhados ao 07. |
 | 1.2 | 29/09/2026 | Análise profunda das regras: modificadores não aplicados, desgaste inativo, visual de cabelo não configurado, reputação inicial 3,0; padronização (cabeçalho, sumário, legenda de status); documentos 09 (arte, áudio e tecnologia) e 10 (glossário). |
 
 ## 6. Como manter esta documentação
