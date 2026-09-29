@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | **Documento** | 02 · Guia de jogabilidade (regras e fluxo) |
-| **Versão** | 1.3 — 29/09/2026 |
+| **Versão** | 1.4 — 29/09/2026 |
 | **Leitores** | Game designers, testadores, jogadores, desenvolvedores |
 | **Relacionados** | [03 Interface](03-janelas-e-interface.md) · [04 Progressão](04-progressao-e-objetivos.md) · [05 Economia](05-economia-e-gestao.md) · [07 Estado atual](07-estado-atual-e-roadmap.md) |
 
@@ -375,7 +375,7 @@ O progresso é salvo **automaticamente e continuamente** no aparelho (exceto a *
 2. **Treine o timing.** No modo atual, o resultado depende só da precisão no minigame; combos rendem mais.
 3. **Não deixe a fila crescer.** Ela cansa o barbeiro e irrita os clientes.
 4. **Caminhe para recuperar.** Uma volta longa pelo bairro recupera energia até 2,5× mais rápido.
-5. **Pague as contas em dia.** Atraso gera multa de 5%, reduz a reputação, corta 20% da demanda e drena energia.
+5. **Pague as contas em dia.** Atraso gera multa de 5%, reduz a reputação, corta 20% da demanda e drena energia. ⚠️ Hoje, pagar **não restaura** a demanda perdida — ver [07 §2.3](07-estado-atual-e-roadmap.md#23-contas-de-abril-nascem-vencidas).
 6. **Preço acima do sugerido espanta clientes; abaixo, atrai.**
 7. **Dias de sol são movimentados; de tempestade, vazios** — planeje compras e descanso.
 8. **Aproveite as datas culturais:** novembro dá bônus de XP e dinheiro, e o dia 20 dobra o XP.

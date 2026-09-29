@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | **Documento** | 08 · Referência para inscrição em editais |
-| **Versão** | 1.3 — 29/09/2026 |
+| **Versão** | 1.4 — 29/09/2026 |
 | **Leitores** | Proponente, produção cultural, redatores de projeto |
 | **Relacionados** | [01 Visão geral](01-visao-geral-do-jogo.md) · [06 Universo cultural](06-universo-cultural.md) · [07 Estado atual](07-estado-atual-e-roadmap.md) · [09 Arte e tecnologia](09-arte-audio-e-tecnologia.md) |
 
@@ -171,7 +171,7 @@ O desenvolvimento segue ciclos curtos (iterações) com build jogável ao fim de
 
 | Etapa | Meses | Atividades | Entregas |
 |---|---|---|---|
-| **1. Integração e correções** | 1–2 | Ativar maestria, VIP, arcos narrativos, prestígio e conquistas; barra de navegação; kit inicial; preço por corte; requisitos e desgaste de ferramentas; regras de fidelidade, humor e clima; balanceamento | Build alfa completa |
+| **1. Integração e correções** | 1–2 | **Primeiro, os bloqueios:** barra de navegação (Loja, Inventário, Biblioteca), kit inicial, salvamento da data do jogo, correção das contas mensais, pausa do tempo e recalibração da paciência. **Depois:** ativar maestria, VIP, arcos narrativos, prestígio e conquistas; preço por corte; requisitos e desgaste de ferramentas; regras de fidelidade, humor e clima; balanceamento | Build alfa completa, jogável num save novo |
 | **2. Arte e áudio autorais** | 2–5 | Personagens próprios (clientes, 5 personagens narrativos, barbeiro); cabelos antes/depois dos 24 cortes; objetos das 7 reformas; interface e ícones; trilha original | Pacote de arte e trilha próprios |
 | **3. Consultoria cultural e acessibilidade** | 3–6 | Revisão do conteúdo histórico; implementação dos recursos de acessibilidade | Relatório de consultoria; build acessível |
 | **4. Testes com público** | 5–8 | Playtests com estudantes, barbeiros e jogadores; ajustes | Relatório de testes; build beta |

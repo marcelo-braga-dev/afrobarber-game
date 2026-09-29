@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | **Documento** | 07 · Estado da build, pendências e roadmap |
-| **Versão** | 1.3 — 29/09/2026 |
+| **Versão** | 1.4 — 29/09/2026 |
 | **Leitores** | Produção, desenvolvimento, design, proponente de editais |
 | **Base do levantamento** | Código (`Assets/Afrobarber/Scripts`), assets (`ScriptableObjects`, prefabs) e `GameScene.unity` em 29/09/2026 |
 
@@ -29,7 +29,7 @@ Legenda: ✅ ativo · 🟡 pronto, não ativo · 🧩 regra projetada, fora do c
 
 **Estágio:** pré-alfa (versão 0.1.0). O ciclo de atendimento funciona, mas **um save novo não consegue atender clientes sem intervenção no Editor** (ver §2).
 
-**O que já funciona de ponta a ponta:** o ciclo completo de atendimento (agenda → espera → pedido → planejamento → minigame → avaliação → pagamento → saída), bairro vivo com moradores e trânsito, dia/noite, clima, energia e desmaio, economia (caixa, extrato, contas, multas, empréstimos, loja, mobília, reformas com bônus), desbloqueio dos 24 cortes, missões, desafios diários com ranking, conquistas, BarberBook, conversa contextual com memória, tutorial e salvamento automático.
+**O que está programado de ponta a ponta:** o ciclo completo de atendimento (agenda → espera → pedido → planejamento → minigame → avaliação → pagamento → saída) — **jogável hoje apenas com intervenção no Editor** (itens no inventário), por causa do §2.1 —, bairro vivo com moradores e trânsito, dia/noite, clima, energia e desmaio, economia (caixa, extrato, contas, multas, empréstimos, loja, mobília, reformas com bônus), desbloqueio dos 24 cortes, missões, desafios diários com ranking, conquistas, BarberBook, conversa contextual com memória, tutorial e salvamento automático.
 
 **O que está programado mas não ligado (🟡):** maestria por corte, clientes VIP, arcos narrativos, prestígio, painel de conquistas, clientes espontâneos, relatório diário e os botões de 8 painéis na HUD (incluindo Loja, Inventário e Biblioteca).
 
@@ -112,7 +112,7 @@ Verificados no código e na `GameScene` em 29/09/2026. Precisam ser resolvidos a
 | **Economia** | Caixa, extrato, empréstimos, crise | ✅ | |
 | | Contas mensais | ⚠️ | Nascem vencidas; verificação por igualdade; pagamento não restaura demanda (§2.3) |
 | | Preço por corte | ⚠️ | Tabela por tipo de serviço sobrepõe o preço do corte |
-| | Loja, inventário, mobília colocável | ✅ | Painéis sem botão na HUD (§2.1, §8) |
+| | Loja, inventário, mobília colocável | ⚠️ | Sistemas prontos, mas **sem caminho de abertura** na HUD — bloqueio crítico (§2.1, §8) |
 | | Gestão: horários, dias, ajuste de preço, reformas | ✅ | |
 | | Reformas — bônus | ✅ | |
 | | Reformas — objetos na cena | 🧩 | Nenhum dos 7 objetos existe na `GameScene` |
@@ -165,7 +165,7 @@ Valores já configurados que nenhum sistema consome hoje:
 | # | Problema | Impacto | Sugestão | Prioridade |
 |---|---|---|---|---|
 | 1 | **Preço por tipo de serviço:** com `overrideRequestPriceTable = true`, todos os cortes do tipo "Corte de Cabelo" custam BM$ 35 e os acabamentos BM$ 15; o preço de referência de cada corte (BM$ 20–80) é ignorado. | Cortes difíceis não pagam mais; progressão econômica achatada. | Usar o preço do corte como base e a tabela como ajuste por tipo. | Alta |
-| 2 | **Turbante** (tipo "Outro") não tem entrada na tabela: preço **0** no pedido; no minigame usa reserva de BM$ 50. | Inconsistência visível. | Criar entrada ou aplicar o item 1. | Alta |
+| 2 | **Turbante** (tipo "Outro") não tem entrada na tabela: preço **0** no pedido; no minigame usa a reserva de BM$ 50 — mais que os BM$ 35 dos demais cortes. | Inconsistência visível. | Criar entrada ou aplicar o item 1. | Alta |
 | 3 | **Nota do minigame = fator × 5:** Horrível 2,25 · Ruim 3,25 · Mais ou Menos 4,25 · **Bom 5,0** · Maravilhoso 5,75 · Perfeito 6,5. | Reputação inflada; "Mãos de Ouro" (≥ 4,8) e combos (≥ 3,5) quase automáticos; "Nota Máxima" trivial; avaliação pode exibir "6,5/5". | Mapear resultado → 0,5 / 1,5 / 2,5 / 3,5 / 4,3 / 5,0. | Alta |
 | 4 | **Minigame ignora ferramentas e contexto:** só o timing conta. | Comprar ferramentas melhores não muda o resultado. | Combinar timing com qualidade das ferramentas e contexto do cliente. | Alta |
 | 5 | **Inventário inicial vazio** e caixa de BM$ 100: o plano padrão com produto capilar custa ≥ BM$ 195. | Primeiros minutos confusos. | Dar um kit inicial (pente, tesoura, creme básico). | Alta |
@@ -175,11 +175,10 @@ Valores já configurados que nenhum sistema consome hoje:
 | 9 | Conquista **"Barbearia Premium"** exige 10 reformas (existem 7). | Inalcançável. | Mudar para 7. | Baixa |
 | 10 | Conquista **"Mestre Supremo AfroBarber"** exige 25 cortes Lenda (existem 24). | Inalcançável. | Mudar para 24 / "todos". | Baixa |
 | 11 | **Secador** à venda sem etapa compatível. | Compra inútil. | Criar etapa "Secar" ou incluir em Finalizar/Definir. | Baixa |
-| 12 | Itens caros com atributos piores (FadeX Control, UrbanBlade Pro). | Escolha confusa. | Reordenar preços por atributos. | Baixa |
-| 13 | XP de High Top Fade (dif. 4) e Jheri Curl (dif. 3) = 10. | Cortes difíceis pouco atraentes. | Normalizar XP ≈ 6–8 × dificuldade. | Baixa |
-| 14 | "Dia Impecável" e "Sequência de Ouro" medem quase a mesma coisa. | Pouca variedade. | Trocar um por "atender N cortes diferentes". | Baixa |
-| 15 | Agenda gera cliente a cada ~5 min de jogo na cena (código: 90). | Fila enche rápido. | Validar em playtest. | Média |
-| 16 | Cliente não abandona a fila. | Espera longa sem custo real. | Sair com avaliação negativa ao esgotar. | Média |
+| 12 | Agenda gera cliente a cada ~5 min de jogo na cena (código: 90). | Fila enche rápido. | Validar em playtest. | Média |
+| 13 | Cliente não abandona a fila. | Espera longa sem custo real. | Sair com avaliação negativa ao esgotar. | Média |
+
+Itens de balanceamento numérico (preço de produtos, XP de cortes, metas, desafios) ficam só em [§6](#6-balanceamento), para não duplicar.
 
 ---
 
@@ -187,7 +186,7 @@ Valores já configurados que nenhum sistema consome hoje:
 
 | # | Observação | Números | Sugestão |
 |---|---|---|---|
-| B1 | **Turbante paga mais que os outros cortes** no minigame: sem entrada na tabela, cai na reserva de BM$ 50. | Dif. 1, 10 min → BM$ 50; demais cortes → BM$ 35. | Resolver com o preço por corte (§5 #1). |
+| B1 | **Turbante paga mais que os outros cortes** no minigame. | BM$ 50 (reserva) contra BM$ 35. | Mesmo problema de §5 #2 — ver lá. |
 | B2 | **Etapas não servem a 9 dos 24 estilos.** O plano Lavar → Cortar → Acabamento → Finalizar com máquina ou tesoura não descreve tranças, locs, twists, puff e turbante. | Box Braids, Cornrows, Tranças Nagô, Dreads/Locs, Sisterlocks, Twists, Twist Out, Coily Puff, Turbante. | Novas ações (Trançar, Torcer, Enrolar, Amarrar, Secar) e, talvez, um tipo de serviço "Penteado/Trança". |
 | B3 | **Conquistas dominam o XP.** | Conquistas: 17.500 XP. Nível 1→5: 12.500 XP. Um corte: 10–40 XP. Com a nota inflada, o nível 2 chega em ~10 clientes. Os 500 XP de "Lenda AfroBarber" chegam quando não há mais nível. | Reduzir XP das conquistas ou aumentar a curva; trocar XP da conquista de nível 5 por outra recompensa. |
 | B4 | **Maestria total é inviável.** | Lenda nos 24 cortes = 550 × Σ dificuldades (75) = **41.250 pontos** ≈ 1.650 atendimentos Perfeitos. | Reduzir o multiplicador por dificuldade ou os limiares. |
@@ -197,7 +196,7 @@ Valores já configurados que nenhum sistema consome hoje:
 | B8 | **Ícones e filtros.** | 2 dos 9 ícones de pedido (High Fade, Low Fade) não correspondem a cortes; os filtros "Black Power" e "Outros" da Biblioteca ficam sempre vazios (nenhum corte nessas categorias). | Criar os cortes ou remover ícones/filtros; mover Black Power Clássico para a categoria Black Power. |
 | B9 | **Sem trava de corte por nível.** | A agenda sorteia qualquer um dos cortes; um Sisterlocks (dif. 5) pode chegar no primeiro dia. | Liberar cortes por nível ou por reputação. |
 | B10 | **Eventos sobrepostos.** | Em 20/11, "Mês" (× 1,5) e "Dia" (× 2,0) não se somam: vale o **maior** bônus de cada tipo. | Documentado; decidir se é o comportamento desejado. |
-| B11 | **Desafio "Dia Impecável".** | Conta atendimentos não ruins do dia; um Ruim zera o progresso exibido, mas o próximo atendimento restaura a contagem acumulada. | Definir se é "5 no dia" ou "5 seguidos" e alinhar o código. |
+| B11 | **Desafios "Dia Impecável" e "Sequência de Ouro".** | "Dia Impecável" conta atendimentos não ruins do dia (um Ruim zera o progresso exibido, mas o próximo atendimento restaura a contagem); "Sequência de Ouro" mede quase a mesma coisa (4 seguidos sem Ruim). | Definir a regra do "Dia Impecável" e trocar um dos dois por "atender N cortes diferentes". |
 
 ---
 

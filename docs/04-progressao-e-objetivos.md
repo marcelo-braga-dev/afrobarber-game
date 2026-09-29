@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | **Documento** | 04 · Progressão, metas e recompensas |
-| **Versão** | 1.3 — 29/09/2026 |
+| **Versão** | 1.4 — 29/09/2026 |
 | **Leitores** | Game designers, roteiristas, balanceamento |
 | **Relacionados** | [02 Jogabilidade](02-guia-de-jogabilidade.md) · [05 Economia](05-economia-e-gestao.md) · [06 Universo cultural](06-universo-cultural.md) · [07 Estado atual](07-estado-atual-e-roadmap.md) |
 
@@ -301,9 +301,9 @@ Ativados pela data do jogo e anunciados no chat. Os bônus funcionam ✅; o desb
 
 | Evento | Quando | XP | Dinheiro | Cortes em destaque |
 |---|---|---|---|---|
-| Carnaval | Fevereiro | × 1,3 | × 1,4 | Moicano Afro, Burst Fade, Afro Degradê |
-| Mês da Cultura Afro-Latino-Americana | Julho | × 1,2 | × 1,1 | Corte César, Cornrows, Box Braids |
-| Dia Nacional do Turbante | 25/09 | × 1,5 | × 1,3 | Turbante |
+| Carnaval | Fevereiro (fixo no jogo; a data real varia) | × 1,3 | × 1,4 | Moicano Afro, Burst Fade, Afro Degradê |
+| Julho afro-latino-americano (nome em revisão — sugestão: 25/07, Tereza de Benguela) | Julho | × 1,2 | × 1,1 | Corte César, Cornrows, Box Braids |
+| Dia do Turbante (fonte a confirmar) | 25/09 | × 1,5 | × 1,3 | Turbante |
 | Mês da Consciência Negra | Novembro | × 1,5 | × 1,2 | Black Power Clássico, Tranças Nagô, Cornrows, Turbante |
 | Dia da Consciência Negra | 20/11 | **× 2,0** | × 1,5 | Dreads/Locs, Afro Natural, Conk |
 
