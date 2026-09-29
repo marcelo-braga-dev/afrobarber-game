@@ -43,7 +43,7 @@ Nome completo, usado no corpo do projeto: ***AfroBarber - Cada Corte, uma Histó
 >
 > O conhecimento vem da prática. O jogador assume o papel de um(a) jovem barbeiro(a) que abre a própria barbearia num bairro brasileiro, recebe moradores com personalidades e histórias próprias e executa os cortes em um minigame de precisão e ritmo. **Cada vez que pratica um corte, destrava um novo capítulo** do minidocumentário daquele estilo. Os clientes comentam na cadeira o que o jogador acabou de descobrir e, mais adiante, passam a pedir o corte pelo que ele significa ("quero algo que minha avó reconheceria"). Aprender a história passa a fazer parte do ofício.
 >
-> O projeto já conta com um protótipo avançado do jogo e com a base do conteúdo histórico dos 24 cortes, desenvolvidos com recursos próprios. Este apoio financiará:
+> O projeto já conta com um protótipo avançado do jogo e com a base do conteúdo histórico dos 24 cortes, desenvolvidos com recursos próprios. Uma **versão demonstrativa (demo)** está publicada na Google Play exclusivamente para que os pareceristas possam verificar e visualizar o jogo: `[LINK DA DEMO]`. Este apoio financiará:
 > - o **roteiro, a validação cultural, as ilustrações, a narração e a trilha dos 120 capítulos**;
 > - a conclusão da versão 1.0 do jogo, livre de direitos de terceiros e acessível;
 > - a **publicação gratuita** para celular Android e computador;
@@ -91,7 +91,7 @@ Nome completo, usado no corpo do projeto: ***AfroBarber - Cada Corte, uma Histó
 > - Trailer com janela de Libras, legendas e audiodescrição.
 > - Testes com participação de pessoa com deficiência.
 >
-> **Meta 5 — Publicação gratuita.** Distribuição gratuita na Google Play (Android) e no itch.io (computador), sem anúncios nem compras dentro do jogo.
+> **Meta 5 — Publicação gratuita da versão final.** A versão 1.0, com o acervo completo, substitui a demo na Google Play (Android) e é publicada também no itch.io (computador), gratuita, sem anúncios nem compras dentro do jogo.
 >
 > **Meta 6 — Lançamento público e sessões de jogo mediado.**
 > - Um evento aberto de lançamento em Ribeirão Preto.
@@ -273,6 +273,7 @@ Meses contados a partir do recebimento dos recursos.
 4. **AfroBarber - Cada Corte, uma História — o protótipo:**
    - capturas de tela (barbearia, pedido com resumo histórico, minigame, Biblioteca de Cortes);
    - **amostra do acervo:** roteiro completo de 1 minidocumentário (5 capítulos) e, se possível, 1 capítulo ilustrado e narrado como piloto;
+   - **link da demo na Google Play** `[LINK]`, com instruções rápidas de como jogar;
    - link de vídeo de gameplay de 2 a 3 minutos (sem ativos de terceiros visíveis, ou com aviso de arte provisória);
    - números: 24 cortes com conteúdo histórico, ~206 scripts, ~357 testes automatizados, documentação de design em 10 volumes.
 5. **Outros trabalhos:** projetos de software, jogos, arte ou educação. `[LISTAR]`
@@ -280,11 +281,11 @@ Meses contados a partir do recebimento dos recursos.
 
 ## N. Demais informações
 
-> - O jogo é **inédito**: nunca foi publicado nem distribuído.
+> - **Versão demonstrativa.** Uma demo do protótipo está publicada na Google Play (`[LINK]`) com o objetivo exclusivo de permitir aos pareceristas verificar e visualizar o jogo. A obra objeto deste projeto é **inédita em sua versão final**: o acervo de 24 minidocumentários (120 capítulos narrados e ilustrados), a trilha original e a versão 1.0 do jogo ainda não existem e serão produzidos com o apoio do edital. Ao final, a versão 1.0 substitui a demo na mesma página da Google Play.
 > - Não haverá monetização de nenhum tipo.
 > - Todos os recursos de terceiros usados no protótipo serão removidos ou substituídos por material autoral ou de licença aberta antes da publicação. Os créditos e licenças serão publicados junto ao jogo.
 > - O proponente declara que as referências a religiões de matriz africana presentes no jogo têm caráter exclusivamente histórico e cultural.
-> - Links: vídeo do protótipo `[LINK]` · documentação de design `[LINK]` · cartas de anuência dos locais `[ANEXAR]`.
+> - Links: demo na Google Play `[LINK]` · vídeo do protótipo `[LINK]` · documentação de design `[LINK]` · cartas de anuência dos locais `[ANEXAR]`.
 
 ---
 
@@ -309,5 +310,6 @@ Meses contados a partir do recebimento dos recursos.
 - [ ] Locais das ações confirmados como acessíveis; bairros conferidos no Anexo 11.
 - [ ] Portfólio comprova 2 anos de atuação cultural em Ribeirão Preto.
 - [ ] Vídeo e imagens sem ativos de terceiros visíveis.
+- [ ] **Demo na Google Play:** jogável num aparelho sem save anterior (acesso à loja/inventário ou kit inicial, sem os bloqueios do [07 §2](07-estado-atual-e-roadmap.md#2-bloqueios-críticos)); sem nomes, marcas ou músicas de terceiros (ex.: "Fliperama Pac-Man"); sem anúncios nem compras; descrição da loja informando que é uma demo em desenvolvimento, sem uso de marcas da Prefeitura ou do Governo Federal antes da contemplação.
 - [ ] Texto sem menção a venda, anúncios ou patrocínio de marcas.
 - [ ] Envio feito pelo menos 2 dias antes do prazo final.

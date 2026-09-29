@@ -35,7 +35,7 @@
 |---|---|
 | Modalidade | I — R$ 30.000,00 |
 | Proponente | **Pessoa física**, residente em Ribeirão Preto há mais de 2 anos |
-| Natureza do produto | **Jogo eletrônico inédito** (nunca publicado) |
+| Natureza do produto | **Jogo eletrônico inédito em sua versão final**. Existe uma **demo publicada na Google Play** exclusivamente para verificação e visualização pelos pareceristas; o edital financia a finalização e a publicação da versão 1.0, que substitui a demo |
 | Monetização | **Nenhuma** — distribuição gratuita |
 | Direitos autorais | Todo recurso de terceiros será **removido ou substituído** por material autoral ou de licença aberta (CC0, CC-BY, SIL OFL) antes da publicação |
 
