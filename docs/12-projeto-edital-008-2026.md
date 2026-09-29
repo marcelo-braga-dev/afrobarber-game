@@ -1,4 +1,4 @@
-# Projeto — AfroBarber: jogo sobre a barbearia afro, sua história e sua comunidade
+# Projeto — Cada Corte, uma História
 
 | | |
 |---|---|
@@ -9,6 +9,7 @@
 | **Proponente** | Pessoa física — `[NOME COMPLETO]` — residente em Ribeirão Preto há mais de 2 anos |
 | **Cota** | `[Pessoas negras / Ampla concorrência]` |
 | **Bônus pleiteados** | `[nenhum / periferia / …]` |
+| **Nome do projeto** | **Cada Corte, uma História** (no texto: *AfroBarber - Cada Corte, uma História*) |
 | **Planejamento** | [11 — Planejamento da inscrição](11-proposta-edital-008-2026-rp.md) |
 
 > **Como usar:** cada seção abaixo corresponde a um campo do formulário (item 4.2.1 do edital, letras A a N). Copie o texto do bloco, preencha os `[COLCHETES]` e confira o limite de caracteres de cada campo na plataforma. O cronograma (§K) e a planilha (§L) devem ser transcritos nos modelos oficiais (Anexos 3 e 4).
@@ -17,17 +18,19 @@
 
 ## Título do projeto
 
-**AfroBarber — um jogo sobre a barbearia afro, sua história e sua comunidade**
+**Cada Corte, uma História**
+
+Nome completo, usado no corpo do projeto: ***AfroBarber - Cada Corte, uma História***
 
 ## Resumo (uma frase)
 
-> Produção e lançamento público do jogo eletrônico inédito *AfroBarber*, gratuito e acessível, em que cada corte feito numa barbearia afro de bairro desbloqueia a história e o significado cultural de um penteado negro.
+> Produção e lançamento público do jogo eletrônico inédito *AfroBarber - Cada Corte, uma História*, gratuito e acessível, em que cada corte feito numa barbearia afro de bairro desbloqueia a história e o significado cultural de um penteado negro.
 
 ---
 
 ## A. Apresentação do projeto
 
-> *AfroBarber* é um jogo eletrônico inédito, criado e desenvolvido em Ribeirão Preto, que coloca a barbearia afro — espaço histórico de encontro, autoestima e resistência da população negra — no centro de uma obra artística interativa.
+> *AfroBarber - Cada Corte, uma História* é um jogo eletrônico inédito, criado e desenvolvido em Ribeirão Preto, que coloca a barbearia afro — espaço histórico de encontro, autoestima e resistência da população negra — no centro de uma obra artística interativa.
 >
 > No jogo, a pessoa assume o papel de um(a) jovem barbeiro(a) que abre a própria barbearia num bairro urbano brasileiro. Ela recebe moradores com personalidades e histórias próprias, escolhe as ferramentas, planeja as etapas do atendimento e executa o corte em um minigame de precisão e ritmo. Fora da cadeira, cuida das contas, dos preços, da reputação e da própria energia.
 >
@@ -37,7 +40,7 @@
 
 ## B. Relevância e justificativa
 
-> **Um patrimônio cultural pouco presente nos jogos.** A barbearia afro é uma instituição da vida negra no Brasil: lugar de conversa, de circulação de notícias, de cuidado com a autoestima e de afirmação estética. Os penteados negros carregam séculos de história, das tranças de raiz africana ao Black Power como símbolo político dos anos 1960 e 1970. Esse patrimônio raramente aparece em produtos culturais interativos, e quase nunca como tema central. *AfroBarber* propõe um jogo em que pessoas negras e sua cultura são protagonistas, tratadas com respeito, humor e orgulho.
+> **Um patrimônio cultural pouco presente nos jogos.** A barbearia afro é uma instituição da vida negra no Brasil: lugar de conversa, de circulação de notícias, de cuidado com a autoestima e de afirmação estética. Os penteados negros carregam séculos de história, das tranças de raiz africana ao Black Power como símbolo político dos anos 1960 e 1970. Esse patrimônio raramente aparece em produtos culturais interativos, e quase nunca como tema central. *AfroBarber - Cada Corte, uma História* propõe um jogo em que pessoas negras e sua cultura são protagonistas, tratadas com respeito, humor e orgulho.
 >
 > **O jogo como linguagem artística.** Jogos eletrônicos são reconhecidos como produção cultural pelo Marco Legal da Indústria de Jogos Eletrônicos (Lei 14.852/2024) e estão entre as formas de fruição mais presentes no cotidiano de crianças e jovens. Uma obra que une narrativa, música, arte visual e interação amplia o repertório artístico da cidade e alcança um público que dificilmente procuraria esse conteúdo em livros ou exposições.
 >
@@ -153,7 +156,7 @@
 
 | # | Nome | Função no projeto | Reside em RP | Minicurrículo |
 |---|---|---|---|---|
-| 1 | `[PROPONENTE]` | Direção geral, game design e programação | Sim | `[Formação; experiência em desenvolvimento de software e jogos; criador do AfroBarber; atuação cultural em Ribeirão Preto desde [ano]: …]` |
+| 1 | `[PROPONENTE]` | Direção geral, game design e programação | Sim | `[Formação; experiência em desenvolvimento de software e jogos; criador de AfroBarber - Cada Corte, uma História; atuação cultural em Ribeirão Preto desde [ano]: …]` |
 | 2 | `[ ]` | Arte 3D e interface | `[ ]` | `[ ]` |
 | 3 | `[ ]` | Trilha sonora original e efeitos | `[ ]` | `[ ]` |
 | 4 | `[ ]` | Consultoria em cultura afro-brasileira | `[ ]` | `[ ]` |
@@ -231,7 +234,7 @@ Meses contados a partir do recebimento dos recursos.
 1. **Apresentação:** nome, formação, área de atuação e resumo da trajetória (meia página).
 2. **Atuação cultural em Ribeirão Preto (ordem cronológica, desde `[ano]`):** cada item com data, local, função, foto com legenda e link. `[LISTAR]`
 3. **Declarações e cartas de reconhecimento** de escolas, ONGs, associações, coletivos ou espaços culturais da cidade. `[OBTER]`
-4. **AfroBarber — o protótipo:**
+4. **AfroBarber - Cada Corte, uma História — o protótipo:**
    - capturas de tela (barbearia, pedido com resumo histórico, minigame, Biblioteca de Cortes);
    - link de vídeo de gameplay de 2 a 3 minutos (sem ativos de terceiros visíveis, ou com aviso de arte provisória);
    - números: 24 cortes com conteúdo histórico, ~206 scripts, ~357 testes automatizados, documentação de design em 10 volumes.

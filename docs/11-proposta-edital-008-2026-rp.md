@@ -1,10 +1,11 @@
-# AfroBarber — Proposta para o Edital PNAB nº 008/2026 (Ribeirão Preto)
+# Cada Corte, uma História — Planejamento para o Edital PNAB nº 008/2026 (Ribeirão Preto)
 
 | | |
 |---|---|
 | **Documento** | 11 · Planejamento da inscrição no Edital de Chamamento Público nº 008/2026 |
 | **Versão** | 0.1 (rascunho de trabalho) — 29/09/2026 |
 | **Edital** | Incentivo a Projetos de Produção Artística — Secretaria Municipal de Cultura e Turismo de Ribeirão Preto — recursos da PNAB (Lei 14.399/2022) |
+| **Nome do projeto** | **Cada Corte, uma História** — no corpo do texto: *AfroBarber - Cada Corte, uma História* |
 | **Modalidade** | **I — R$ 30.000,00** (até 10 projetos) |
 | **Inscrição** | Plataforma Criarte (`https://criarte.grupogorki.com.br/`) — prazo original 29/09/2026, **prorrogado por 15 dias** (≈ 14/10/2026 — `[CONFIRMAR data e hora no ato de prorrogação]`) |
 | **Relacionados** | [12 Texto do projeto](12-projeto-edital-008-2026.md) · [07 Estado atual](07-estado-atual-e-roadmap.md) · [08 Referência para editais](08-referencia-para-editais.md) · [06 Universo cultural](06-universo-cultural.md) |
@@ -81,7 +82,7 @@
 ## 4. O projeto: objeto, recorte e metas
 
 ### 4.1 Objeto
-**Produção e lançamento público do jogo eletrônico inédito *AfroBarber*** — simulação de uma barbearia afro de bairro em que cada corte executado desbloqueia a história e o significado cultural de um penteado negro — em versão 1.0 **gratuita** para Android e PC, **acessível**, com Biblioteca de 24 cortes revisada por consultoria, e **sessões públicas de lançamento e de jogo mediado** em Ribeirão Preto.
+**Produção e lançamento público do jogo eletrônico inédito *AfroBarber - Cada Corte, uma História*** — simulação de uma barbearia afro de bairro em que cada corte executado desbloqueia a história e o significado cultural de um penteado negro — em versão 1.0 **gratuita** para Android e PC, **acessível**, com Biblioteca de 24 cortes revisada por consultoria, e **sessões públicas de lançamento e de jogo mediado** em Ribeirão Preto.
 
 ### 4.2 Recorte para R$ 30 mil
 O [08](08-referencia-para-editais.md) descreve um projeto maior (arte autoral completa, trilha extensa, localização). Para esta modalidade:
@@ -114,7 +115,7 @@ O [08](08-referencia-para-editais.md) descreve um projeto maior (arte autoral co
 ## 5. Campos do formulário (A–N) — rascunho
 
 **A. Apresentação do projeto**
-> AfroBarber é um jogo eletrônico inédito, desenvolvido em Ribeirão Preto, em que o jogador administra uma barbearia afro de bairro. A cada corte realizado, desbloqueia a história e o significado cultural de um penteado negro — das Tranças Nagô e do Turbante ao Black Power, ao Afro Degradê e ao Skin Fade —, formando uma Biblioteca de 24 cortes que funciona como uma linha do tempo da estética negra. O projeto financia a conclusão da versão 1.0, gratuita e acessível, para celular Android e computador, a revisão do conteúdo por consultoria em cultura afro-brasileira e o lançamento público do jogo em Ribeirão Preto, com sessões de jogo mediado em `[escolas/equipamentos culturais de bairros periféricos]`.
+> *AfroBarber - Cada Corte, uma História* é um jogo eletrônico inédito, desenvolvido em Ribeirão Preto, em que o jogador administra uma barbearia afro de bairro. A cada corte realizado, desbloqueia a história e o significado cultural de um penteado negro — das Tranças Nagô e do Turbante ao Black Power, ao Afro Degradê e ao Skin Fade —, formando uma Biblioteca de 24 cortes que funciona como uma linha do tempo da estética negra. O projeto financia a conclusão da versão 1.0, gratuita e acessível, para celular Android e computador, a revisão do conteúdo por consultoria em cultura afro-brasileira e o lançamento público do jogo em Ribeirão Preto, com sessões de jogo mediado em `[escolas/equipamentos culturais de bairros periféricos]`.
 
 **B. Relevância / justificativa** — base: [08 §3](08-referencia-para-editais.md#3-justificativa), acrescentando:
 - produção de jogos como linguagem artística em Ribeirão Preto `[dado local, se houver]`;
