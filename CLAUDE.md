@@ -167,7 +167,7 @@ On success: calls `BarberWorkController.StartService()`, then `WaitClientSitThen
 
 **Wiring na cena:** campo `[SerializeField] MinigameCortePerfeitoController minigame` no `BarbershopServiceManager` no Inspector.
 
-> O minigame e o fluxo avançado por plano são mutuamente exclusivos. Se `useMinigame = true`, o `ServicePlanningUI` não é aberto.
+> O `ServicePlanningUI` **continua abrindo** com `useMinigame = true`: o jogador monta o plano, e ao clicar em iniciar `StartAdvancedServiceFromPlanningUI` desvia para `ExecutarMinigameEConcluir` (os ícones das etapas do plano viram os alvos do minigame). O que é substituído é só a execução por etapas (`TryExecutePreparedAdvancedPlan`). Nesse caminho a nota é `fatorRating × 5` (Bom = 5,0; Perfeito = 6,5) e ignora ferramentas/maestria/personalidade — ver `docs/07-estado-atual-e-roadmap.md`.
 
 ---
 
@@ -433,7 +433,7 @@ NarrativeMissionSystem.Instance?.RegistrarAtendimentoNarrativo(
 
 ## Cut Mastery System
 
-`Progression/CutMasterySystem.cs` — singleton que rastreia, **por corte** (`ClientRequestData.RequestId`, os 25 cortes da Biblioteca), o quão bom o jogador está naquele corte específico. Mede progressão via XP por atendimento e 5 tiers genéricos reaproveitáveis em qualquer corte.
+`Progression/CutMasterySystem.cs` — singleton que rastreia, **por corte** (`ClientRequestData.RequestId`, os 24 cortes da Biblioteca — `MainClientRequestDatabase` tem 24 entradas), o quão bom o jogador está naquele corte específico. Mede progressão via XP por atendimento e 5 tiers genéricos reaproveitáveis em qualquer corte.
 
 **Tiers** (`CutMasteryTier`):
 
@@ -622,11 +622,11 @@ O `NPCConversationBrain` integra com `GlobalDialogueManager.AddNpcMessage(identi
 
 `Characters/Clients/ClientHairVisualController.cs` — controla a troca visual de cabelo do cliente antes/depois do atendimento.
 
-**Fluxo:**
-1. Na inicialização do cliente → `ApplyInitialHair()` (baseado em `beforeHairId` do `ClientRequestData`)
-2. Ao concluir serviço (`MarkServiceCompleted()`) → `ApplyFinalHair()` (baseado em `afterHairId`)
+**Como funciona (verificado em 29/09/2026):** o controller tem `defaultHair` (GameObject) e uma lista `hairVariants` de pares `{ ClientRequestData requestData, GameObject hairObject }`. `ApplyHair(request)` ativa o `hairObject` cujo `requestData` corresponde ao pedido (ou o `defaultHair` se não houver variante); `ApplyDefaultHair()` volta ao padrão. Os campos `beforeHairId`/`afterHairId` de `ClientRequestData`/`ClientServiceProfile` **não** são usados por esse controller e estão vazios nos 24 cortes.
 
-**Configuração no prefab:** criar GameObjects filhos para cada cabelo possível; desativar todos por padrão; registrar IDs em `ClientHairVisualController`; preencher `beforeHairId`/`afterHairId` no `ClientRequestData`.
+**Configuração no prefab:** criar GameObjects filhos para cada cabelo; desativar todos; atribuir `defaultHair` e preencher `hairVariants` com o asset do pedido e o objeto de cabelo correspondente.
+
+> **Estado atual:** nenhum prefab/cena tem `hairVariants` preenchido — a troca visual não acontece em jogo.
 
 > `ClientHairDefinition.cs` e `HairAnchorBinder.cs` foram removidos na limpeza de código morto — não recriar.
 
@@ -766,7 +766,7 @@ Never reuse these keys for new data:
 ## Estado do Repositório / Débito Técnico Conhecido
 
 - **VCS**: o projeto usa Plastic SCM (`.plastic/`) como controle de versão principal. Um repositório Git separado dentro de `Assets/Afrobarber/Scripts/.git` (espelho manual apontando para `github.com/marcelo-braga-dev/afrobarber`) existiu em algum momento, excluído do Plastic via `ignore.conf`, mas não está mais presente no checkout atual — se for recriado, trate-o como espelho manual, não como histórico confiável.
-- **Testes**: `Assets/Tests/` não tinha nenhum teste até esta rodada. Um scaffold mínimo (`Assets/Tests/EditMode/`) foi criado com 2 testes de exemplo cobrindo lógica estática pura — está longe de cobertura completa.
+- **Testes**: `Assets/Tests/Editor/` tem 28 arquivos com ~357 casos de teste EditMode (levantamento de 29/09/2026), cobrindo resolução de resultado, avaliação por etapas, compatibilidade de ferramentas, planejamento, preços, finanças, contas, empréstimos, XP, maestria, fidelidade, VIP, prestígio, desafios, missões, narrativa, BarberBook, reputação, clima e tempo. Não há testes PlayMode do ciclo de atendimento em cena.
 - **Padrão de subscrição de UI auditado**: `LoanPanelUI` (unsubscribe por lambda) foi corrigido. Todos os demais arquivos auditados usam métodos nomeados com `OnDisable` unsubscribe ou guards equivalentes — nenhum vazamento real encontrado.
 - **HDRP/URP em mobile**: `Core/Mobile/MobilePerformanceBootstrap.cs` troca o quality level em Android para um perfil URP, enquanto a esmagadora maioria dos materiais usa shader `HDRP/Lit`. Risco real de material rosa em build Android — **validar em device real antes de shippar**. iOS removido do `MobilePerformanceBootstrap` (sem suporte iOS ativo).
 - **Minigame de serviço integrado mas não documentado anteriormente**: `Services/Minigame/MinigameCortePerfeitoController.cs` e `MinigameHitTarget.cs` — controlados por `BarbershopServiceManager.useMinigame` (campo SerializeField). Ver seção "Minigame de Serviço".
@@ -779,6 +779,7 @@ Never reuse these keys for new data:
 - **`AchievementSystem` — UI criada** (`UI/Achievements/`): `AchievementPopupUI` (popup com fila e fade, assina `OnConquistaDesbloqueada`) e `AchievementsPanelUI` + `AchievementsItemUI` (painel de lista com progresso). **Wiring pendente**: adicionar `Panel_Conquistas` ao Canvas da HUD e `Popup_Conquista` ao Canvas overlay; registrar `uiConquistas` em `GameUIManager` se quiser integrar ao sistema de painéis exclusivos.
 - **Eventos "fire but nobody's home" (documentados, não corrigidos)**: `BarbershopServiceManager.OnAtendimentoConcluido`, os três eventos do `NarrativeMissionSystem` (`OnCapituloDesbloqueado`/`OnCapituloConcluido`/`OnPersonagemCompleto`), `BusinessReportManager.OnRelatorioGerado`, `GlobalGameplayManagement.OnPricesChanged`/`OnScheduleChanged` são disparados mas não têm nenhum assinante hoje. Deixados como estão — são pontos de extensão baratos que uma UI futura pode consumir, não atrapalham nada funcionando vazios.
 - **Componentes não-singleton sem documentação de wiring**: `WaitingAreaManager` (passado a `ClientNPC.InicializarNaCidade`), `FinanceHUDBinder` (substituto do `MoneyTextBinder` removido — conecta `OnCashChanged`/`OnFinanceDataChanged` a dois `TMP_Text`), `NPCConversationBrain`/`NPCDialogueMemory` (sistema de auto-talk por NPC, requer `NPCIdentity`+`NPCSocialProfile`+`ClientNPC`+`ClientPatience` no mesmo GameObject), `BarbershopManagementSaveSystem` (persiste horários e ajustes de preço, 14 chaves PlayerPrefs).
+- **Regras configuradas mas não consumidas (auditoria 29/09/2026)**: `VIPClientSystem.AplicarMultiplicadorPreco/AplicarMultiplicadorGorjeta`, `ClientLoyaltySystem.GetMultiplicadorGorjeta` (só usado no texto do diálogo), `GetBonusPacienciaMinutos`, `DeveElogiarEspontaneamente`, `ClientMoodSystem.GetModificadorRating`, `WeatherEffect.multiplicadorGorjeta/chanceHumorPositivo`, `PrestigeSystem.GetFatorAluguel` não têm chamadores. Com `useMinigame = true`, `AdvancedServiceOutcomeResolver` (nível, maestria, personalidade, urgência, ferramentas) não participa da nota. `ConsumeLoadoutItems` itera `request.requiredItems`, vazio nos 24 cortes → sem consumo/desgaste. `GlobalGameplayManagement.overrideRequestPriceTable = true` faz o preço vir de `MainServicePriceTable` por `ServiceType` (Corte = 35, Acabamento = 15, `Outro` sem entrada → Turbante = 0), ignorando `servicePrice` do corte. Os 7 `gameObjectNomeNaCena` das reformas não existem na `GameScene`. Detalhes e prioridades em `docs/07-estado-atual-e-roadmap.md`.
 - **Triagem de `eventosSuscritos` auditada**: todos os arquivos de UI verificados usam métodos nomeados com `OnDisable` unsubscribe, ou guardas equivalentes (`isBound`, `isSubscribed`, `-=` antes de `+=`). Nenhum vazamento lambda real encontrado. A única lambda de `+=` em produção é em `MainMenuController.IniciarPreloadAposPAD` para o evento one-shot `OnPronto` do PAD — segura.
 
 ---

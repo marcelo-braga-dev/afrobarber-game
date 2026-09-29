@@ -52,7 +52,7 @@ AfroBarber Game é um jogo de simulação em terceira pessoa ambientado em uma b
 - Dinheiro acumulado para comprar produtos e ferramentas melhores
 - XP → 5 níveis (Aprendiz → Barbeiro de Bairro → Profissional → Mestre do Degradê → Lenda AfroBarber)
 - Melhoria de reputação (afeta fluxo de clientes)
-- Desbloqueio de 25 cortes na Biblioteca Educativa
+- Desbloqueio de 24 cortes na Biblioteca Educativa
 - Maestria por corte (5 tiers, bônus de qualidade e recompensa)
 - Prestige System (New Game+ com perks permanentes após nível 5)
 
@@ -121,7 +121,7 @@ Assets/Afrobarber/Scripts/
 ├── Core/               # Bootstrap, GameTimeSystem, WeatherSystem, TutorialController
 ├── Dialogue/           # GlobalDialogueManager, NPCConversationBrain
 ├── Economy/            # FinanceManager, LoanSystem, FinanceMonthlyBillsManager
-├── Education/          # Biblioteca de 25 cortes afro com lore completo
+├── Education/          # Biblioteca de 24 cortes afro com lore completo
 ├── Energy/             # PlayerEnergySystem, BarberWorkController
 ├── Evaluation/         # ClientEvaluationSystem, BarbershopRatingManager
 ├── Gameplay/           # VIPClientSystem, PrestigeSystem, DailyChallengeSystem
@@ -148,12 +148,12 @@ Assets/Afrobarber/Scripts/
 | `ClientNPC` | `Characters/Clients/` | Máquina de estados dos clientes (10 estados) |
 | `FinanceManager` | `Economy/` | Sistema financeiro canônico. Fluxo avançado usa `AddCashIncome`; fallback usa `RegisterServiceIncome` |
 | `PlayerXPManager` | `Progression/` | XP e 5 níveis de progressão do jogador |
-| `EducationProgressManager` | `Education/` | Biblioteca de 25 cortes afro: desbloqueio, favoritos, lore |
-| `CutMasterySystem` | `Progression/` | Maestria por corte (5 tiers × 25 cortes, bônus real de qualidade/recompensa) |
+| `EducationProgressManager` | `Education/` | Biblioteca de 24 cortes afro: desbloqueio, favoritos, lore |
+| `CutMasterySystem` | `Progression/` | Maestria por corte (5 tiers × 24 cortes, bônus real de qualidade/recompensa) |
 | `ClientLoyaltySystem` | `Progression/` | Fidelidade de clientes (5 tiers, bônus de gorjeta e paciência) |
 | `DailyChallengeSystem` | `Gameplay/` | Desafios diários (tempo real) com ranking fictício |
 | `NarrativeMissionSystem` | `Missions/` | Arcos narrativos com 5 personagens fixos, 3 capítulos cada |
-| `MissionSystem` | `Missions/` | Missões por marcos/tiers (⚠ só registra no fluxo fallback) |
+| `MissionSystem` | `Missions/` | Missões por marcos/tiers (registra em todos os fluxos via `NotificarSistemasExternos`) |
 | `BarberBookSystem` | `Social/` | Rede social simulada pós-atendimento, posts virais |
 | `LoanSystem` | `Economy/` | Empréstimos com juros compostos semanais (4 opções) |
 | `PrestigeSystem` | `Gameplay/` | New Game+ com 5 perks permanentes |
@@ -201,7 +201,7 @@ WaitingArea
 Managers como filhos do `GameBootstrap`: `LoanSystem`, `ClientLoyaltySystem`, `CutMasterySystem`, `PlayerNicknameManager`, `ClientAppointmentScheduler`
 
 **Assets obrigatórios:**
-- `MainClientRequestDatabase.asset` (25 `ClientRequestData`)
+- `MainClientRequestDatabase.asset` (24 `ClientRequestData`)
 - `ServicePriceTable.asset` referenciado em `GlobalGameplayManagement.globalPriceTable`
 - Databases de produtos por categoria (`DB_MaquinasCorte.asset`, `DB_Tesouras.asset`, etc.)
 
@@ -251,32 +251,30 @@ ScriptableObjects/Products/Databases/
 
 ## Roadmap
 
+Roadmap completo e matriz de funcionalidades em [docs/07-estado-atual-e-roadmap.md](docs/07-estado-atual-e-roadmap.md).
+
 **Curto prazo**
-- Conectar `MissionSystem` ao fluxo avançado (`HandleAdvancedServiceFinished`)
-- Aplicar `PrestigeSystem.GetBonusXP()` em `PlayerXPManager.AddXP()`
-- Conectar `CulturalEventSystem` ao fluxo de atendimento
-- Criar UI de conquistas (`AchievementSystem` funciona, sem tela/popup)
+- Colocar `CutMasterySystem` na `GameScene` (maestria hoje não roda)
+- Spawnar clientes VIP (`MarcarClienteComoVip` não é chamado) e preencher `narrativeCharacterId` nos NPCs dos arcos
+- Barra de botões da HUD para todos os painéis + painel de Conquistas + tela de Prestígio
+- Corrigir IDs de cortes nos eventos culturais, conquistas inalcançáveis e escala de nota do minigame
 
 **Médio prazo**
-- Melhorar HUD de chat com opções contextuais de gameplay
-- Adicionar comentários de clientes à UI de reputação
-- Personalização visual da barbearia
-- Campanhas narrativas adicionais
+- Relatório de negócio, comentários de clientes na reputação, personalização visual da barbearia, mais arcos narrativos
 
 **Longo prazo**
-- Sistema de cidade ao redor da barbearia com NPCs ambulantes
-- Eventos especiais temáticos (CulturalEventSystem)
-- Build mobile (resolver HDRP/URP — materiais ficam rosa em URP)
-- Publicação
+- Funcionários, expansão do bairro, campeonatos, build mobile validada (HDRP/URP), publicação
 
 ---
 
 ## Débitos Técnicos Conhecidos
 
-- `MissionSystem.RegisterServiceCompleted` não é chamado no fluxo avançado (só no fallback)
-- `PrestigeSystem.BonusXP10` sem efeito: `PlayerXPManager.AddXP` não multiplica por `GetBonusXP()`
-- `CulturalEventSystem` sem efeito real de gameplay (bônus calculados, nunca aplicados ao serviço)
-- `AchievementSystem` sem UI consumidora (funciona internamente, sem popup/tela)
+Lista detalhada em [docs/07-estado-atual-e-roadmap.md](docs/07-estado-atual-e-roadmap.md#4-inconsistências-de-conteúdo-e-design). Principais:
+
+- `CutMasterySystem`, `AchievementsPanelUI` ausentes da `GameScene`; VIP e arcos narrativos sem gatilho na cena; Prestígio sem UI
+- Eventos culturais desbloqueiam IDs de corte inexistentes (falta prefixo `req_`)
+- Conquistas `melhorias_10` e `maestria_lenda_25` inalcançáveis (7 reformas, 24 cortes)
+- Minigame: nota `fatorRating × 5` infla a reputação e ignora ferramentas/maestria
 - HDRP/URP em mobile: materiais HDRP ficam rosa em build URP — validar em device antes de shippar
 - `npc_dialogue_memory_{npcId}` (NPCDialogueMemory) não segue a convenção `AFROBARBER_` nas chaves de PlayerPrefs — exceção documentada
 
@@ -295,6 +293,10 @@ Antes de alterar qualquer código:
 7. Documente novos sistemas no CLAUDE.md (APIs, PlayerPrefs keys, wiring de cena)
 
 ---
+
+## Documentação de Design e Jogo
+
+A pasta [docs/](docs/README.md) é o documento de design completo do jogo (10 documentos): visão geral, guia de jogabilidade, janelas e interface, progressão e objetivos, economia, universo cultural (os 24 cortes), estado atual e roadmap, referência para editais de fomento, arte/áudio/tecnologia e glossário.
 
 ## Documentação Técnica
 
