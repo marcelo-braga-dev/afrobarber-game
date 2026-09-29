@@ -35,7 +35,8 @@
 |---|---|
 | Modalidade | I — R$ 30.000,00 |
 | Proponente | **Pessoa física**, residente em Ribeirão Preto há mais de 2 anos |
-| Natureza do produto | **Jogo eletrônico inédito em sua versão final**. Os pareceristas verão o jogo em **vídeos no YouTube** (não listados) e numa **demo em acesso restrito** na Google Play, com os bugs corrigidos antes da inscrição; o edital financia a finalização e a publicação da versão 1.0, que substitui a demo |
+| Natureza do produto | **Jogo eletrônico inédito**, sem versão publicada. Os pareceristas conhecem o protótipo por **vídeos de gameplay no YouTube** (não listados); os bugs são corrigidos antes da inscrição, com recursos próprios |
+| Orçamento | **Apenas contratação de serviços** — nenhum bem adquirido |
 | Monetização | **Nenhuma** — distribuição gratuita |
 | Direitos autorais | Todo recurso de terceiros será **removido ou substituído** por material autoral ou de licença aberta (CC0, CC-BY, SIL OFL) antes da publicação |
 
