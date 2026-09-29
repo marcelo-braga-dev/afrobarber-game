@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | **Documento** | 01 · Visão geral (conceito e proposta) |
-| **Versão** | 1.2 — 29/09/2026 |
+| **Versão** | 1.3 — 29/09/2026 |
 | **Leitores** | Todos: equipe, parceiros, avaliadores, educadores, jogadores |
 | **Relacionados** | [02 Jogabilidade](02-guia-de-jogabilidade.md) · [06 Universo cultural](06-universo-cultural.md) · [07 Estado atual](07-estado-atual-e-roadmap.md) · [08 Editais](08-referencia-para-editais.md) |
 
@@ -65,15 +65,17 @@ Princípios que orientam toda decisão de design, arte e conteúdo:
 
 ## 4. Fantasia do jogador
 
-Você é um(a) jovem barbeiro(a) que acabou de **abrir a própria barbearia especializada em cortes afro** num bairro urbano brasileiro. Começa com **BM$ 100** (BM$ é a moeda do jogo), uma cadeira, poucas ferramentas e reputação média (3,0 de 5).
+Você é um(a) jovem barbeiro(a) que acabou de **abrir a própria barbearia especializada em cortes afro** num bairro urbano brasileiro. Começa com **BM$ 100** (BM$ é a moeda do jogo), uma cadeira, **nenhuma ferramenta** — a primeira compra é o kit básico — e reputação média (3,0 de 5).
 
 A jornada vai de **"Aprendiz da Navalha"** a **"Lenda AfroBarber"**:
 
 - dominar cortes cada vez mais difíceis — do Coily Puff (dificuldade 1) ao Sisterlocks e ao Skin Fade (dificuldade 5);
 - conquistar clientes que voltam e viram "de casa";
-- descobrir que a barbearia ocupa **o mesmo ponto da antiga barbearia do Geraldo**, lendária no bairro;
-- tornar-se referência cultural — cenário de exposição de arte, roda de conversa sobre identidade negra e música autoral de um artista local;
-- e, no topo, **recomeçar com prestígio** (New Game+).
+- descobrir que a barbearia ocupa **o mesmo ponto da antiga barbearia do Geraldo**, lendária no bairro 🟡;
+- tornar-se referência cultural — cenário de exposição de arte, roda de conversa sobre identidade negra e música autoral de um artista local 🟡;
+- e, no topo, **recomeçar com prestígio** (New Game+) 🟡.
+
+> 🟡 = roteiro e lógica prontos, ainda não ativados na cena (arcos narrativos e prestígio).
 
 ---
 
@@ -147,7 +149,7 @@ Salão com estética afro, urbana e hip-hop:
 - **Cadeira do barbeiro** — onde acontece o atendimento; há modelos compráveis (Almofadada, Clássica) e a reforma Cadeira Premium;
 - **Caixa** — o cliente paga antes de sair;
 - **Pontos de mobília e decoração** — Mesa de Bilhar, Fliperama Pac-Man, entre outros;
-- **Reformas visíveis** — espelhos profissionais, iluminação LED, painéis de arte afro-brasileira, ar-condicionado, som ambiente e recepção aparecem na cena quando compradas.
+- **Reformas** — espelhos profissionais, iluminação LED, painéis de arte afro-brasileira, ar-condicionado, som ambiente e recepção dão bônus permanentes ✅; a aparição física de cada uma na cena está prevista 🧩.
 
 ### 8.2 O bairro
 - **Moradores** caminham por uma rede de pontos pela cidade. Quando têm horário marcado, vão à barbearia; depois do corte, **voltam à rotina** — ninguém "some".
@@ -187,9 +189,9 @@ Capítulos detalhados em [04 §6](04-progressao-e-objetivos.md#6-arcos-narrativo
 3. **Aprender fazendo.** O conteúdo aparece porque o jogador *fez* o corte — no pedido do cliente (resumo) e na Biblioteca (texto completo) —, não num quiz.
 4. **Habilidade + gestão.** Minigame de timing com combos em cada atendimento, somado a uma economia completa com consequências.
 5. **Bairro vivo.** Moradores com rotina, trânsito, dia e noite, clima, conversa contextual com memória.
-6. **Calendário cultural.** Carnaval, Dia Nacional do Turbante (25/09), Mês e Dia da Consciência Negra (20/11, XP em dobro) e Mês da Cultura Afro-Latino-Americana.
+6. **Calendário cultural.** Carnaval, Dia do Turbante (25/09), mês afro-latino-americano (julho) e Mês e Dia da Consciência Negra (20/11, XP em dobro). *Requer salvar a data do jogo para ocorrer em sessões curtas — ver [07 §2.2](07-estado-atual-e-roadmap.md#22-a-data-do-jogo-não-é-salva).*
 7. **O corpo do barbeiro importa.** Energia e fadiga: excesso de trabalho, hora extra e dívidas cansam; energia zerada faz o personagem desmaiar.
-8. **Histórias humanas.** Luto e legado, autoestima e racismo escolar, ascensão social, educação antirracista e criação artística.
+8. **Histórias humanas** 🟡. Luto e legado, autoestima e racismo escolar, ascensão social, educação antirracista e criação artística.
 9. **Feito para crescer.** Cortes, produtos, missões e reformas são criados como dados, sem programação — o conteúdo pode ser expandido barato.
 
 ---
@@ -224,5 +226,6 @@ Não há game over: falir gera crise financeira, multas e perda de clientes, mas
 | Maestria por corte, VIPs, arcos narrativos, prestígio, painel de conquistas | 🟡 programado, em integração |
 | Bônus de fidelidade, efeito do humor e da personalidade na nota, desgaste de ferramentas, troca visual do cabelo | 🧩 regras projetadas, em conexão |
 | Arte e áudio | Parte provisória/de terceiros; substituição por material autoral planejada |
+| **Bloqueios a resolver** | Acesso à Loja/Inventário na HUD, salvamento da data, contas iniciais, ritmo de paciência — ver [07 §2](07-estado-atual-e-roadmap.md#2-bloqueios-críticos) |
 
 Lista completa e prioridades em [07](07-estado-atual-e-roadmap.md).

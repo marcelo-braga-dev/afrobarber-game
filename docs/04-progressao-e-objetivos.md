@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | **Documento** | 04 · Progressão, metas e recompensas |
-| **Versão** | 1.2 — 29/09/2026 |
+| **Versão** | 1.3 — 29/09/2026 |
 | **Leitores** | Game designers, roteiristas, balanceamento |
 | **Relacionados** | [02 Jogabilidade](02-guia-de-jogabilidade.md) · [05 Economia](05-economia-e-gestao.md) · [06 Universo cultural](06-universo-cultural.md) · [07 Estado atual](07-estado-atual-e-roadmap.md) |
 
@@ -99,6 +99,8 @@ O XP para subir de tier é o **valor base × dificuldade do corte** (1–5): dom
 
 Subir de tier gera mensagem no chat e alimenta 5 conquistas e o desafio "Evolução Contínua". Os bônus de qualidade e tempo valem no modo por etapas.
 
+**Escala total:** levar os 24 cortes a Lenda exige 550 × 75 (soma das dificuldades) = **41.250 pontos** — cerca de 1.650 atendimentos Perfeitos. Ajuste recomendado em [07 §6](07-estado-atual-e-roadmap.md#6-balanceamento).
+
 ---
 
 ## 4. Fidelidade de clientes
@@ -124,7 +126,7 @@ A fala *"Deixa eu ver aqui... quantas vezes você já veio?"* revela o nível e 
 - Nota média **0–5**, começando em **3,0**, com subnotas de **Atendimento**, **Estrutura** e **Experiência**.
 - Cada atendimento soma uma avaliação; reformas acrescentam **bônus de nota**.
 - **Efeitos:** demanda de clientes (de × 0,5 a × 1,8; 3,0 é neutro), frequência de agendamentos, **preço sugerido** (de × 0,75 a × 1,45) e requisito dos VIPs (≥ 3,5 🟡).
-- **Penalidades:** −0,1 por conta mensal em atraso; penalidade por empréstimo em atraso.
+- **Penalidades:** conta mensal em atraso registra uma avaliação com nota (média − 0,1) — o efeito real é menor que 0,1; empréstimo em atraso também penaliza.
 - ⚠️ No modo minigame, a nota de um atendimento "Bom" já conta como 5,0, o que infla a reputação (ver [07](07-estado-atual-e-roadmap.md)).
 
 ---
@@ -218,9 +220,11 @@ O sistema também aceita missões em **janela de evento** e por **corte específ
 | **Mãos que Trabalham** | Atender clientes | 3 + N | BM$ 80·N + 15·N XP |
 | **Caixa Forte** | Faturar | BM$ 400·N | BM$ 120·N + 20·N XP |
 | **Artesão do Dia** | Atendimentos Perfeitos | 2 + N/2 | BM$ 180·N + 35·N XP |
-| **Dia Impecável** | Atendimentos sem Ruim ou Horrível | 5 | BM$ 250·N + 45·N XP |
+| **Dia Impecável** | Atendimentos do dia sem Ruim ou Horrível ⚠️ | 5 | BM$ 250·N + 45·N XP |
 | **Sequência de Ouro** | Atendimentos seguidos sem Ruim ou Horrível | 4 | BM$ 200·N + 30·N XP |
 | **Evolução Contínua** 🟡 | Pontos de maestria | 20 + 8·N | BM$ 100·N + 25·N XP |
+
+⚠️ "Dia Impecável": um resultado Ruim zera o progresso exibido, mas o atendimento seguinte restaura a contagem acumulada do dia — regra a definir (ver [07 §6](07-estado-atual-e-roadmap.md#6-balanceamento)).
 
 **Ranking:** a barbearia do jogador, com o apelido, disputa com 9 barbearias fictícias; a pontuação delas é regerada a cada sessão para dar sensação de "ao vivo".
 
@@ -264,7 +268,7 @@ O sistema também aceita missões em **janela de evento** e por **corte específ
 | | Multi-Talentoso | Lenda em 5 cortes | 1.500 XP + BM$ 1.500 |
 | | Mestre Supremo AfroBarber ⚠️ | Lenda em 25 cortes (existem 24) | 3.000 XP + BM$ 5.000 |
 
-Soma das recompensas: **17.500 XP** e **BM$ 26.900**. Ressalvas (conquistas inalcançáveis, conquistas facilitadas pela nota inflada, contagem da Biblioteca afetada por IDs de eventos) em [07 §4](07-estado-atual-e-roadmap.md).
+Soma das recompensas: **17.500 XP** e **BM$ 26.900** — mais XP do que os 12.500 necessários para ir do nível 1 ao 5 (ver [07 §6](07-estado-atual-e-roadmap.md#6-balanceamento)). Ressalvas (conquistas inalcançáveis, conquistas facilitadas pela nota inflada, contagem da Biblioteca afetada por IDs de eventos) em [07 §5](07-estado-atual-e-roadmap.md#5-inconsistências-de-conteúdo-e-design).
 
 ---
 
@@ -303,6 +307,10 @@ Ativados pela data do jogo e anunciados no chat. Os bônus funcionam ✅; o desb
 | Mês da Consciência Negra | Novembro | × 1,5 | × 1,2 | Black Power Clássico, Tranças Nagô, Cornrows, Turbante |
 | Dia da Consciência Negra | 20/11 | **× 2,0** | × 1,5 | Dreads/Locs, Afro Natural, Conk |
 
+- Quando dois eventos coincidem (ex.: 20/11 dentro de novembro), vale o **maior** bônus de cada tipo — não se somam.
+- ⚠️ Como a data do jogo não é salva, eventos fora de abril só ocorrem em sessões longas ([07 §2.2](07-estado-atual-e-roadmap.md#22-a-data-do-jogo-não-é-salva)).
+- Nomes e datas em revisão cultural ([07 §7.1](07-estado-atual-e-roadmap.md#71-conteúdo-cultural-a-corrigir-ou-confirmar)).
+
 Contexto cultural de cada data em [06 §3](06-universo-cultural.md#3-calendário-cultural).
 
 ---
@@ -327,6 +335,8 @@ Contexto cultural de cada data em [06 §3](06-universo-cultural.md#3-calendário
 ---
 
 ## 13. Curva de progressão por fase
+
+> Curva **pretendida**. Hoje não há trava de corte por nível: a agenda sorteia qualquer um dos 24 cortes desde o primeiro dia.
 
 | Fase | Nível | Foco do jogador | Conteúdo típico |
 |---|---|---|---|

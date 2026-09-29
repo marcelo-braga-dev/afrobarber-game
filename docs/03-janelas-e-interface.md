@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | **Documento** | 03 · Janelas e interface (UI/UX) |
-| **Versão** | 1.2 — 29/09/2026 |
+| **Versão** | 1.3 — 29/09/2026 |
 | **Leitores** | Designers de UI/UX, artistas, desenvolvedores, testadores |
 | **Relacionados** | [02 Jogabilidade](02-guia-de-jogabilidade.md) · [09 Arte e tecnologia](09-arte-audio-e-tecnologia.md) · [07 Estado atual](07-estado-atual-e-roadmap.md) |
 
@@ -52,8 +52,7 @@
 | | Reputação detalhada | Botão da HUD | ✅ |
 | | Histórico de atendimentos | Botão da HUD | ✅ |
 | | BarberBook | Badge da HUD | ✅ |
-| | Biblioteca de Cortes | Pelo próprio painel | ✅ |
-| | Loja, Inventário, Fila, Agenda, Missões, Empréstimos, Desafios Diários | Método existe; botão não encontrado na cena | ⚠️ |
+| | Loja, Inventário, Biblioteca de Cortes, Fila, Agenda, Missões, Empréstimos, Desafios Diários | Método existe; **nenhum caminho de abertura** na cena | ⚠️ (Loja e Inventário: bloqueio crítico) |
 | | Painel de Conquistas | Não está na cena | 🟡 |
 | | Prestígio | Sem tela | 🟡 |
 | Popups | Novo corte, Conquista, Descanso, Sair, Tutorial, Loading | Automáticos | ✅ |
@@ -209,8 +208,9 @@ Dia, hora, cliente, serviço, valor recebido e nota /5 de cada atendimento.
 
 ### 6.13 Biblioteca de Cortes (`EducationEncyclopediaUI`)
 
-*Status: ✅*
-- **Filtros** (Todos, Black Power, Fade, Tranças, Dreads, Twists, Flat Top, Afro Clássico, Contemporâneo, Tradicional, Outros), **busca** e **ordenação por década**.
+*Status: ✅ conteúdo · ⚠️ sem caminho de abertura na cena · o tutorial e uma conquista a chamam de "Enciclopédia Afro" (nome a unificar)*
+
+- **Filtros** (Todos, Black Power, Fade, Tranças, Dreads, Twists, Flat Top, Afro Clássico, Contemporâneo, Tradicional, Outros), **busca** e **ordenação por década**. Os filtros "Black Power" e "Outros" ficam vazios: nenhum corte está nessas categorias.
 - **Progresso** "X / 24 descobertos".
 - **Cards** (`EducationEncyclopediaItemUI`): ícone, nome e década (ou **"???"**), categoria, estrelas de dificuldade, selos Novo/Favorito/Bloqueado, maestria 🟡.
 - **Detalhes:** história completa, significado cultural, curiosidade, preço/tempo/XP, maestria 🟡, **Favoritar**.
@@ -251,6 +251,6 @@ Dia, hora, cliente, serviço, valor recebido e nota /5 de cada atendimento.
 
 ## 9. Pendências de navegação
 
-Na `GameScene`, os botões de abertura encontrados são: **Financeiro, Gestão, Reputação detalhada, Histórico, Apelido** e o badge do **BarberBook**. Os métodos `OpenLoja`, `OpenInventario`, `OpenFila`, `OpenAgenda`, `OpenMissoes`, `OpenEmprestimos` e `OpenDesafiosDiarios` existem no `GameUIManager`, mas nenhum botão da cena ou de prefab os chama.
+Na `GameScene`, os botões de abertura encontrados são: **Financeiro, Gestão, Reputação detalhada, Histórico, Apelido** e o badge do **BarberBook**. Os métodos `OpenLoja`, `OpenInventario`, `OpenBibliotecaCortes`, `OpenFila`, `OpenAgenda`, `OpenMissoes`, `OpenEmprestimos` e `OpenDesafiosDiarios` existem no `GameUIManager`, mas nenhum botão, atalho ou objeto da cena ou de prefab os chama. Como o inventário começa vazio, a falta de acesso à **Loja** e ao **Inventário** impede o primeiro atendimento (ver [07 §2.1](07-estado-atual-e-roadmap.md#21-save-novo-não-consegue-atender-soft-lock)).
 
 **Proposta de UX:** uma **barra de navegação** fixa na HUD (ícones com rótulo) com: Loja · Inventário · Fila · Agenda · Financeiro · Gestão · Missões · Desafios · Biblioteca · BarberBook · Conquistas — mais atalhos de teclado (ex.: `I` inventário, `L` loja, `M` missões) e, no celular, menu em leque. Confirmar no Editor antes de implementar.

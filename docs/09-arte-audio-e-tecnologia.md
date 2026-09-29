@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | **Documento** | 09 · Direção de arte, áudio, tecnologia e produção de conteúdo |
-| **Versão** | 1.2 — 29/09/2026 |
+| **Versão** | 1.3 — 29/09/2026 |
 | **Leitores** | Artistas, músicos, desenvolvedores, avaliadores técnicos |
 | **Relacionados** | [03 Interface](03-janelas-e-interface.md) · [07 Estado atual](07-estado-atual-e-roadmap.md) · [08 Editais](08-referencia-para-editais.md) · [CLAUDE.md](../CLAUDE.md) |
 
@@ -144,7 +144,7 @@ Salvamento automático no armazenamento local do aparelho (PlayerPrefs), por sis
 | Memória de diálogo de cada NPC | JSON |
 | Apelido, tutorial concluído | Texto / marcador |
 
-Não salvos: agenda de clientes e ranking dos desafios (regerado por sessão). Lista completa de chaves em [CLAUDE.md](../CLAUDE.md#playerprefs-keys).
+Não salvos: **data e hora do jogo** (toda sessão recomeça em 10/04/2026, 8h — bloqueio crítico, ver [07 §2.2](07-estado-atual-e-roadmap.md#22-a-data-do-jogo-não-é-salva)), agenda de clientes e ranking dos desafios (regerado por sessão). Lista completa de chaves em [CLAUDE.md](../CLAUDE.md#playerprefs-keys).
 
 ---
 

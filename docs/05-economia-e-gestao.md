@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | **Documento** | 05 · Economia, preços, demanda e catálogo |
-| **Versão** | 1.2 — 29/09/2026 |
+| **Versão** | 1.3 — 29/09/2026 |
 | **Leitores** | Designers de sistemas, balanceamento, produção |
 | **Relacionados** | [02 Jogabilidade](02-guia-de-jogabilidade.md) · [04 Progressão](04-progressao-e-objetivos.md) · [07 Estado atual](07-estado-atual-e-roadmap.md) |
 
@@ -178,16 +178,21 @@ Posts positivos no BarberBook também geram **clientes orgânicos** na virada do
 | **Energia elétrica** | Dia 10 | BM$ 220 + BM$ 7/hora | Horas trabalhadas no mês anterior |
 | **Água** | Dia 12 | BM$ 90 + BM$ 3/hora | Horas trabalhadas no mês anterior |
 
+⚠️ **Situação atual** (detalhes em [07 §2.3](07-estado-atual-e-roadmap.md#23-contas-de-abril-nascem-vencidas)):
+- as contas de abril nascem no primeiro dia (10/04), com o **aluguel já vencido** — BM$ 1.010 contra BM$ 100 de caixa;
+- aviso e multa só disparam com atraso de **exatamente** 1 e 3 dias; o aluguel de abril, que nasce com 5, nunca é multado, mas pesa na dívida vencida;
+- como a data não é salva, avisos e multas podem se repetir a cada sessão.
+
 **Exemplo:** 22 dias × 9 h = 198 h → energia BM$ 1.606 · água BM$ 684 · total do mês com aluguel ≈ **BM$ 2.990**.
 
 **Atrasos**
 | Momento | Consequência |
 |---|---|
 | 1 dia após o vencimento | Aviso no chat: *"… venceu ontem! Pague logo para evitar multa."* |
-| Após 2 dias de carência | Multa de **5%**, **−0,1 de reputação**, **−20% de demanda** enquanto a conta estiver aberta |
+| 3 dias de atraso | Multa de **5%**, uma avaliação com nota (média − 0,1) e **−20% de demanda** |
 | Dívida vencida > BM$ 1.000 | Perda diária de energia, crescente com os dias de atraso |
 | Caixa negativo | **CRISE FINANCEIRA:** *"Seu saldo está negativo. Atenda mais clientes ou considere um empréstimo…"* |
-| Pagamento | *"'Aluguel' pago! Suas contas estão em dia."* |
+| Pagamento | Previsto: mensagem *"'Aluguel' pago!"* e restauração da demanda — hoje não acontecem (a notificação de pagamento não é chamada) ⚠️ |
 
 ---
 
@@ -333,7 +338,8 @@ O `BusinessReportManager` registra por dia **clientes atendidos**, **receita** e
 
 ### 13.1 Ciclo típico
 ```text
-Dias 1–5   Caixa de BM$ 100: comprar tesoura + pente (BM$ 50); plano mínimo; juntar para o creme; aluguel de BM$ 700 no dia 5.
+Início     Caixa de BM$ 100: comprar tesoura + pente (BM$ 50); plano mínimo; juntar para o creme.
+           Contas do 1º mês (≈ BM$ 1.010) — hoje nascem vencidas; o desenho pretendido é começar no início do mês.
 Semana 2   Primeiras reformas baratas (Espelhos, Som Ambiente). Preço no sugerido.
 Mês 1      Luz e água crescem com as horas trabalhadas. Empréstimo pequeno se necessário.
 Meses 2–3  Ferramentas Pro, Cadeira Premium, Decoração Afro. Reputação ↑ → preço sugerido ↑.
@@ -350,7 +356,8 @@ Mês 4+     Recepção e Ar-Condicionado; metas semanais de faturamento.
 | Reformas completas | BM$ 6.800 |
 
 ### 13.3 Pontos de atenção
-- Preço único por tipo de serviço reduz o interesse por cortes difíceis (§4.1).
+- Preço único por tipo de serviço reduz o interesse por cortes difíceis (§4.1); o Turbante, o mais fácil, recebe a reserva de BM$ 50 no minigame — mais que os BM$ 35 dos outros cortes.
+- Meta "Semana dos Campeões" tier 3 (BM$ 10.000) acima do teto semanal estimado (~BM$ 5.600).
 - Consumo e desgaste inativos eliminam custos recorrentes de estoque (§9.3).
 - Itens caros com atributos piores (FadeX Control, UrbanBlade Pro).
 - Inventário inicial vazio e caixa de BM$ 100 não cobrem o plano padrão com produto capilar.

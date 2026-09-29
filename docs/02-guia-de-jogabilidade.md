@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | **Documento** | 02 · Guia de jogabilidade (regras e fluxo) |
-| **Versão** | 1.2 — 29/09/2026 |
+| **Versão** | 1.3 — 29/09/2026 |
 | **Leitores** | Game designers, testadores, jogadores, desenvolvedores |
 | **Relacionados** | [03 Interface](03-janelas-e-interface.md) · [04 Progressão](04-progressao-e-objetivos.md) · [05 Economia](05-economia-e-gestao.md) · [07 Estado atual](07-estado-atual-e-roadmap.md) |
 
@@ -48,7 +48,9 @@
   4. **Executar serviço** — escolher as ferramentas certas para cada etapa (lavar, cortar, finalizar).
   5. **Receber pagamento** — o cliente vai ao caixa; serviço bem feito rende dinheiro, XP e conteúdo histórico.
   6. **Enciclopédia** — "Você desbloqueou seu primeiro conteúdo na Enciclopédia Afro! … Conhecimento é poder!"
-- **Estado inicial:** BM$ 100 (cena; padrão do código BM$ 1.000) · nível 1, *Aprendiz da Navalha* · reputação 3,0 · 10/04/2026, 8h.
+- **Estado inicial:** BM$ 100 (cena; padrão do código BM$ 1.000) · inventário vazio · nível 1, *Aprendiz da Navalha* · reputação 3,0 · 10/04/2026, 8h.
+- ⚠️ **Contas já vencidas:** as contas de abril são geradas no início, com o aluguel (dia 5) já atrasado — total de BM$ 1.010 contra BM$ 100 de caixa (ver [07 §2.3](07-estado-atual-e-roadmap.md#23-contas-de-abril-nascem-vencidas)).
+- ⚠️ **Acesso à Loja:** hoje não há botão para abrir Loja e Inventário, então um save novo não consegue comprar ferramentas (ver [07 §2.1](07-estado-atual-e-roadmap.md#21-save-novo-não-consegue-atender-soft-lock)).
 
 ---
 
@@ -60,11 +62,12 @@
 | Correr (sprint) | `Shift` esquerdo | Pressionar analógico esquerdo | — |
 | Pular | `Espaço` | Botão Sul (A/✕) | — |
 | Girar a câmera | Setas `← → ↑ ↓` | Analógico direito | Controle na tela |
-| Interagir (cliente, cadeira, carro) | `E` ou clique esquerdo no objeto | — | Tocar no objeto |
-| Minigame | Clique no alvo | — | Toque no alvo |
+| Interagir (cliente, cadeira, carro) | `E` ou clique esquerdo no objeto | — ⚠️ | Tocar no objeto |
+| Minigame | Clique no alvo | — ⚠️ | Toque no alvo |
 | Fechar painéis | `Esc` | — | Botão fechar |
 
 - **Câmera:** orbital atrás do personagem (4,5 m andando, 5,8 m no sprint), realinha sozinha após ~1,5 s de caminhada, desvia de paredes e amplia o campo de visão no sprint.
+- **Gamepad:** move o personagem, a câmera, corre e pula, mas **ainda não interage** com clientes nem joga o minigame. ⚠️
 - **Personagem:** andar 2,5 · correr 5,5 · sprint 8 m/s; pulo com tolerância (*coyote time* e *jump buffer*); sobe rampas suavemente. Painéis bloqueantes travam o movimento.
 
 ---
@@ -79,6 +82,8 @@
 | Duração de um expediente | ~3 minutos reais |
 
 - Relógio e data ficam na HUD; céu, luz e névoa acompanham a hora.
+- ⚠️ **O tempo nunca pausa**, nem com painéis abertos ou durante o planejamento.
+- ⚠️ **A data não é salva:** toda sessão recomeça em 10/04/2026, 8h (ver [07 §2.2](07-estado-atual-e-roadmap.md#22-a-data-do-jogo-não-é-salva)).
 - Durante o atendimento, o **tempo do serviço é somado ao relógio** (e cresce com o cansaço — ver §10).
 - No fechamento, clientes que ainda estão na barbearia são dispensados.
 
@@ -96,7 +101,7 @@
 
 *Status: ✅*
 Os clientes são moradores da cidade que chegam pela **agenda automática**:
-- novos agendamentos são gerados continuamente — na cena atual a cada ~5 min de jogo (padrão do código: 90 min), com frequência maior quando a reputação é alta;
+- novos agendamentos são gerados continuamente — na cena atual a cada ~5 min de jogo, cerca de 1,7 s reais (padrão do código: 90 min), com frequência maior quando a reputação é alta;
 - podem ser marcados com até **3 dias** de antecedência (30% de chance); o limite é de 2 agendamentos por hora, que o **overbooking** (25% de chance) pode ultrapassar;
 - no horário, o morador interrompe a caminhada e vai até a barbearia.
 
@@ -107,7 +112,11 @@ Com a fila cheia, os agendamentos seguintes **atrasam em cascata** (+8 min por p
 > Clientes espontâneos (sem agendamento) existem no código, mas estão desligados na cena. 🟡
 
 ### 4.3 Paciência e humor
-Paciência padrão: **90 minutos de jogo** (VIP: 6 min 🟡; fiéis: +5 a +25 min 🧩). A mesma barra gera duas leituras:
+Paciência padrão: **90 minutos de jogo** (VIP: 6 min 🟡; fiéis: +5 a +25 min 🧩).
+
+> ⚠️ Como o relógio corre a 3 minutos por segundo e não pausa, **90 minutos de paciência equivalem a 30 segundos reais** (VIP: 2 segundos). A recalibração está no plano de ação ([07 §2.4](07-estado-atual-e-roadmap.md#24-paciência-e-agenda-rápidas-demais)).
+
+A mesma barra gera duas leituras, com limites diferentes — por isso o rótulo "Impaciente" aparece em faixas distintas na fila e no humor:
 
 **Estado na fila** ✅ — exibido no card da fila
 
@@ -208,7 +217,7 @@ Os **ícones das etapas do plano** surgem como **alvos**, um a cada ~1,4 s. Cada
 Em seguida:
 - abre a **Avaliação** (nota /5, resultado, comentários de Atendimento, Estrutura e Experiência, comentário sobre o tempo) ✅;
 - entram **dinheiro + gorjeta** (com bônus de evento cultural) e **XP** (com bônus de reformas, prestígio e evento) ✅;
-- a nota entra na **reputação** ⚠️ — a escala do minigame está inflada: "Bom" conta como 5,0 (ver [07 §4](07-estado-atual-e-roadmap.md));
+- a nota entra na **reputação** ⚠️ — a escala do minigame está inflada: "Bom" conta como 5,0 (ver [07 §5](07-estado-atual-e-roadmap.md#5-inconsistências-de-conteúdo-e-design));
 - o corte é **desbloqueado na Biblioteca** ✅;
 - são notificados: fidelidade ✅, maestria 🟡, BarberBook ✅, VIP 🟡, desafios diários ✅, arcos narrativos 🟡, missões ✅, contas vencidas ✅;
 - **troca visual do cabelo** 🧩 — sistema pronto, sem cabelos configurados nos clientes;
@@ -356,7 +365,7 @@ Com menos de 10 de energia, **não é possível iniciar atendimento**.
 
 *Status: ✅*
 
-O progresso é salvo **automaticamente e continuamente** no aparelho: caixa e extrato, inventário, XP e nível, Biblioteca (desbloqueios, favoritos, vistos), reputação, reformas, empréstimos, BarberBook, prestígio, desafios, fidelidade, narrativa, conquistas, relatórios, maestria, missões, horários e preços, mobília, escolhas de ferramenta, memória dos NPCs e apelido. Não há slots de salvamento; a agenda de clientes não é salva entre sessões. Detalhes em [09](09-arte-audio-e-tecnologia.md#8-salvamento).
+O progresso é salvo **automaticamente e continuamente** no aparelho (exceto a **data do jogo** ⚠️ e a agenda): caixa e extrato, inventário, XP e nível, Biblioteca (desbloqueios, favoritos, vistos), reputação, reformas, empréstimos, BarberBook, prestígio, desafios, fidelidade, narrativa, conquistas, relatórios, maestria, missões, horários e preços, mobília, escolhas de ferramenta, memória dos NPCs e apelido. Não há slots de salvamento; a agenda de clientes não é salva entre sessões. Detalhes em [09](09-arte-audio-e-tecnologia.md#8-salvamento).
 
 ---
 
