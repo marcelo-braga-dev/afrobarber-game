@@ -150,6 +150,39 @@ Nome completo, usado no corpo do projeto: ***AfroBarber - Cada Corte, uma Histó
 > - **Otimização para celulares de entrada**, com testes em aparelho Android simples, para que o jogo rode nos aparelhos mais comuns entre jovens de baixa renda.
 > - **Valorização de saberes locais:** barbeiros(as) e trancistas da cidade como mediadores remunerados das sessões.
 
+### Contrapartida social
+
+> O Edital 008/2026 não tem um campo chamado "contrapartida": pede a **ação pública de fruição** (item 2.1.2.1 b) e a **democratização de acesso** (campo I). O texto abaixo cumpre essas duas exigências. Use-o no campo I, ou no campo N se a plataforma pedir contrapartida à parte.
+
+> Como contrapartida à comunidade de Ribeirão Preto, o projeto *AfroBarber - Cada Corte, uma História* oferece, gratuitamente:
+>
+> 1. **O jogo, livre e permanente.** A versão 1.0 fica disponível sem custo, sem anúncios e sem compras dentro do jogo, na Google Play (Android) e no itch.io (computador), durante a vigência do projeto e depois dela. A versão para computador pode ser instalada em laboratórios de informática de escolas, bibliotecas e centros culturais do município.
+>
+> 2. **Lançamento público aberto.** Um evento gratuito em `[LOCAL ACESSÍVEL]`, com apresentação do jogo, jogo livre em equipamentos do projeto, roda de conversa sobre a barbearia afro e a estética negra, e intérprete de Libras. Público estimado: `[80]` pessoas.
+>
+> 3. **Quatro sessões "Jogar e Conversar".** Encontros gratuitos de cerca de 2 horas em `[escolas públicas/equipamentos culturais]` de bairros periféricos listados no Anexo 11, com cerca de 30 participantes cada (estudantes do fundamental II e médio e comunidade). Cada sessão tem três momentos:
+>    - o público joga um expediente na barbearia, em equipamentos levados pelo projeto;
+>    - lê, na Biblioteca de Cortes, a história dos penteados atendidos;
+>    - participa de uma roda de conversa mediada por barbeiro(a) ou trancista de Ribeirão Preto sobre o significado desses penteados, identidade e autoestima.
+>
+>    As sessões têm intérprete de Libras, acontecem em locais acessíveis e são agendadas com as escolas e equipamentos, com prioridade para turmas de escolas públicas. Público estimado: `[120]` pessoas.
+>
+> 4. **Guia do professor.** Material pedagógico gratuito que relaciona os 24 cortes da Biblioteca aos temas da Lei 10.639/2003 e traz uma atividade pronta de 50 minutos. Distribuído em PDF acessível (compatível com leitor de tela), com `[40]` exemplares impressos entregues às escolas participantes, para que o conteúdo continue sendo usado depois do projeto.
+>
+> 5. **Trailer acessível e conteúdo educativo aberto.** Trailer com Libras, legendas e audiodescrição e a série de vídeos curtos "Curiosidade do corte", publicados gratuitamente nas redes para uso livre por educadores e coletivos.
+>
+> 6. **Remuneração de saberes locais.** Barbeiros(as) e trancistas da cidade são contratados como mediadores das sessões, e pelo menos 70% da equipe do projeto reside em Ribeirão Preto.
+
+| Contrapartida | Quando | Evidência para o Relatório de Objeto | Custeio (planilha) |
+|---|---|---|---|
+| Jogo gratuito e permanente | Mês 8 em diante | Links públicos das lojas | Itens 1–5, 15–16 |
+| Lançamento público | Mês 8 | Lista de presença, fotos, vídeo | Itens 7, 10, 11 |
+| 4 sessões "Jogar e Conversar" | Meses 9–10 | Listas de presença, fotos, declaração de cada escola/equipamento | Itens 7, 9, 10, 11 |
+| Guia do professor | Mês 7 | Link do PDF; recibo de entrega dos impressos | Itens 5, 12 |
+| Trailer acessível e vídeos | Meses 7–11 | Links públicos | Itens 8, 13 |
+
+**Público total da contrapartida presencial:** `[~200]` pessoas, somando lançamento e sessões (coerente com o campo F).
+
 ## J. Ficha técnica
 
 > Mínimo de 70% de residentes em Ribeirão Preto (item 4.2.6). CPF e endereço de cada pessoa são informados no formulário.
