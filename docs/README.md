@@ -28,6 +28,7 @@ Todos os números foram levantados diretamente do projeto (código, assets e `Ga
 | 08 | [Referência para editais](08-referencia-para-editais.md) | Textos prontos, justificativa, objetivos, metas, orçamento, acessibilidade, checklist de inscrição | Proponente, produção cultural |
 | 09 | [Arte, áudio e tecnologia](09-arte-audio-e-tecnologia.md) | Direção de arte, personagens, cabelos, animação, tipografia, áudio, arquitetura, dados, salvamento, desempenho | Artistas, desenvolvedores, avaliadores técnicos |
 | 10 | [Glossário](10-glossario.md) | Termos do jogo, da barbearia afro, culturais e técnicos | Todos |
+| 11 | [Proposta — Edital PNAB 008/2026 (Ribeirão Preto)](11-proposta-edital-008-2026-rp.md) | Planejamento da inscrição na Modalidade I (R$ 30 mil): regras, pendências, campos A–N, equipe, cronograma, orçamento | Proponente |
 
 ### Por onde começar
 
