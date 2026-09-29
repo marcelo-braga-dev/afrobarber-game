@@ -3,14 +3,14 @@
 | | |
 |---|---|
 | **Documento** | 12 · Texto do projeto para inscrição (pronto para o formulário) |
-| **Versão** | 1.0 (rascunho para revisão) — 29/09/2026 |
+| **Versão** | 1.1 (rascunho para revisão) — 29/09/2026 — acervo de minidocumentários como centro do projeto |
 | **Edital** | Chamamento Público nº 008/2026 — Incentivo a Projetos de Produção Artística — Ribeirão Preto/SP — PNAB |
 | **Modalidade** | I — R$ 30.000,00 |
 | **Proponente** | Pessoa física — `[NOME COMPLETO]` — residente em Ribeirão Preto há mais de 2 anos |
 | **Cota** | `[Pessoas negras / Ampla concorrência]` |
 | **Bônus pleiteados** | `[nenhum / periferia / …]` |
 | **Nome do projeto** | **Cada Corte, uma História** (no texto: *AfroBarber - Cada Corte, uma História*) |
-| **Planejamento** | [11 — Planejamento da inscrição](11-proposta-edital-008-2026-rp.md) |
+| **Planejamento** | [11 — Planejamento da inscrição](11-proposta-edital-008-2026-rp.md) · [13 — Desenho do acervo](13-acervo-minidocumentarios.md) |
 
 > **Como usar:** cada seção abaixo corresponde a um campo do formulário (item 4.2.1 do edital, letras A a N). Copie o texto do bloco, preencha os `[COLCHETES]` e confira o limite de caracteres de cada campo na plataforma. O cronograma (§K) e a planilha (§L) devem ser transcritos nos modelos oficiais (Anexos 3 e 4).
 
@@ -24,19 +24,30 @@ Nome completo, usado no corpo do projeto: ***AfroBarber - Cada Corte, uma Histó
 
 ## Resumo (uma frase)
 
-> Produção e lançamento público do jogo eletrônico inédito *AfroBarber - Cada Corte, uma História*, gratuito e acessível, em que cada corte feito numa barbearia afro de bairro desbloqueia a história e o significado cultural de um penteado negro.
+> Produção e lançamento público do jogo eletrônico inédito *AfroBarber - Cada Corte, uma História*, gratuito e acessível, que reúne um acervo de 24 minidocumentários narrados sobre a história, a tradição e o significado dos penteados negros, destravados à medida que o jogador pratica cada corte numa barbearia afro de bairro.
 
 ---
 
 ## A. Apresentação do projeto
 
-> *AfroBarber - Cada Corte, uma História* é um jogo eletrônico inédito, criado e desenvolvido em Ribeirão Preto, que coloca a barbearia afro — espaço histórico de encontro, autoestima e resistência da população negra — no centro de uma obra artística interativa.
+> *AfroBarber - Cada Corte, uma História* é um jogo eletrônico inédito, criado e desenvolvido em Ribeirão Preto, que conta a história da estética negra por meio da barbearia afro — espaço histórico de encontro, autoestima e resistência da população negra.
 >
-> No jogo, a pessoa assume o papel de um(a) jovem barbeiro(a) que abre a própria barbearia num bairro urbano brasileiro. Ela recebe moradores com personalidades e histórias próprias, escolhe as ferramentas, planeja as etapas do atendimento e executa o corte em um minigame de precisão e ritmo. Fora da cadeira, cuida das contas, dos preços, da reputação e da própria energia.
+> O coração da obra é um **acervo de 24 minidocumentários narrados**, um para cada penteado ou corte do jogo — de Tranças Nagô, Cornrows, Turbante e Locs ao Black Power, Conk, Jheri Curl, Flat Top, Box Braids, Sisterlocks, Afro Degradê e Skin Fade. Cada minidocumentário tem cinco capítulos curtos, com ilustrações próprias, narração, texto na tela e trilha sonora da época:
+> 1. o corte e sua técnica;
+> 2. sua origem;
+> 3. quem o usou e quando foi popular;
+> 4. seu significado de identidade e resistência, e como vive no Brasil;
+> 5. como o estilo vive hoje.
 >
-> O coração da obra é o conteúdo cultural. O jogo reúne **24 penteados e cortes reais** — de Tranças Nagô, Cornrows, Turbante e Locs ao Black Power, Conk, Jheri Curl, Flat Top, Box Braids, Sisterlocks, Afro Degradê e Skin Fade —, cada um com época, contexto histórico, significado cultural e curiosidade. Esse conteúdo é desbloqueado quando o jogador realiza o corte, formando uma **Biblioteca de Cortes** que funciona como uma linha do tempo da estética negra, com referências que vão de Zumbi dos Palmares, Angela Davis e Malcolm X às Baianas de Acarajé, ao hip-hop e ao Afropunk. Um calendário cultural dentro do jogo celebra o Dia da Consciência Negra e outras datas da cultura afro-brasileira, e personagens do bairro trazem histórias sobre legado, autoestima, racismo e pertencimento.
+> São 120 capítulos que, juntos, formam uma **linha do tempo da estética negra**, da ancestralidade africana à barbearia contemporânea.
 >
-> O projeto já conta com um protótipo avançado, desenvolvido com recursos próprios. Este apoio financiará a **conclusão da versão 1.0**, com arte e trilha livres de direitos de terceiros, conteúdo revisado por consultoria em cultura afro-brasileira e recursos de acessibilidade. Também financiará a **publicação gratuita** para celular Android e computador e o **lançamento público em Ribeirão Preto**, com sessões de jogo mediado e roda de conversa em `[escolas/equipamentos culturais de bairros periféricos]` e um guia do professor gratuito.
+> O conhecimento vem da prática. O jogador assume o papel de um(a) jovem barbeiro(a) que abre a própria barbearia num bairro brasileiro, recebe moradores com personalidades e histórias próprias e executa os cortes em um minigame de precisão e ritmo. **Cada vez que pratica um corte, destrava um novo capítulo** do minidocumentário daquele estilo. Os clientes comentam na cadeira o que o jogador acabou de descobrir e, mais adiante, passam a pedir o corte pelo que ele significa ("quero algo que minha avó reconheceria"). Aprender a história passa a fazer parte do ofício.
+>
+> O projeto já conta com um protótipo avançado do jogo e com a base do conteúdo histórico dos 24 cortes, desenvolvidos com recursos próprios. Este apoio financiará:
+> - o **roteiro, a validação cultural, as ilustrações, a narração e a trilha dos 120 capítulos**;
+> - a conclusão da versão 1.0 do jogo, livre de direitos de terceiros e acessível;
+> - a **publicação gratuita** para celular Android e computador;
+> - o **lançamento público em Ribeirão Preto**, com sessões de jogo mediado em `[escolas/equipamentos culturais de bairros periféricos]` e um guia do professor gratuito.
 
 ## B. Relevância e justificativa
 
@@ -44,30 +55,39 @@ Nome completo, usado no corpo do projeto: ***AfroBarber - Cada Corte, uma Histó
 >
 > **O jogo como linguagem artística.** Jogos eletrônicos são reconhecidos como produção cultural pelo Marco Legal da Indústria de Jogos Eletrônicos (Lei 14.852/2024) e estão entre as formas de fruição mais presentes no cotidiano de crianças e jovens. Uma obra que une narrativa, música, arte visual e interação amplia o repertório artístico da cidade e alcança um público que dificilmente procuraria esse conteúdo em livros ou exposições.
 >
-> **Educação para as relações étnico-raciais.** A Lei 10.639/2003 tornou obrigatório o ensino de história e cultura afro-brasileira, mas faltam materiais atrativos para a sala de aula. Na Biblioteca de Cortes, o conhecimento vem da ação: o jogador aprende a história de um penteado depois de executá-lo. O guia do professor produzido no projeto relaciona cada corte a temas escolares (ancestralidade, resistência à escravidão, religiões de matriz africana, movimentos negros, cultura hip-hop, direitos).
+> **Educação para as relações étnico-raciais.** A Lei 10.639/2003 tornou obrigatório o ensino de história e cultura afro-brasileira, mas faltam materiais atrativos para a sala de aula. No acervo do jogo, o conhecimento vem da ação: o jogador destrava cada capítulo da história de um penteado ao praticá-lo, e a narração com texto na tela torna o conteúdo acessível a quem tem dificuldade de leitura. O guia do professor produzido no projeto relaciona cada corte a temas escolares (ancestralidade, resistência à escravidão, religiões de matriz africana, movimentos negros, cultura hip-hop, direitos).
 >
-> **Impacto em Ribeirão Preto.** O projeto é criado na cidade e contrata majoritariamente profissionais residentes no município (arte, música, consultoria cultural, pedagogia, acessibilidade, Libras, vídeo, design e mediação), fortalecendo a cadeia produtiva local da cultura digital. As ações presenciais acontecem em territórios periféricos, com barbeiros(as) e trancistas da cidade como mediadores, valorizando saberes e profissionais da estética negra local.
+> **Impacto em Ribeirão Preto.** O projeto é criado na cidade e contrata majoritariamente profissionais residentes no município (ilustração, narração, música, consultoria cultural, pedagogia, acessibilidade, Libras, vídeo, design e mediação), fortalecendo a cadeia produtiva local da cultura digital. As ações presenciais acontecem em territórios periféricos, com barbeiros(as) e trancistas da cidade como mediadores, valorizando saberes e profissionais da estética negra local.
 >
-> **Maturidade.** O projeto não parte do zero: o ciclo principal do jogo já está programado, o conteúdo cultural dos 24 cortes está escrito e há documentação técnica e de design completa. O recurso será aplicado em etapas claras e verificáveis, o que reduz o risco de execução.
+> **Maturidade.** O projeto não parte do zero: o ciclo principal do jogo já está programado, a base do conteúdo histórico dos 24 cortes (história, significado e curiosidade) já está escrita e há documentação técnica e de design completa, incluindo o desenho detalhado do acervo de minidocumentários. O recurso será aplicado em etapas claras e verificáveis, o que reduz o risco de execução.
 
 ## C. Descrição detalhada das ações e atividades
 
 > O projeto tem sete metas, executadas em 12 meses.
 >
-> **Meta 1 — Conclusão da versão 1.0 do jogo.** Finalização da programação para que o jogo possa ser jogado do início ao fim num salvamento novo:
-> - navegação completa da interface (loja, inventário, biblioteca e painéis);
-> - kit inicial de ferramentas;
-> - salvamento da data do jogo;
-> - ajuste de contas, tempo e paciência dos clientes;
-> - ativação dos arcos narrativos dos cinco personagens do bairro, das conquistas e da maestria por corte;
-> - balanceamento de preços, notas e recompensas.
+> **Meta 1 — Acervo "Cada Corte, uma História": 24 minidocumentários, 120 capítulos.**
+> - **Roteiro:** 5 capítulos por corte (o corte, origem, quem usou, significado, hoje), cerca de 12 mil palavras, em linguagem simples e com fontes, ampliando a base histórica já escrita.
+> - **Validação cultural:** consultoria em cultura afro-brasileira revisa os 120 capítulos quanto a precisão, respeito e ausência de estereótipos.
+> - **Ilustração:** 34 ilustrações 2D próprias (uma principal por corte e dez de apoio, com mapas, épocas e linha do tempo).
+> - **Narração:** cerca de 80 minutos de áudio.
+> - **Trilha:** cinco trilhas originais, uma por época (ancestral; anos 1920–1970; anos 1980–1990; anos 2000; hoje).
 >
-> **Meta 2 — Obra livre de direitos de terceiros.** Substituição de todos os modelos, músicas, fontes e nomes de terceiros por criações da equipe ou por recursos de licença aberta (CC0, CC-BY, SIL OFL), com lista pública de créditos e licenças. Inclui arte 3D e de interface e **trilha sonora original** (três faixas instrumentais inspiradas em afrobeat, soul e samba-rock).
+> **Meta 2 — Conclusão da versão 1.0 do jogo.**
+> - Visualizador dos minidocumentários e linha do tempo na Biblioteca de Cortes.
+> - Capítulos destravados pela prática de cada corte.
+> - Comentários dos clientes e pedidos pelo significado.
+> - Navegação completa da interface, kit inicial de ferramentas e salvamento da data do jogo.
+> - Ajuste de tempo e paciência dos clientes.
+> - Ativação dos personagens do bairro e das conquistas.
+> - Balanceamento de preços, notas e recompensas.
 >
-> **Meta 3 — Revisão cultural.** Consultoria em cultura afro-brasileira revisa os textos históricos dos 24 cortes, o calendário cultural e os roteiros dos personagens, garantindo precisão, respeito e ausência de estereótipos. As correções são aplicadas no jogo.
+> **Meta 3 — Obra livre de direitos de terceiros.** Substituição de todos os modelos, músicas, fontes e nomes de terceiros por criações da equipe ou por recursos de licença aberta (CC0, CC-BY, SIL OFL), com lista pública de créditos e licenças.
 >
 > **Meta 4 — Acessibilidade.**
-> - No jogo: linguagem simples, indicadores além da cor, modo sem pressão de tempo no minigame e fonte ajustável.
+> - Narração com texto sempre na tela nos 120 capítulos.
+> - Linguagem simples.
+> - Indicadores além da cor e modo sem pressão de tempo no minigame.
+> - Fonte ajustável.
 > - Trailer com janela de Libras, legendas e audiodescrição.
 > - Testes com participação de pessoa com deficiência.
 >
@@ -77,9 +97,9 @@ Nome completo, usado no corpo do projeto: ***AfroBarber - Cada Corte, uma Histó
 > - Um evento aberto de lançamento em Ribeirão Preto.
 > - Quatro sessões gratuitas de "Jogar e Conversar" em `[escolas públicas/equipamentos culturais de bairros periféricos]`.
 >
-> Nas sessões, o público joga em equipamentos disponibilizados pelo projeto e participa de roda de conversa mediada por barbeiro(a) ou trancista da cidade sobre a história e o significado dos penteados negros. Todas as ações têm intérprete de Libras e acontecem em locais acessíveis.
+> Nas sessões, o público joga em equipamentos disponibilizados pelo projeto, assiste aos capítulos que destravou e participa de roda de conversa mediada por barbeiro(a) ou trancista da cidade. Todas as ações têm intérprete de Libras e acontecem em locais acessíveis.
 >
-> **Meta 7 — Guia do professor.** Material pedagógico gratuito, em PDF acessível e com tiragem impressa para as escolas participantes, que relaciona os cortes da Biblioteca aos temas da Lei 10.639/2003 e propõe uma atividade de 50 minutos.
+> **Meta 7 — Guia do professor.** Material pedagógico gratuito, em PDF acessível e com tiragem impressa para as escolas participantes, que relaciona os minidocumentários aos temas da Lei 10.639/2003 e propõe uma atividade de 50 minutos.
 
 ## D. Perfil do público-alvo e classificação indicativa
 
@@ -115,7 +135,7 @@ Nome completo, usado no corpo do projeto: ***AfroBarber - Cada Corte, uma Histó
 
 ## G. Plano de divulgação
 
-> - **Redes sociais do projeto:** série de vídeos curtos "Curiosidade do corte", com a história de um penteado da Biblioteca por vídeo, legendados e com descrição de imagem; bastidores da produção; chamadas para o lançamento e as sessões.
+> - **Redes sociais do projeto:** série de vídeos curtos "Cada Corte, uma História", com trechos narrados dos minidocumentários, legendados e com descrição de imagem; bastidores da produção; chamadas para o lançamento e as sessões.
 > - **Trailer oficial** com janela de Libras, legendas e audiodescrição.
 > - **Imprensa local:** release e kit de imprensa para jornais, rádios e sites de Ribeirão Preto.
 > - **Escolas e educação:** convite às escolas participantes e envio do guia do professor a professores da rede pública.
@@ -127,7 +147,7 @@ Nome completo, usado no corpo do projeto: ***AfroBarber - Cada Corte, uma Histó
 ## H. Proposta de acessibilidade
 
 > **Comunicacional:**
-> - **No jogo:** textos em linguagem simples; todo o diálogo é escrito (não depende de áudio); indicadores de forma e ícone além da cor no minigame, pensando em pessoas daltônicas; opção de tamanho de fonte maior; modo sem pressão de tempo no minigame (janela de acerto ampliada), para pessoas com dificuldades motoras; jogável com teclado, mouse ou toque.
+> - **No jogo:** os 120 capítulos do acervo têm **narração e texto na tela ao mesmo tempo**, atendendo pessoas surdas e pessoas com baixa visão ou dificuldade de leitura; textos em linguagem simples; todo o diálogo é escrito (não depende de áudio); indicadores de forma e ícone além da cor no minigame, pensando em pessoas daltônicas; opção de tamanho de fonte maior; modo sem pressão de tempo no minigame (janela de acerto ampliada), para pessoas com dificuldades motoras; jogável com teclado, mouse ou toque.
 > - **Trailer:** janela de Libras, legendas e audiodescrição.
 > - **Guia do professor:** PDF acessível, compatível com leitores de tela.
 > - **Peças de divulgação:** texto alternativo em imagens, legendas em vídeos e linguagem simples.
@@ -139,7 +159,7 @@ Nome completo, usado no corpo do projeto: ***AfroBarber - Cada Corte, uma Histó
 > - Intérprete de Libras em todas as ações presenciais.
 > - Equipe de mediação orientada para o atendimento de pessoas com deficiência.
 >
-> **No orçamento:** itens 6 (consultoria de acessibilidade), 7 (intérprete de Libras) e 8 (Libras, legendas e audiodescrição do trailer), somando R$ 3.700,00. A adaptação do jogo (fonte, modo sem pressão, indicadores) é feita pela equipe de programação, dentro do item 1.
+> **No orçamento:** itens 7 (consultoria de acessibilidade), 8 (intérprete de Libras) e 9 (Libras, legendas e audiodescrição do trailer), somando R$ 3.300,00. A narração dos capítulos (item 3) também é recurso de acessibilidade. A adaptação do jogo (fonte, modo sem pressão, indicadores) é feita pela programação, dentro do item 1.
 
 ## I. Proposta de democratização de acesso
 
@@ -166,19 +186,20 @@ Nome completo, usado no corpo do projeto: ***AfroBarber - Cada Corte, uma Histó
 
 | # | Nome | Função no projeto | Reside em RP | Minicurrículo |
 |---|---|---|---|---|
-| 1 | `[PROPONENTE]` | Direção geral, game design e programação | Sim | `[Formação; experiência em desenvolvimento de software e jogos; criador de AfroBarber - Cada Corte, uma História; atuação cultural em Ribeirão Preto desde [ano]: …]` |
-| 2 | `[ ]` | Arte 3D e interface | `[ ]` | `[ ]` |
-| 3 | `[ ]` | Trilha sonora original e efeitos | `[ ]` | `[ ]` |
-| 4 | `[ ]` | Consultoria em cultura afro-brasileira | `[ ]` | `[ ]` |
-| 5 | `[ ]` | Consultoria pedagógica (guia do professor) | `[ ]` | `[ ]` |
-| 6 | `[ ]` | Consultoria de acessibilidade (pessoa com deficiência) | `[ ]` | `[ ]` |
-| 7 | `[ ]` | Intérprete de Libras | `[ ]` | `[ ]` |
-| 8 | `[ ]` | Mediação das sessões (barbeiro/a ou trancista) | `[ ]` | `[ ]` |
-| 9 | `[ ]` | Edição de vídeo e trailer | `[ ]` | `[ ]` |
-| 10 | `[ ]` | Design gráfico | `[ ]` | `[ ]` |
-| 11 | `[ ]` | Contabilidade e apoio à prestação de contas | `[ ]` | `[ ]` |
+| 1 | `[PROPONENTE]` | Direção geral, roteiro do acervo, game design e programação | Sim | `[Formação; experiência em desenvolvimento de software e jogos; criador de AfroBarber - Cada Corte, uma História; atuação cultural em Ribeirão Preto desde [ano]: …]` |
+| 2 | `[ ]` | Ilustração 2D do acervo | `[ ]` | `[ ]` |
+| 3 | `[ ]` | Narração (locução) e edição de áudio | `[ ]` | `[ ]` |
+| 4 | `[ ]` | Trilha sonora original | `[ ]` | `[ ]` |
+| 5 | `[ ]` | Consultoria em cultura afro-brasileira | `[ ]` | `[ ]` |
+| 6 | `[ ]` | Consultoria pedagógica (guia do professor) | `[ ]` | `[ ]` |
+| 7 | `[ ]` | Consultoria de acessibilidade (pessoa com deficiência) | `[ ]` | `[ ]` |
+| 8 | `[ ]` | Intérprete de Libras | `[ ]` | `[ ]` |
+| 9 | `[ ]` | Mediação das sessões (barbeiro/a ou trancista) | `[ ]` | `[ ]` |
+| 10 | `[ ]` | Edição de vídeo e trailer | `[ ]` | `[ ]` |
+| 11 | `[ ]` | Design gráfico | `[ ]` | `[ ]` |
+| 12 | `[ ]` | Contabilidade e apoio à prestação de contas | `[ ]` | `[ ]` |
 
-**Controle:** pelo menos **8 das 11** pessoas devem residir em Ribeirão Preto. Se um serviço for prestado por empresa (ex.: Libras, contabilidade), conferir com a Secretaria como ele conta na proporção.
+**Controle:** pelo menos **9 das 12** pessoas devem residir em Ribeirão Preto (70% de 12 = 8,4). Se um serviço for prestado por empresa (ex.: Libras, contabilidade), conferir com a Secretaria como ele conta na proporção.
 
 ## K. Cronograma de execução (transcrever no Anexo 3)
 
@@ -186,22 +207,26 @@ Meses contados a partir do recebimento dos recursos.
 
 | # | Atividade | Meta | Início | Fim | Responsável |
 |---|---|---|---|---|---|
-| 1 | Contratação da equipe e plano de trabalho detalhado | — | Mês 1 | Mês 1 | Proponente |
-| 2 | Correções estruturais do jogo (navegação, kit inicial, salvamento, tempo, contas) | M1 | Mês 1 | Mês 2 | Proponente |
-| 3 | Ativação de narrativa, conquistas e maestria; balanceamento | M1 | Mês 2 | Mês 5 | Proponente |
-| 4 | Substituição de modelos, fontes e nomes de terceiros; arte 3D e de interface | M2 | Mês 2 | Mês 5 | Arte 3D |
-| 5 | Composição e produção da trilha original | M2 | Mês 3 | Mês 5 | Trilha sonora |
-| 6 | Revisão cultural dos 24 cortes, calendário e roteiros; aplicação no jogo | M3 | Mês 2 | Mês 5 | Consultoria cultural + proponente |
-| 7 | Recursos de acessibilidade no jogo | M4 | Mês 4 | Mês 6 | Proponente + consultoria de acessibilidade |
-| 8 | Guia do professor | M7 | Mês 5 | Mês 7 | Consultoria pedagógica |
-| 9 | Testes fechados com estudantes, barbeiros(as) e pessoa com deficiência; ajustes | M1, M4 | Mês 6 | Mês 7 | Toda a equipe |
-| 10 | Trailer com Libras, legendas e audiodescrição; peças de divulgação | M4 | Mês 7 | Mês 8 | Vídeo, design, Libras |
-| 11 | **Publicação gratuita** (Google Play e itch.io) | M5 | Mês 8 | Mês 8 | Proponente |
-| 12 | Divulgação | — | Mês 7 | Mês 11 | Proponente + design |
-| 13 | **Lançamento público** | M6 | Mês 8 | Mês 8 | Toda a equipe |
-| 14 | **Quatro sessões de jogo mediado** | M6 | Mês 9 | Mês 10 | Proponente, mediação, Libras |
-| 15 | Correções pós-lançamento e coleta de evidências | — | Mês 9 | Mês 11 | Proponente |
-| 16 | **Relatório de Objeto da Execução Cultural** (Anexo 8) | — | Mês 12 | Mês 12 | Proponente + contabilidade |
+| 1 | Contratação da equipe; padrão de roteiro e guia de estilo das ilustrações | — | Mês 1 | Mês 1 | Proponente |
+| 2 | Correções estruturais do jogo (navegação, kit inicial, salvamento, tempo) | M2 | Mês 1 | Mês 2 | Proponente |
+| 3 | Roteiro dos 120 capítulos | M1 | Mês 1 | Mês 5 | Proponente |
+| 4 | Validação cultural dos capítulos (em lotes de 6 cortes) | M1 | Mês 2 | Mês 6 | Consultoria cultural |
+| 5 | Ilustrações 2D do acervo (34 peças) | M1 | Mês 2 | Mês 7 | Ilustração |
+| 6 | Trilhas das cinco épocas | M1 | Mês 3 | Mês 5 | Trilha sonora |
+| 7 | Narração e edição de áudio dos 120 capítulos (em lotes validados) | M1 | Mês 4 | Mês 7 | Narração |
+| 8 | Visualizador de capítulos, linha do tempo e destravamento pela prática; integração do acervo | M1, M2 | Mês 3 | Mês 7 | Proponente |
+| 9 | Substituição de modelos, fontes e nomes de terceiros por recursos abertos | M3 | Mês 2 | Mês 5 | Proponente |
+| 10 | Personagens do bairro, conquistas e balanceamento | M2 | Mês 4 | Mês 6 | Proponente |
+| 11 | Recursos de acessibilidade no jogo | M4 | Mês 5 | Mês 7 | Proponente + consultoria de acessibilidade |
+| 12 | Guia do professor | M7 | Mês 6 | Mês 7 | Consultoria pedagógica |
+| 13 | Testes fechados com estudantes, barbeiros(as) e pessoa com deficiência; ajustes | M2, M4 | Mês 7 | Mês 8 | Toda a equipe |
+| 14 | Trailer com Libras, legendas e audiodescrição; peças de divulgação | M4 | Mês 8 | Mês 8 | Vídeo, design, Libras |
+| 15 | **Publicação gratuita** (Google Play e itch.io) | M5 | Mês 9 | Mês 9 | Proponente |
+| 16 | Divulgação | — | Mês 8 | Mês 11 | Proponente + design |
+| 17 | **Lançamento público** | M6 | Mês 9 | Mês 9 | Toda a equipe |
+| 18 | **Quatro sessões de jogo mediado** | M6 | Mês 10 | Mês 11 | Proponente, mediação, Libras |
+| 19 | Correções pós-lançamento e coleta de evidências | — | Mês 10 | Mês 11 | Proponente |
+| 20 | **Relatório de Objeto da Execução Cultural** (Anexo 8) | — | Mês 12 | Mês 12 | Proponente + contabilidade |
 
 ## L. Planilha orçamentária (transcrever no Anexo 4)
 
@@ -209,32 +234,33 @@ Meses contados a partir do recebimento dos recursos.
 
 | # | Item | Descrição / justificativa | Unid. | Qtd. | Unit. (R$) | Total (R$) | Referência de preço |
 |---|---|---|---|---|---|---|---|
-| 1 | Direção geral, game design e programação | Conclusão do jogo, acessibilidade no jogo, publicação e coordenação (proponente) | mês | 6 | 1.500,00 | 9.000,00 | `[ ]` |
-| 2 | Arte 3D e interface | Modelos e ícones que substituem ativos de terceiros | serviço | 1 | 5.000,00 | 5.000,00 | `[ ]` |
-| 3 | Trilha sonora original | 3 faixas instrumentais + efeitos | serviço | 1 | 2.500,00 | 2.500,00 | `[ ]` |
-| 4 | Consultoria em cultura afro-brasileira | Revisão dos 24 cortes, calendário e roteiros | serviço | 1 | 1.500,00 | 1.500,00 | `[ ]` |
-| 5 | Consultoria pedagógica | Elaboração do guia do professor | serviço | 1 | 1.000,00 | 1.000,00 | `[ ]` |
-| 6 | Consultoria de acessibilidade | Pessoa com deficiência; testes e orientação | serviço | 1 | 1.000,00 | 1.000,00 | `[ ]` |
-| 7 | Intérprete de Libras | Lançamento + 4 sessões | diária | 5 | 300,00 | 1.500,00 | `[ ]` |
-| 8 | Acessibilidade do trailer | Janela de Libras, legendas e audiodescrição | serviço | 1 | 1.200,00 | 1.200,00 | `[ ]` |
-| 9 | Mediação das sessões | Barbeiro(a) ou trancista convidado(a) | sessão | 4 | 250,00 | 1.000,00 | `[ ]` |
-| 10 | Locação de equipamentos | Notebooks, projetor e som para lançamento e sessões | diária | 5 | 230,00 | 1.150,00 | `[ ]` |
-| 11 | Transporte | Equipe e equipamentos até os locais | verba | 1 | 500,00 | 500,00 | `[ ]` |
-| 12 | Impressão | Guia do professor (40 ex.) e cartazes | lote | 1 | 800,00 | 800,00 | `[ ]` |
-| 13 | Edição de vídeo | Trailer e vídeos curtos de divulgação | serviço | 1 | 1.200,00 | 1.200,00 | `[ ]` |
-| 14 | Design gráfico | Peças de divulgação acessíveis | serviço | 1 | 800,00 | 800,00 | `[ ]` |
-| 15 | Conta de desenvolvedor Google Play | Taxa única de publicação | taxa | 1 | 150,00 | 150,00 | Google Play Console |
-| 16 | Celular Android de entrada | Testes de desempenho em aparelho popular `[confirmar se o edital aceita bens; alternativa: locação]` | unid. | 1 | 900,00 | 900,00 | `[ ]` |
-| 17 | Contabilidade | Recolhimentos e apoio ao relatório | serviço | 1 | 800,00 | 800,00 | `[ ]` |
+| 1 | Direção geral, roteiro e programação | Roteiro dos 120 capítulos, integração do acervo, conclusão do jogo, acessibilidade no jogo, publicação e coordenação (proponente) | mês | 6 | 1.200,00 | 7.200,00 | `[ ]` |
+| 2 | Ilustração 2D do acervo | 24 ilustrações principais + 10 de apoio (mapas, épocas, linha do tempo) | ilustração | 34 | 150,00 | 5.100,00 | `[ ]` |
+| 3 | Narração e edição de áudio | Locução dos 120 capítulos (~80 min finalizados), edição e normalização | serviço | 1 | 3.800,00 | 3.800,00 | `[ ]` |
+| 4 | Trilha sonora original | 5 trilhas em loop, uma por época | serviço | 1 | 2.000,00 | 2.000,00 | `[ ]` |
+| 5 | Consultoria em cultura afro-brasileira | Validação dos 120 capítulos e das fontes | serviço | 1 | 2.000,00 | 2.000,00 | `[ ]` |
+| 6 | Consultoria pedagógica | Elaboração do guia do professor | serviço | 1 | 800,00 | 800,00 | `[ ]` |
+| 7 | Consultoria de acessibilidade | Pessoa com deficiência; testes e orientação | serviço | 1 | 800,00 | 800,00 | `[ ]` |
+| 8 | Intérprete de Libras | Lançamento + 4 sessões | diária | 5 | 300,00 | 1.500,00 | `[ ]` |
+| 9 | Acessibilidade do trailer | Janela de Libras, legendas e audiodescrição | serviço | 1 | 1.000,00 | 1.000,00 | `[ ]` |
+| 10 | Mediação das sessões | Barbeiro(a) ou trancista convidado(a) | sessão | 4 | 250,00 | 1.000,00 | `[ ]` |
+| 11 | Locação de equipamentos | Notebooks, projetor e som para lançamento e sessões | diária | 5 | 200,00 | 1.000,00 | `[ ]` |
+| 12 | Transporte | Equipe e equipamentos até os locais | verba | 1 | 350,00 | 350,00 | `[ ]` |
+| 13 | Impressão | Guia do professor (40 ex.) e cartazes | lote | 1 | 500,00 | 500,00 | `[ ]` |
+| 14 | Edição de vídeo | Trailer e vídeos curtos de divulgação | serviço | 1 | 800,00 | 800,00 | `[ ]` |
+| 15 | Design gráfico | Peças de divulgação acessíveis | serviço | 1 | 500,00 | 500,00 | `[ ]` |
+| 16 | Conta de desenvolvedor Google Play | Taxa única de publicação | taxa | 1 | 150,00 | 150,00 | Google Play Console |
+| 17 | Celular Android de entrada | Testes de desempenho em aparelho popular `[confirmar se o edital aceita bens; alternativa: locação]` | unid. | 1 | 900,00 | 900,00 | `[ ]` |
+| 18 | Contabilidade | Recolhimentos e apoio ao relatório | serviço | 1 | 600,00 | 600,00 | `[ ]` |
 | | **TOTAL** | | | | | **30.000,00** | |
 
 | Grupo | Itens | Total (R$) | % |
 |---|---|---|---|
-| Produção artística | 1–5 | 19.000,00 | 63,3% |
-| Acessibilidade | 6–8 | 3.700,00 | 12,3% |
-| Ação pública e educação | 9–12 | 3.450,00 | 11,5% |
-| Divulgação | 13–14 | 2.000,00 | 6,7% |
-| Serviços e administração | 15–17 | 1.850,00 | 6,2% |
+| Produção artística (acervo e jogo) | 1–6 | 20.900,00 | 69,7% |
+| Acessibilidade | 7–9 | 3.300,00 | 11,0% |
+| Ação pública e educação | 10–13 | 2.850,00 | 9,5% |
+| Divulgação | 14–15 | 1.300,00 | 4,3% |
+| Serviços e administração | 16–18 | 1.650,00 | 5,5% |
 
 ## M. Currículo e portfólio do agente cultural
 
@@ -246,6 +272,7 @@ Meses contados a partir do recebimento dos recursos.
 3. **Declarações e cartas de reconhecimento** de escolas, ONGs, associações, coletivos ou espaços culturais da cidade. `[OBTER]`
 4. **AfroBarber - Cada Corte, uma História — o protótipo:**
    - capturas de tela (barbearia, pedido com resumo histórico, minigame, Biblioteca de Cortes);
+   - **amostra do acervo:** roteiro completo de 1 minidocumentário (5 capítulos) e, se possível, 1 capítulo ilustrado e narrado como piloto;
    - link de vídeo de gameplay de 2 a 3 minutos (sem ativos de terceiros visíveis, ou com aviso de arte provisória);
    - números: 24 cortes com conteúdo histórico, ~206 scripts, ~357 testes automatizados, documentação de design em 10 volumes.
 5. **Outros trabalhos:** projetos de software, jogos, arte ou educação. `[LISTAR]`
@@ -277,8 +304,8 @@ Meses contados a partir do recebimento dos recursos.
 
 - [ ] Nenhum `[COLCHETE]` restante.
 - [ ] Planilha soma **exatamente R$ 30.000,00** e cada item tem referência de preço.
-- [ ] Pelo menos 70% da ficha técnica reside em Ribeirão Preto, e o proponente está nela.
-- [ ] Acessibilidade aparece no texto (H) **e** na planilha (itens 6–8).
+- [ ] Pelo menos 70% da ficha técnica (9 de 12) reside em Ribeirão Preto, e o proponente está nela.
+- [ ] Acessibilidade aparece no texto (H) **e** na planilha (itens 7–9).
 - [ ] Locais das ações confirmados como acessíveis; bairros conferidos no Anexo 11.
 - [ ] Portfólio comprova 2 anos de atuação cultural em Ribeirão Preto.
 - [ ] Vídeo e imagens sem ativos de terceiros visíveis.
