@@ -7,7 +7,7 @@
 | **Edital** | Incentivo a Projetos de Produção Artística — Secretaria Municipal de Cultura e Turismo de Ribeirão Preto — recursos da PNAB (Lei 14.399/2022) |
 | **Modalidade** | **I — R$ 30.000,00** (até 10 projetos) |
 | **Inscrição** | Plataforma Criarte (`https://criarte.grupogorki.com.br/`) — prazo original 29/09/2026, **prorrogado por 15 dias** (≈ 14/10/2026 — `[CONFIRMAR data e hora no ato de prorrogação]`) |
-| **Relacionados** | [07 Estado atual](07-estado-atual-e-roadmap.md) · [08 Referência para editais](08-referencia-para-editais.md) · [06 Universo cultural](06-universo-cultural.md) |
+| **Relacionados** | [12 Texto do projeto](12-projeto-edital-008-2026.md) · [07 Estado atual](07-estado-atual-e-roadmap.md) · [08 Referência para editais](08-referencia-para-editais.md) · [06 Universo cultural](06-universo-cultural.md) |
 
 > Documento vivo. Trechos entre `[COLCHETES]` dependem do proponente. Valores do orçamento são **estimativas iniciais** a validar com orçamentos reais (a Comissão pode vetar itens fora do preço de mercado — item 7.5 do edital).
 
