@@ -204,9 +204,15 @@ Detalhes do desenho técnico em [13](13-acervo-minidocumentarios.md).
 ### Título
 **Cada Corte, uma História**
 
-### Resumo (se a plataforma pedir)
+### Apresentação resumida do projeto
 
-> Um jogo gratuito para celular e computador em que a pessoa cuida de uma barbearia afro de bairro e, a cada corte que faz, conhece a história e o significado dos penteados negros, contados em 24 pequenos documentários narrados.
+*Versão final (≈690 caracteres com espaços). Versão curta, para campos de até 300 caracteres, logo abaixo.*
+
+> Cada Corte, uma História é um jogo gratuito, para celular e computador, que estou criando em Ribeirão Preto. Nele, a pessoa cuida de uma barbearia afro num bairro, recebe os moradores e faz os cortes que eles pedem. A cada corte, ela libera um pequeno documentário narrado sobre aquele penteado: de onde ele veio, quem usou, o que significa para a identidade negra e como vive no Brasil. São 24 penteados, das tranças nagô ao Black Power e ao degradê, que juntos contam a história da estética negra. O jogo terá recursos de acessibilidade, será lançado com um evento aberto e quatro encontros gratuitos em bairros da periferia, e virá acompanhado de um guia para professores.
+
+**Versão curta (≈250 caracteres):**
+
+> Um jogo gratuito em que a pessoa cuida de uma barbearia afro de bairro e, a cada corte, libera um pequeno documentário narrado sobre a história e o significado de 24 penteados negros, das tranças nagô ao Black Power.
 
 ### A. Apresentação do projeto
 
