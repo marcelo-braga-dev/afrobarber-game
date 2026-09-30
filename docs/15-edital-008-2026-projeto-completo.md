@@ -264,7 +264,7 @@ Detalhes do desenho técnico em [13](13-acervo-minidocumentarios.md).
 >
 > 4. Acessibilidade (meses 5 a 8). Além da narração com texto na tela e da descrição das ilustrações, o jogo terá opção de letras maiores, sinais que não dependem só de cor e um modo sem pressa. Uma consultora com deficiência testa o jogo e orienta a equipe. O trailer terá Libras, legendas e audiodescrição.
 >
-> 5. Testes e publicação (meses 7 a 10). Antes de publicar, um grupo de estudantes, barbeiros e trancistas e a consultora de acessibilidade testam o jogo, inclusive em celulares simples, e eu faço os ajustes. Depois, o jogo é publicado de graça na Google Play, para celulares Android, e no itch.io, um site de jogos independentes para computador. Não terá propaganda nem compras.
+> 5. Testes e publicação (meses 7 a 9). Antes de publicar, um grupo de estudantes, barbeiros e trancistas e a consultora de acessibilidade testam o jogo, inclusive em celulares simples, e eu faço os ajustes. Depois, o jogo é publicado de graça na Google Play, para celulares Android, e no itch.io, um site de jogos independentes para computador. Não terá propaganda nem compras.
 >
 > 6. Lançamento (novembro). O jogo será lançado num evento aberto e gratuito em novembro, mês da Consciência Negra, num espaço acessível de um bairro da periferia. O público vai poder jogar nos computadores levados pelo projeto, assistir a trechos dos documentários e participar de uma roda de conversa com um barbeiro e uma trancista da cidade sobre a história dos penteados e o que eles representam. O evento terá intérpretes de Libras. Quem quiser responde a algumas perguntas rápidas sobre o que achou e o que aprendeu.
 >
@@ -449,32 +449,38 @@ Ver [parte 10](#10-portfólio-e-vídeos).
 
 ## 8. Cronograma (Anexo 3)
 
-Meses contados a partir do recebimento do recurso.
+Planilha pronta: [`edital-008/Anexo3-Cronograma-Cada-Corte-uma-Historia.xlsx`](edital-008/Anexo3-Cronograma-Cada-Corte-uma-Historia.xlsx), com as barras mês a mês. Meses contados a partir do recebimento do recurso.
 
-| # | Atividade | Etapa | Início | Fim | Responsável |
-|---|---|---|---|---|---|
-| 1 | Contratação da equipe; modelo de roteiro e estilo das ilustrações | — | Mês 1 | Mês 1 | Proponente |
-| 2 | Preparação do jogo para receber os documentários | 2 | Mês 1 | Mês 2 | Proponente |
-| 3 | Roteiro das 120 partes, com descrição das ilustrações | 1, 4 | Mês 1 | Mês 5 | Proponente |
-| 4 | Revisão cultural dos roteiros (em grupos de 6 penteados) | 1 | Mês 2 | Mês 6 | Consultoria cultural |
-| 5 | Ilustrações (34 peças) | 1 | Mês 2 | Mês 7 | Ilustração |
-| 6 | Músicas das cinco épocas | 1 | Mês 3 | Mês 5 | Trilha sonora |
-| 7 | Narração e edição de áudio das 120 partes | 1 | Mês 4 | Mês 7 | Narração |
-| 8 | Documentários dentro do jogo: linha do tempo, liberação conforme se joga, conversas dos clientes | 1, 2 | Mês 3 | Mês 7 | Proponente |
-| 9 | Troca do material de terceiros por material próprio ou de uso livre | 3 | Mês 2 | Mês 5 | Proponente |
-| 10 | Personagens do bairro, ajustes finais e marcas institucionais no jogo | 2 | Mês 4 | Mês 6 | Proponente |
-| 11 | Recursos de acessibilidade no jogo | 4 | Mês 5 | Mês 7 | Proponente + consultoria de acessibilidade |
-| 12 | Guia para professores e perguntas do lançamento | 6, 7 | Mês 6 | Mês 7 | Consultoria pedagógica |
-| 13 | Testes com estudantes, barbeiros(as) e pessoa com deficiência, inclusive em celulares simples; ajustes | 4, 5 | Mês 7 | Mês 8 | Toda a equipe |
-| 14 | Trailer com Libras, legendas e audiodescrição; peças de divulgação | 4 | Mês 8 | Mês 8 | Vídeo e design, Libras |
-| 15 | Reserva do local e organização do lançamento | 6 | Mês 7 | Mês 9 | Proponente |
-| 16 | **Publicação gratuita** (Google Play e itch.io) | 5 | Mês 9 | Mês 10 | Proponente |
-| 17 | Divulgação | — | Mês 8 | Mês 11 | Proponente + vídeo e design |
-| 18 | **Lançamento aberto ao público, em novembro** | 6 | Novembro | Novembro | Toda a equipe, roda de conversa, Libras |
-| 19 | Correções depois do lançamento e organização das comprovações | — | Mês 10 | Mês 11 | Proponente |
-| 20 | **Relatório de Objeto da Execução Cultural** (Anexo 8) | — | Mês 12 | Mês 12 | Proponente + contabilidade |
+| Etapa / atividade | Início | Fim | Responsável |
+|---|---|---|---|
+| **PRÉ-PRODUÇÃO** | | | |
+| Contratação dos prestadores de serviço (ilustração, narração, trilha, consultorias) | Mês 1 | Mês 1 | Proponente |
+| Definição do modelo de roteiro dos documentários e do estilo das ilustrações | Mês 1 | Mês 1 | Proponente e ilustração |
+| Pesquisa das fontes históricas dos 24 penteados | Mês 1 | Mês 2 | Proponente |
+| Preparação do jogo para receber os documentários | Mês 1 | Mês 2 | Proponente |
+| **PRODUÇÃO** | | | |
+| Roteiro das 120 partes dos documentários, com descrição das ilustrações | Mês 2 | Mês 5 | Proponente |
+| Revisão cultural dos roteiros, em grupos de 6 penteados | Mês 3 | Mês 6 | Consultoria cultural |
+| Ilustrações dos documentários (34 peças) | Mês 3 | Mês 7 | Ilustração |
+| Músicas originais das cinco épocas | Mês 3 | Mês 5 | Trilha sonora |
+| Narração e edição de áudio das 120 partes | Mês 4 | Mês 7 | Narração |
+| Troca do material de terceiros por material próprio ou de uso livre | Mês 2 | Mês 5 | Proponente |
+| Documentários dentro do jogo: linha do tempo, liberação conforme se joga e conversas dos clientes | Mês 3 | Mês 7 | Proponente |
+| Personagens do bairro, ajustes finais e marcas institucionais no jogo | Mês 5 | Mês 7 | Proponente |
+| Recursos de acessibilidade no jogo | Mês 5 | Mês 7 | Proponente e consultoria de acessibilidade |
+| Guia para professores | Mês 6 | Mês 7 | Consultoria pedagógica |
+| Divulgação dos bastidores nas redes sociais | Mês 3 | Mês 8 | Proponente |
+| Testes com estudantes, barbeiros, trancistas e pessoa com deficiência, inclusive em celulares simples; ajustes | Mês 7 | Mês 8 | Proponente e consultoria de acessibilidade |
+| Trailer com Libras, legendas e audiodescrição; peças de divulgação | Mês 8 | Mês 8 | Vídeo e design, Libras |
+| **PÓS-PRODUÇÃO** | | | |
+| Publicação gratuita do jogo (Google Play e itch.io) e do guia para professores | Mês 9 | Mês 9 | Proponente |
+| Organização do lançamento: reserva do local, equipamentos, convidados e intérpretes | Mês 9 | Mês 10 | Proponente |
+| Divulgação do lançamento (imprensa, escolas, coletivos e barbearias) | Mês 9 | Mês 11 | Proponente, vídeo e design |
+| **Lançamento aberto ao público, em novembro** (mês da Consciência Negra) | Mês 11 | Mês 11 | Proponente, roda de conversa, Libras |
+| Correções depois do lançamento e distribuição do guia impresso às escolas | Mês 11 | Mês 12 | Proponente |
+| Organização das comprovações e Relatório de Objeto da Execução Cultural | Mês 12 | Mês 12 | Proponente e contabilidade |
 
-**Novembro fixo:** o lançamento é em novembro, mês da Consciência Negra. Se o recurso for recebido entre dezembro de 2026 e fevereiro de 2027, novembro de 2027 cai entre os meses 10 e 12 do projeto, depois da publicação. `[Ao transcrever no Anexo 3, trocar "Novembro" pelo número do mês correspondente, quando a data de recebimento for conhecida.]` A produção termina no mês 8, o que deixa folga para imprevistos.
+**Novembro fixo:** o mês 11 considera o recebimento do recurso em dezembro de 2026. Se o recurso chegar em outra data, ajuste os números dos meses para o lançamento continuar em novembro, depois da publicação e dentro dos 12 meses.
 
 ---
 
