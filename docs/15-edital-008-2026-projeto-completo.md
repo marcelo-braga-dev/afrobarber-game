@@ -331,19 +331,21 @@ Detalhes do desenho técnico em [13](13-acervo-minidocumentarios.md).
 
 ### H. Proposta de acessibilidade
 
-> A acessibilidade faz parte do projeto desde o começo, não é um detalhe acrescentado no fim.
+*Versão final (≈2.110 caracteres com espaços).*
+
+> Quero que o jogo e as atividades possam ser aproveitados pelo maior número de pessoas possível, por isso a acessibilidade entrou no projeto desde o começo.
 >
-> **Nos documentários:** as 120 partes têm narração e texto na tela ao mesmo tempo. Quem é surdo ou tem deficiência auditiva acompanha pelo texto, e quem tem baixa visão ou dificuldade de leitura acompanha pela narração. Além disso, a narração descreve cada ilustração, para que pessoas cegas também possam acompanhar.
+> Nos documentários, a narração e o texto aparecem juntos na tela. Quem é surdo ou tem deficiência auditiva acompanha pela leitura, e quem tem baixa visão ou dificuldade para ler acompanha pela voz. Além disso, a narração descreve cada ilustração, como se contasse para alguém o que está na tela. Assim, pessoas cegas também conseguem acompanhar as histórias.
 >
-> **No jogo:** textos em linguagem simples, opção de letras maiores e sinais que não dependem só de cor, pensando em quem não enxerga bem as cores. Um modo sem pressa ajuda quem tem dificuldade de movimento. Dá para jogar com teclado, mouse ou tocando na tela.
+> No jogo, os textos usam linguagem simples e há opção de letras maiores. Os sinais importantes não dependem só de cor, pensando em quem tem daltonismo. Para quem tem dificuldade de movimento nas mãos, haverá um modo sem pressa, em que o tempo para acertar o corte é maior. Dá para jogar com teclado, mouse ou tocando na tela.
 >
-> **No trailer e na divulgação:** o trailer terá Libras, legendas e audiodescrição. As imagens das redes terão descrição, os vídeos terão legenda, e o guia para professores será um PDF que funciona com leitores de tela.
+> Na divulgação, o trailer do jogo terá janela de Libras, legendas e audiodescrição. As imagens publicadas nas redes terão descrição, os vídeos terão legenda, e o guia para professores será um PDF que funciona com leitores de tela. Todo o material vai informar quais recursos de acessibilidade o jogo e os encontros oferecem.
 >
-> **Nos encontros:** só usaremos locais com acesso para pessoas com mobilidade reduzida e banheiro acessível, e todos os encontros terão intérprete de Libras.
+> Nos encontros e no lançamento, só vou usar locais com entrada acessível para cadeira de rodas e pessoas com mobilidade reduzida e com banheiro adaptado. Todos terão intérprete de Libras.
 >
-> **Na equipe:** vou contratar uma pessoa com deficiência como consultora de acessibilidade. Ela testa o jogo e orienta a equipe, inclusive no atendimento ao público nos encontros.
+> Também vou contratar uma pessoa com deficiência como consultora de acessibilidade. Ela vai testar o jogo antes da publicação, apontar o que precisa melhorar e orientar a equipe sobre como receber bem o público com deficiência nos encontros. Para mim, é importante que essa avaliação venha de quem vive essas barreiras no dia a dia.
 >
-> **No orçamento:** a consultoria de acessibilidade, o intérprete de Libras e a acessibilidade do trailer somam R$ 3.300,00 (itens 7, 8 e 9). A narração dos documentários (item 3) e a descrição das ilustrações no roteiro (item 1) também são recursos de acessibilidade.
+> No orçamento, a acessibilidade tem R$ 3.300,00 reservados: consultoria de acessibilidade (R$ 800,00), intérprete de Libras nos cinco eventos (R$ 1.500,00) e a versão acessível do trailer (R$ 1.000,00). A narração dos documentários e a descrição das ilustrações já estão incluídas nos itens de narração e roteiro.
 
 ### I. Proposta de democratização de acesso
 
