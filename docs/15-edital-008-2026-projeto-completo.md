@@ -368,7 +368,7 @@ Detalhes do desenho técnico em [13](13-acervo-minidocumentarios.md).
 
 ### I. Proposta de democratização de acesso
 
-*Versão final (≈1.690 caracteres com espaços).*
+*Versão final (≈1.590 caracteres com espaços).*
 
 > O jogo será totalmente gratuito. Não terá propaganda, compras dentro do jogo nem coleta de dados pessoais para fins comerciais. Qualquer pessoa poderá baixar e jogar, sem pagar nada, antes, durante ou depois do projeto.
 >
