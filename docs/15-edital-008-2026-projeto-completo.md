@@ -318,17 +318,15 @@ Detalhes do desenho técnico em [13](13-acervo-minidocumentarios.md).
 
 ### F. Expectativa de público
 
-*Versão final (≈1.240 caracteres com espaços).*
+*Versão final (≈780 caracteres com espaços).*
 
-> Espero alcançar diretamente cerca de 800 pessoas durante o projeto. Explico de onde vem esse número.
+> O público do projeto vem de dois lugares: o lançamento e a internet.
 >
-> No lançamento, aberto ao público e gratuito, em novembro, espero receber cerca de 100 pessoas, contando estudantes, professores, famílias, barbeiros, trancistas e quem se interessa por cultura negra na cidade. Por ser no mês da Consciência Negra, o evento conversa com a programação das escolas e de coletivos da cidade, o que ajuda a trazer público.
+> No lançamento, em novembro, espero receber cerca de 100 pessoas, entre estudantes, professores, famílias, barbeiros, trancistas e quem se interessa por cultura negra na cidade.
 >
-> O jogo será gratuito e ficará disponível para qualquer pessoa. Espero cerca de 500 downloads nos três primeiros meses depois da publicação, contando celular e computador.
+> Na internet, o jogo e o guia para professores ficarão disponíveis de graça por tempo indeterminado. Nos três primeiros meses depois da publicação, espero cerca de 500 downloads do jogo e 200 do guia. Como eles continuam no ar depois que o projeto termina, esse número tende a crescer com o tempo, principalmente em novembro de cada ano e sempre que um professor usar o material em sala de aula.
 >
-> O guia para professores terá cerca de 200 downloads e 40 exemplares impressos, distribuídos no lançamento e entregues a escolas públicas da cidade. Cada professor que usar o guia leva o conteúdo para as suas turmas, então o alcance real deve ser maior.
->
-> Somando tudo, são cerca de 100 pessoas no lançamento e 700 pelo jogo e pelo guia. Não contei quem vai ver os vídeos curtos nas redes sociais nem os alunos alcançados pelos professores, porque são números difíceis de prever. Vou acompanhar tudo pela lista de presença do lançamento e pelos números de download das lojas e do guia.
+> Durante o projeto, espero alcançar diretamente cerca de 800 pessoas. Vou acompanhar pela lista de presença do lançamento e pelos números de download.
 
 ### G. Plano de divulgação
 
