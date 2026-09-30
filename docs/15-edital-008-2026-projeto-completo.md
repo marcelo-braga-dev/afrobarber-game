@@ -251,21 +251,25 @@ Detalhes do desenho técnico em [13](13-acervo-minidocumentarios.md).
 
 ### C. Descrição detalhada das ações e atividades
 
-> O projeto está dividido em sete etapas, ao longo de 12 meses.
+*Versão final (≈3.800 caracteres com espaços).*
+
+> O projeto vai durar 12 meses e está dividido em sete etapas. Algumas acontecem ao mesmo tempo, mas todas levam ao mesmo resultado: o jogo completo, gratuito, com os 24 documentários, apresentado ao público de Ribeirão Preto.
 >
-> **1. Os 24 documentários.** Vou escrever os roteiros das 120 partes, cinco para cada penteado, com linguagem simples e indicação das fontes consultadas. Na narração, cada ilustração também é descrita em voz alta, para que pessoas cegas possam acompanhar. Um(a) especialista em cultura afro-brasileira revisa todos os textos antes da gravação. Depois vêm as 34 ilustrações (uma para cada penteado e outras dez com mapas e épocas), cerca de 80 minutos de narração e cinco músicas originais, uma para cada época.
+> 1. Os documentários (meses 1 a 7). Esta é a parte principal do projeto. Vou escrever os roteiros dos 24 documentários, cada um com cinco partes curtas: como é o corte, de onde ele veio, quem usou, o que significa e como vive no Brasil, e como ele aparece hoje. São 120 partes no total, com linguagem simples e as fontes consultadas. Em cada parte, a narração descreve a ilustração que está na tela, para que pessoas cegas possam acompanhar. Um(a) especialista em cultura afro-brasileira revisa todos os textos antes da gravação, em grupos de seis penteados. Com os textos aprovados, entram as 34 ilustrações feitas especialmente para o projeto, cerca de 80 minutos de narração e cinco músicas originais, uma para cada época.
 >
-> **2. Colocar os documentários dentro do jogo.** É a parte de programação: fazer as partes se liberarem conforme a pessoa joga, montar a linha do tempo, criar as conversas dos clientes sobre cada penteado e terminar os personagens do bairro. As marcas da Prefeitura de Ribeirão Preto e do Governo Federal aparecem na abertura, nos créditos e na página do jogo na loja.
+> 2. Os documentários dentro do jogo (meses 1 a 7). Aqui entra a programação. As partes de cada documentário vão sendo liberadas conforme a pessoa repete aquele corte no jogo. A Biblioteca de Cortes vira uma linha do tempo, da África até hoje, que vai se completando. Os clientes passam a comentar o que o jogador descobriu e, com o tempo, pedem o corte pelo que ele significa. Também termino os personagens do bairro e coloco as marcas da Prefeitura e do Governo Federal na abertura e nos créditos do jogo.
 >
-> **3. Deixar o jogo livre de direitos de terceiros.** O protótipo usa alguns modelos, músicas e fontes de outras pessoas. Tudo isso será trocado por material feito pela equipe ou de uso livre, com uma lista pública de créditos.
+> 3. Material próprio ou de uso livre (meses 2 a 5). O protótipo usa alguns modelos, músicas e fontes feitos por outras pessoas. Tudo isso será trocado por material da equipe ou de uso livre, e a lista de créditos ficará disponível junto com o jogo.
 >
-> **4. Acessibilidade.** Além da narração com texto na tela e da descrição das ilustrações, o jogo terá opção de letras maiores, sinais que não dependem só de cor e um modo sem pressa, para quem tem dificuldade de movimento. O trailer terá Libras, legendas e audiodescrição. Uma pessoa com deficiência vai testar o jogo e orientar a equipe.
+> 4. Acessibilidade (meses 5 a 8). Além da narração com texto na tela e da descrição das ilustrações, o jogo terá opção de letras maiores, sinais que não dependem só de cor e um modo sem pressa. Uma consultora com deficiência testa o jogo e orienta a equipe. O trailer terá Libras, legendas e audiodescrição.
 >
-> **5. Publicação gratuita.** O jogo será publicado de graça na Google Play, para celulares Android, e no itch.io, um site de jogos independentes para computador. Não terá propaganda nem compras dentro do jogo. Antes disso, um grupo de estudantes, barbeiros e uma pessoa com deficiência testa o jogo, inclusive em celulares simples.
+> 5. Testes e publicação (meses 7 a 9). Antes de publicar, um grupo de estudantes, barbeiros e trancistas e a consultora de acessibilidade testam o jogo, inclusive em celulares simples, e eu faço os ajustes. Depois, o jogo é publicado de graça na Google Play, para celulares Android, e no itch.io, um site de jogos independentes para computador. Não terá propaganda nem compras.
 >
-> **6. Lançamento e encontros "Jogar e Conversar".** Um lançamento aberto ao público e quatro encontros gratuitos em escolas públicas e espaços culturais de bairros da periferia, escolhidos e agendados no começo do projeto. De preferência, o lançamento será em novembro, mês da Consciência Negra, se as datas permitirem. Em cada encontro, o público joga nos computadores levados pelo projeto, assiste às partes dos documentários que liberou e participa de uma roda de conversa com um(a) barbeiro(a) ou trancista da cidade. No início e no fim, os participantes respondem a algumas perguntas rápidas, para sabermos o que aprenderam. Todos os encontros terão intérprete de Libras e serão em locais acessíveis.
+> 6. Lançamento e encontros "Jogar e Conversar" (meses 9 a 11). No mês da publicação faço um lançamento aberto ao público, de preferência em novembro, mês da Consciência Negra, se as datas permitirem. Depois vêm quatro encontros gratuitos, de cerca de duas horas, em escolas públicas e espaços culturais de bairros da periferia. Em cada um, o público joga nos computadores levados pelo projeto, assiste às partes dos documentários que liberou e participa de uma roda de conversa com um(a) barbeiro(a) ou trancista da cidade sobre os penteados e o que eles representam. No começo e no fim, os participantes respondem a algumas perguntas rápidas, para eu saber o que aprenderam. Todos os encontros terão intérprete de Libras e serão em locais acessíveis.
 >
-> **7. Guia para professores.** Um material gratuito, em PDF acessível e também impresso para as escolas participantes, com sugestões de como usar os documentários em sala de aula e uma atividade pronta de 50 minutos.
+> 7. Guia para professores (meses 6 e 7). Com a ajuda de um(a) consultor(a) pedagógico(a), vou preparar um guia gratuito que mostra como usar os documentários nas aulas de História, Artes e Sociologia, com uma atividade pronta de 50 minutos. Ele estará disponível em PDF acessível e terá 40 exemplares impressos, entregues às escolas que participarem dos encontros.
+>
+> No último mês, reúno as listas de presença, fotos, links e o resultado das perguntas para o relatório final.
 
 **Tabela de resultados** (colar no campo C, ou no N se faltar espaço):
 
