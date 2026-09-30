@@ -229,15 +229,19 @@ Detalhes do desenho técnico em [13](13-acervo-minidocumentarios.md).
 
 ### B. Relevância e justificativa
 
-> Quase não existem jogos que falem da cultura negra brasileira, e menos ainda da barbearia afro, que é um lugar tão importante para a nossa comunidade. Este projeto quer ocupar esse espaço com respeito e orgulho, e também com leveza, porque é um jogo e tem que ser gostoso de jogar.
+*Versão final (≈2.300 caracteres com espaços).*
+
+> Quem já passou por uma barbearia afro sabe que ali se conversa de tudo: futebol, música, política, a vida do bairro. É também onde muita gente aprende a gostar do próprio cabelo. E cada penteado negro carrega uma história. As tranças que vieram da África, o Black Power que virou símbolo de luta nos anos 1960 e 1970, o turbante das baianas de Salvador, o degradê que hoje está em toda parte. Essa história quase nunca é contada, e muito menos dentro de um jogo.
 >
-> Os jogos fazem parte do dia a dia de muitos adolescentes e jovens, e desde 2024 a lei brasileira reconhece os jogos eletrônicos como produção cultural (Lei 14.852/2024). Um jogo consegue chegar a pessoas que talvez nunca abrissem um livro sobre o assunto. Aqui, a história não aparece como lição para decorar: ela vai sendo descoberta enquanto se joga.
+> Os jogos fazem parte da rotina de muitos adolescentes e jovens, inclusive dos que não têm o hábito de ler ou de frequentar espaços culturais. Desde 2024, a Lei 14.852 reconhece os jogos eletrônicos como parte da produção cultural brasileira. Mesmo assim, é raro encontrar um jogo feito no Brasil em que pessoas negras sejam as protagonistas e a nossa cultura seja o assunto principal. Este projeto quer ajudar a mudar isso.
 >
-> O projeto também pode ajudar as escolas. A Lei 10.639/2003 obriga o ensino da história e da cultura afro-brasileira, mas muitos professores sentem falta de materiais que prendam a atenção dos alunos. Por isso vou produzir um guia gratuito que liga cada penteado a temas das aulas, como a ancestralidade africana, a resistência à escravidão, os movimentos negros, o hip-hop e os direitos conquistados.
+> Aqui ninguém precisa "estudar" para aprender. A pessoa joga, atende os clientes e, cada vez que repete um corte, libera um pequeno documentário narrado sobre aquele penteado. O conhecimento chega como recompensa, do mesmo jeito que numa conversa de barbearia a gente aprende sem perceber.
 >
-> Para Ribeirão Preto, o projeto significa trabalho para artistas e profissionais da cidade: ilustração, narração, música, consultoria, Libras, vídeo e design. Significa também atividades gratuitas em bairros da periferia, conduzidas por barbeiros e trancistas daqui, que são quem conhece esse assunto na prática. `[Se possível, acrescentar um dado local: população negra de Ribeirão Preto no Censo IBGE 2022.]`
+> O projeto também pode ajudar as escolas. A Lei 10.639/2003 tornou obrigatório o ensino da história e da cultura afro-brasileira, mas os professores ainda têm pouco material que prenda a atenção dos alunos. Os 24 documentários e o guia gratuito para professores poderão ser usados nas aulas de História, Artes e Sociologia.
 >
-> O projeto não começa do zero. O jogo já funciona, os textos-base sobre os 24 penteados já estão escritos e todo o planejamento está documentado. Junto com esta proposta, envio um documentário-piloto de um dos penteados, o Black Power, para mostrar como vai ficar o resultado.
+> Para Ribeirão Preto, o projeto gera trabalho para quem faz cultura na cidade: ilustração, narração, música, Libras, consultoria e vídeo. Os encontros gratuitos acontecem em bairros da periferia e são conduzidos por barbeiros e trancistas daqui, que conhecem esse assunto na prática e raramente são chamados a falar dele em um projeto cultural.
+>
+> O projeto não começa do zero. O jogo já funciona, os textos sobre os 24 penteados já estão escritos e, junto com esta proposta, envio um primeiro documentário, sobre o Black Power, para mostrar como o resultado vai ficar. O apoio do edital é o que falta para transformar esse protótipo numa obra completa, gratuita e acessível a toda a cidade.
 
 ### C. Descrição detalhada das ações e atividades
 
