@@ -318,7 +318,7 @@ Detalhes do desenho técnico em [13](13-acervo-minidocumentarios.md).
 
 ### F. Expectativa de público
 
-*Versão final (≈780 caracteres com espaços).*
+*Versão final (≈810 caracteres com espaços).*
 
 > O público do projeto vem de dois lugares: o lançamento e a internet.
 >
