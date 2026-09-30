@@ -275,9 +275,21 @@ Detalhes do desenho técnico em [13](13-acervo-minidocumentarios.md).
 
 ### D. Perfil do público-alvo e classificação indicativa
 
-> O jogo é para pessoas a partir de 12 anos que jogam no celular ou no computador. Quero chegar principalmente aos estudantes do ensino fundamental II e do ensino médio das escolas públicas de Ribeirão Preto e aos seus professores. Também aos moradores dos bairros da periferia, à comunidade negra da cidade e a quem trabalha com beleza afro, como barbeiros, trancistas e cabeleireiros.
+*Versão final (≈1.560 caracteres com espaços).*
+
+> O jogo é para qualquer pessoa a partir de 12 anos que tenha um celular ou um computador. Mas penso principalmente em quatro grupos.
 >
-> **Classificação indicativa: 12 anos.** O jogo não tem violência, sexo nem drogas. A indicação a partir de 12 anos se deve aos temas históricos tratados nos documentários, como a escravidão e o racismo.
+> O primeiro são os estudantes do ensino fundamental II e do ensino médio das escolas públicas de Ribeirão Preto. É a idade em que muitos jovens começam a se perguntar sobre o próprio cabelo e a própria identidade, e em que os jogos fazem parte do dia a dia. Junto com eles, os professores, que vão poder usar os documentários e o guia gratuito nas aulas.
+>
+> O segundo são os moradores dos bairros da periferia da cidade, onde vão acontecer os encontros gratuitos. Como o projeto leva os computadores, ninguém fica de fora por não ter um aparelho em casa.
+>
+> O terceiro é a comunidade negra de Ribeirão Preto, de todas as idades. Quem viveu os bailes black dos anos 1970 vai reconhecer muita coisa nos documentários, e quem é mais novo vai descobrir de onde vêm os cortes que usa hoje.
+>
+> O quarto são os profissionais da beleza afro, como barbeiros, trancistas e cabeleireiros, que vão ver o próprio trabalho tratado como cultura.
+>
+> O jogo também foi pensado para pessoas com deficiência: tem narração e texto na tela ao mesmo tempo, descrição falada das ilustrações, letras maiores e um modo sem pressa.
+>
+> Classificação indicativa: 12 anos. O jogo não tem violência, sexo, palavrões nem drogas. A indicação a partir de 12 anos se deve aos temas históricos dos documentários, como a escravidão e o racismo, que pedem um pouco mais de maturidade para serem compreendidos.
 
 ### E. Local de realização e justificativa
 
