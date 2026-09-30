@@ -303,12 +303,19 @@ Detalhes do desenho técnico em [13](13-acervo-minidocumentarios.md).
 
 ### F. Expectativa de público
 
-> - Lançamento: cerca de `[80]` pessoas.
-> - Quatro encontros: cerca de `[120]` pessoas, uns 30 por encontro.
-> - Jogo: cerca de `[500]` downloads nos três primeiros meses depois da publicação.
-> - Guia para professores: cerca de `[200]` downloads e `[40]` exemplares impressos entregues às escolas.
+*Versão final (≈1.320 caracteres com espaços).*
+
+> Espero alcançar diretamente cerca de 900 pessoas durante o projeto. Explico de onde vem esse número.
 >
-> **Ao todo, espero alcançar diretamente cerca de `[900]` pessoas durante o projeto.**
+> No lançamento aberto ao público, espero receber cerca de 80 pessoas, contando estudantes, famílias, barbeiros, trancistas e quem se interessa por cultura negra na cidade.
+>
+> Nos quatro encontros "Jogar e Conversar", a ideia é trabalhar com grupos de cerca de 30 pessoas, o tamanho de uma turma de escola. Assim todo mundo consegue jogar e participar da roda de conversa. São cerca de 120 pessoas no total.
+>
+> O jogo será gratuito e ficará disponível para qualquer pessoa. Espero cerca de 500 downloads nos três primeiros meses depois da publicação, contando celular e computador.
+>
+> O guia para professores terá cerca de 200 downloads e 40 exemplares impressos, entregues às escolas que participarem dos encontros. Cada professor que usar o guia leva o conteúdo para as suas turmas, então o alcance real deve ser maior.
+>
+> Somando tudo, são cerca de 200 pessoas nas atividades presenciais e 700 pelo jogo e pelo guia. Não contei quem vai ver os vídeos curtos nas redes sociais nem os alunos alcançados pelos professores, porque são números difíceis de prever. Vou acompanhar tudo pelas listas de presença dos encontros e pelos números de download das lojas e do guia.
 
 ### G. Plano de divulgação
 
