@@ -251,7 +251,7 @@ Detalhes do desenho técnico em [13](13-acervo-minidocumentarios.md).
 
 ### C. Descrição detalhada das ações e atividades
 
-*Versão final (≈3.800 caracteres com espaços).*
+*Versão final (≈3.700 caracteres com espaços).*
 
 > O projeto vai durar 12 meses e está dividido em sete etapas. Algumas acontecem ao mesmo tempo, mas todas levam ao mesmo resultado: o jogo completo, gratuito, com os 24 documentários, apresentado ao público de Ribeirão Preto.
 >
