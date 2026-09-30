@@ -37,6 +37,9 @@
 | Proponente | **Pessoa física**, residente em Ribeirão Preto há mais de 2 anos |
 | Natureza do produto | **Jogo eletrônico inédito**, sem versão publicada. Os pareceristas conhecem o protótipo por **vídeos de gameplay no YouTube** (não listados); os bugs são corrigidos antes da inscrição, com recursos próprios |
 | Orçamento | **Apenas contratação de serviços** — nenhum bem adquirido |
+| Cartas de anuência e de apoio | **Não haverá.** Os locais do lançamento e dos encontros são escolhidos e agendados no início da execução |
+| Classificação indicativa | **12 anos** (temas históricos como escravidão e racismo) |
+| Linguagem dos textos | Primeira pessoa, sem jargão de jogos, como quem explica o projeto a alguém de fora da área |
 | Monetização | **Nenhuma** — distribuição gratuita |
 | Direitos autorais | Todo recurso de terceiros será **removido ou substituído** por material autoral ou de licença aberta (CC0, CC-BY, SIL OFL) antes da publicação |
 
@@ -76,7 +79,7 @@
 | P4 | Bairro de residência e locais das ações vs. **Anexo 11** (áreas periféricas) | Bônus de periferia; o item 5.2.6 parece exigir ação **e** residência em periferia — confirmar por e-mail (`pnab2ribeirao@gmail.com`) | `[CONFERIR]` |
 | P5 | **Equipe** com nomes, CPF, endereço e minicurrículo; ≥ 70% de Ribeirão Preto | Campo J; critério VI | `[MONTAR]` |
 | P6 | Anexos 3 (cronograma) e 4 (planilha) do edital | Formato obrigatório de upload | `[BAIXAR]` |
-| P7 | Locais das ações públicas (escolas, CEUs, bibliotecas, centros culturais) e cartas de anuência | Campo E; credibilidade (critério V) | `[CONTATAR]` |
+| P7 | Lista de locais possíveis para as ações públicas (escolas, CEUs, bibliotecas, centros culturais), sem cartas de anuência | Campo E; credibilidade (critério V) | `[CONTATAR]` |
 | P8 | Orçamentos reais (3 referências por item relevante) | Critério V-b; evitar glosa | `[COTAR]` |
 | P9 | Vídeo de gameplay e capturas do protótipo **sem os ativos de terceiros visíveis**, ou com aviso de "arte provisória" | Portfólio e credibilidade | `[PRODUZIR]` |
 
