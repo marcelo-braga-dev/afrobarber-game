@@ -414,9 +414,9 @@ Ver [parte 10](#10-portfólio-e-vídeos).
 |---|---|---|
 | `[NOME COMPLETO]` | Proponente. Criação, direção, roteiro dos documentários e programação do jogo | Sim, há 3 anos |
 
-### Minicurrículo — versão para o formulário (≈890 caracteres)
+### Minicurrículo — versão para o formulário (≈1.030 caracteres)
 
-> Sou desenvolvedor de software e moro em Ribeirão Preto há 3 anos. Trabalho há 6 anos com programação, desenvolvendo sistemas e jogos.
+> Sou desenvolvedor de software e moro em Ribeirão Preto há 3 anos. Trabalho há 6 anos com programação, desenvolvendo sistemas e jogos, e estou cursando Engenharia da Computação. Tenho uma empresa de desenvolvimento de sistemas, modelagem 3D e animação 3D.
 >
 > Sou uma pessoa negra e sempre gostei de barbearia, de cortes e da cultura negra. Ao mesmo tempo, quase nunca vi essa cultura representada nos jogos, e quando aparecia, era sem destaque. Foi daí que nasceu o *AfroBarber - Cada Corte, uma História*: eu quis criar o jogo que eu gostaria de ter jogado.
 >
@@ -426,7 +426,7 @@ Ver [parte 10](#10-portfólio-e-vídeos).
 
 ### Minicurrículo — versão curta (≈440 caracteres, se o campo for pequeno)
 
-> Desenvolvedor de software há 6 anos, com experiência em sistemas e jogos, e morador de Ribeirão Preto há 3 anos. Pessoa negra, criei o *AfroBarber - Cada Corte, uma História* por paixão pela barbearia e pela cultura negra, que quase nunca vejo representada nos jogos. Desenvolvi sozinho o protótipo e os textos sobre 24 penteados negros. No projeto, cuido da direção, do roteiro dos documentários, da programação e do lançamento.
+> Desenvolvedor de software há 6 anos, estudante de Engenharia da Computação e dono de uma empresa de sistemas, modelagem e animação 3D. Moro em Ribeirão Preto há 3 anos. Pessoa negra, criei o *AfroBarber - Cada Corte, uma História* por paixão pela barbearia e pela cultura negra, que quase nunca vejo representada nos jogos. No projeto, cuido da direção, do roteiro dos documentários, da programação e do lançamento.
 
 ### Prestadores de serviço (fora da ficha técnica)
 
