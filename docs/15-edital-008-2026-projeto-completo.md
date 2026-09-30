@@ -332,7 +332,7 @@ Detalhes do desenho técnico em [13](13-acervo-minidocumentarios.md).
 
 ### G. Plano de divulgação
 
-*Versão final (≈1.960 caracteres com espaços).*
+*Versão final (≈1.840 caracteres com espaços).*
 
 > A divulgação vai acontecer em três momentos: durante a produção, no mês do lançamento e depois dele.
 >
