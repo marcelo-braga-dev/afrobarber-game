@@ -58,7 +58,7 @@
 | Parcela única; execução em até 12 meses | 2.1.4, 2.4.1 | Cronograma de 12 meses. |
 | Proponente mora em Ribeirão Preto há 2 anos **e** tem atuação cultural na cidade há 2 anos, comprovada por portfólio | 2.7.1, 2.7.1.2 | Morar já está resolvido; o **portfólio cultural** é o ponto crítico (parte 13). |
 | O proponente faz parte da ficha técnica | 2.7.1.3 | Direção, roteiro e programação. |
-| Pelo menos **70% da equipe mora em Ribeirão Preto** | 4.2.6 | Pelo menos 10 de 13 pessoas (parte 7). |
+| Pelo menos **70% da equipe mora em Ribeirão Preto** | 4.2.6 | A ficha técnica tem só o proponente, que mora na cidade (parte 7). |
 | Acessibilidade obrigatória e **com dinheiro na planilha** | 6.1 | Itens 7, 8 e 9 da planilha. |
 | Desclassificação por publicidade ou propaganda religiosa | 8.1.2 | Sem monetização; religiões de matriz africana tratadas só como história e cultura. |
 | Direitos autorais são responsabilidade do proponente | 10.2.5 | Todo material de terceiros sai antes da publicação. |
@@ -134,7 +134,7 @@ Seis critérios, cada um com duas perguntas. Cada pergunta vale de 0 a 5 (Ausent
 | III — Integração e acessibilidade | Narração + texto + descrição das imagens nos 120 capítulos; Libras no lançamento; consultora com deficiência; R$ 2.500 na planilha; lançamento em bairro da periferia | Campos H e I; itens 7–9 |
 | IV — Portfólio | Histórico cultural em Ribeirão Preto; protótipo em vídeo; **documentário-piloto** pronto; documentação do jogo | Parte 10 |
 | V — Viabilidade | Protótipo já funcionando; cronograma com margem; planilha só de serviços, com unidades concretas e orçamentos reais | Partes 8 e 9 |
-| VI — Equipe | Uma pessoa para cada função, com minicurrículo compatível; pelo menos 10 de 13 da cidade | Parte 7 |
+| VI — Equipe | Ficha técnica só com o proponente; serviços contratados como prestadores, com prioridade para profissionais da cidade | Parte 7 |
 
 **As três ações que mais aumentam a nota:**
 1. **Documentário-piloto produzido** (uma parte ilustrada e narrada) no terceiro vídeo e no portfólio. Transforma a promessa em prova.
@@ -408,23 +408,42 @@ Ver [parte 10](#10-portfólio-e-vídeos).
 
 ## 7. Ficha técnica
 
-Pelo menos 70% da equipe precisa morar em Ribeirão Preto. Com 13 pessoas (dois intérpretes de Libras e duas pessoas na roda de conversa), são **pelo menos 10**. CPF e endereço vão no formulário; os comprovantes de residência são pedidos na habilitação. Se algum serviço for prestado por empresa (Libras, contabilidade), confirmar com a Secretaria como ele conta na proporção.
+**Decisão:** a ficha técnica tem **apenas o proponente**, que é o programador e criador do jogo. Os demais serviços da planilha (ilustração, narração, trilha, consultorias, Libras, roda de conversa, vídeo, design e contabilidade) são contratados como **prestadores de serviço**, escolhidos no início da execução, de preferência em Ribeirão Preto. Com uma só pessoa na ficha, morando em Ribeirão Preto, a regra dos 70% está cumprida.
 
-| # | Nome | Função | Mora em RP | Minicurrículo (3 a 5 linhas) |
-|---|---|---|---|---|
-| 1 | `[PROPONENTE]` | Direção geral, roteiro dos documentários, criação e programação do jogo | Sim | `[Formação; experiência com desenvolvimento de software e jogos; criador do AfroBarber - Cada Corte, uma História; atuação cultural em Ribeirão Preto desde [ano]]` |
-| 2 | `[ ]` | Ilustração | `[ ]` | `[ ]` |
-| 3 | `[ ]` | Narração e edição de áudio | `[ ]` | `[ ]` |
-| 4 | `[ ]` | Trilha sonora original | `[ ]` | `[ ]` |
-| 5 | `[ ]` | Consultoria em cultura afro-brasileira | `[ ]` | `[ ]` |
-| 6 | `[ ]` | Consultoria pedagógica (guia para professores) | `[ ]` | `[ ]` |
-| 7 | `[ ]` | Consultoria de acessibilidade (pessoa com deficiência) | `[ ]` | `[ ]` |
-| 8 | `[ ]` · `[ ]` | Intérpretes de Libras (2) | `[ ]` | `[ ]` |
-| 9 | `[ ]` · `[ ]` | Roda de conversa do lançamento (barbeiro e trancista) | `[ ]` | `[ ]` |
-| 10 | `[ ]` | Edição de vídeo e design gráfico | `[ ]` | `[ ]` |
-| 11 | `[ ]` | Contabilidade e apoio à prestação de contas | `[ ]` | `[ ]` |
+| Nome | Função | Mora em RP |
+|---|---|---|
+| `[NOME COMPLETO]` | Proponente. Criação, direção, roteiro dos documentários e programação do jogo | Sim |
 
-**Dica para o critério VI:** escreva cada minicurrículo mostrando **por que aquela pessoa serve para aquela função** (trabalhos parecidos, formação, tempo de experiência). Se a equipe for majoritariamente negra ou tiver mulheres em funções centrais, diga isso no texto: representatividade conta no critério de relevância.
+### Minicurrículo — versão para o formulário (≈1.000 caracteres)
+
+> Sou desenvolvedor de software e moro em Ribeirão Preto há `[X]` anos. Trabalho com programação desde `[ANO]` `[e tenho formação em NOME DO CURSO, INSTITUIÇÃO]`. `[Uma frase sobre a experiência profissional principal: onde trabalha ou trabalhou, com que tipo de sistema.]`
+>
+> Sou o criador do *AfroBarber - Cada Corte, uma História*. Desenvolvi sozinho, com recursos próprios, todo o protótipo do jogo: a barbearia, os clientes, o momento do corte, a parte de gestão e a Biblioteca de Cortes, que reúne textos sobre a história de 24 penteados negros. Também escrevi toda a documentação do projeto, do desenho do jogo ao conteúdo cultural.
+>
+> `[Uma ou duas frases sobre a atuação cultural em Ribeirão Preto: projetos, eventos, oficinas, coletivos de que participou e desde quando.]`
+>
+> No projeto, sou responsável pela direção geral, pelo roteiro dos 24 documentários, pela programação do jogo e pela organização do lançamento.
+
+### Minicurrículo — versão curta (≈450 caracteres, se o campo for pequeno)
+
+> Desenvolvedor de software, morador de Ribeirão Preto há `[X]` anos e programador desde `[ANO]`. Criei e programei sozinho o protótipo do jogo *AfroBarber - Cada Corte, uma História*, incluindo os textos sobre a história de 24 penteados negros. `[Atuação cultural em Ribeirão Preto desde ANO.]` No projeto, cuido da direção, do roteiro dos documentários, da programação e do lançamento.
+
+### Prestadores de serviço (fora da ficha técnica)
+
+| Serviço | Item da planilha |
+|---|---|
+| Ilustração | 2 |
+| Narração e edição de áudio | 3 |
+| Trilha sonora original | 4 |
+| Consultoria em cultura afro-brasileira | 5 |
+| Consultoria pedagógica | 6 |
+| Consultoria de acessibilidade (pessoa com deficiência) | 7 |
+| Intérpretes de Libras | 8 |
+| Roda de conversa (barbeiro e trancista) | 10 |
+| Edição de vídeo e design gráfico | 15, 16 |
+| Assessoria contábil | 17 |
+
+**Atenção ao critério VI (equipe, até 10 pontos):** com só uma pessoa na ficha, a comissão vai avaliar se você dá conta de tudo. Por isso, no campo J ou no N, vale acrescentar uma frase como: *"Os serviços de ilustração, narração, trilha sonora, consultorias, Libras, vídeo, design e contabilidade serão contratados no início do projeto, com prioridade para profissionais de Ribeirão Preto, e estão previstos na planilha orçamentária."* Se até o envio você já tiver algum profissional confirmado (por exemplo, a consultoria cultural), incluí-lo na ficha com minicurrículo aumenta a nota.
 
 ---
 
@@ -607,7 +626,7 @@ Se algo ainda não existir no jogo, diga em voz ou legenda que está "em desenvo
 | Comissão ler o projeto como "evento" | O texto sempre diz que o objeto é **produzir** o jogo e os documentários; o lançamento é a ação pública. |
 | Corte de itens da planilha por preço fora do mercado | Orçamentos reais para cada item. |
 | Remuneração do proponente baixa demais | Se possível, aumentar o item 1 com sobras de outros itens. |
-| Menos de 70% da equipe morando em Ribeirão Preto | Priorizar profissionais da cidade; conferir antes de enviar (pelo menos 10 de 13). |
+| Nota baixa no critério VI por equipe de uma pessoa só | Frase no campo J ou N explicando os prestadores contratados; incluir na ficha quem já estiver confirmado. |
 | Vídeos mostrarem bugs ou material de terceiros | Gravar só depois de corrigir tudo e trocar nomes, marcas e músicas. |
 | Informação histórica errada | Revisão da consultoria cultural antes de gravar; fontes em cada documentário. |
 | Atraso nas ilustrações ou na narração | Produção em lotes de 6 penteados; publicação só no mês 9, com 3 meses de folga. |
@@ -622,7 +641,7 @@ Se algo ainda não existir no jogo, diga em voz ou legenda que está "em desenvo
 | # | Pendência | Para quê |
 |---|---|---|
 | 1 | **Portfólio** com a atuação cultural em Ribeirão Preto desde `[ano]` | Requisito de inscrição e critério IV |
-| 2 | **Equipe:** nomes, CPF, endereço, cidade e minicurrículo | Campo J e critério VI |
+| 2 | **Minicurrículo:** preencher os `[COLCHETES]` da parte 7 | Campo J e critério VI |
 | 3 | **Cota:** pessoas negras ou ampla concorrência (e Anexo 2, se for cota) | Classificação |
 | 4 | **Bônus:** algum se aplica? Mora em área do Anexo 11? | Até +6 pontos |
 | 5 | **Local e bairro** do lançamento (de preferência num bairro do Anexo 11, com acessibilidade) | Campo E e bônus de periferia |
@@ -641,7 +660,7 @@ Se algo ainda não existir no jogo, diga em voz ou legenda que está "em desenvo
 | Quando | O que fazer |
 |---|---|
 | 30/09 a 02/10 | Confirmar o novo prazo; baixar os Anexos 1 a 11; perguntar por e-mail sobre o bônus de periferia; decidir cota e bônus; começar o portfólio |
-| 03/10 a 06/10 | Fechar a equipe e os minicurrículos; pedir orçamentos; escolher o local e o bairro do lançamento (Anexo 11) |
+| 03/10 a 06/10 | Completar o minicurrículo; pedir orçamentos; escolher o local e o bairro do lançamento (Anexo 11) |
 | 03/10 a 08/10 | Corrigir os bugs do protótipo; trocar nomes, marcas e músicas de terceiros; produzir a Parte 4 do piloto |
 | 07/10 a 09/10 | Gravar e publicar os 3 vídeos (não listados, com legendas) |
 | 08/10 a 10/10 | Preencher o formulário com os textos da parte 6; transcrever cronograma e planilha nos Anexos 3 e 4; fechar o portfólio em PDF |
@@ -677,7 +696,7 @@ Se algo ainda não existir no jogo, diga em voz ou legenda que está "em desenvo
 **Requisitos**
 - [ ] Portfólio comprova 2 anos de atuação cultural em Ribeirão Preto.
 - [ ] Proponente está na ficha técnica.
-- [ ] Pelo menos 10 das 13 pessoas da equipe moram em Ribeirão Preto.
+- [ ] Ficha técnica com o minicurrículo do proponente preenchido (parte 7).
 - [ ] Anexo 2 enviado, se houver cota ou bônus.
 
 **Formulário**
