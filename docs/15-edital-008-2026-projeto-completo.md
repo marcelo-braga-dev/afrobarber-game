@@ -37,10 +37,10 @@
 |---|---|
 | **O que é** | Um jogo gratuito, para celular e computador, em que a pessoa cuida de uma barbearia afro de bairro e, a cada corte que faz, conhece a história e o significado dos penteados negros. |
 | **O centro do projeto** | **24 pequenos documentários narrados**, um por penteado, com 5 partes cada (120 partes), liberados à medida que a pessoa joga. Juntos, formam uma linha do tempo da estética negra. |
-| **O que o dinheiro paga** | Roteiro, revisão cultural, ilustrações, narração e trilha dos documentários; conclusão e acessibilidade do jogo; lançamento aberto; 4 encontros em bairros da periferia; guia para professores. |
+| **O que o dinheiro paga** | Roteiro, revisão cultural, ilustrações, narração e trilha dos documentários; conclusão e acessibilidade do jogo; lançamento aberto e gratuito em novembro (mês da Consciência Negra); guia para professores. |
 | **O que já existe** | Protótipo jogável, textos-base dos 24 penteados e documentação completa. Tudo com recursos próprios. |
-| **Entregas finais** | Jogo gratuito na Google Play e no itch.io · 120 partes narradas e ilustradas · trailer acessível · 1 lançamento + 4 encontros · guia para professores. |
-| **Público** | A partir de 12 anos; prioridade para estudantes e professores de escolas públicas e moradores da periferia de Ribeirão Preto. Cerca de 900 pessoas alcançadas diretamente. |
+| **Entregas finais** | Jogo gratuito na Google Play e no itch.io · 120 partes narradas e ilustradas · trailer acessível · 1 lançamento presencial em novembro · guia para professores. |
+| **Público** | A partir de 12 anos; prioridade para estudantes e professores de escolas públicas e moradores da periferia de Ribeirão Preto. Cerca de 800 pessoas alcançadas diretamente. |
 | **Prazo de execução** | 12 meses a partir do recebimento do recurso. |
 | **Valor** | R$ 30.000,00, só com contratação de serviços. |
 
@@ -58,7 +58,7 @@
 | Parcela única; execução em até 12 meses | 2.1.4, 2.4.1 | Cronograma de 12 meses. |
 | Proponente mora em Ribeirão Preto há 2 anos **e** tem atuação cultural na cidade há 2 anos, comprovada por portfólio | 2.7.1, 2.7.1.2 | Morar já está resolvido; o **portfólio cultural** é o ponto crítico (parte 13). |
 | O proponente faz parte da ficha técnica | 2.7.1.3 | Direção, roteiro e programação. |
-| Pelo menos **70% da equipe mora em Ribeirão Preto** | 4.2.6 | 8 de 11 pessoas (parte 7). |
+| Pelo menos **70% da equipe mora em Ribeirão Preto** | 4.2.6 | Pelo menos 10 de 13 pessoas (parte 7). |
 | Acessibilidade obrigatória e **com dinheiro na planilha** | 6.1 | Itens 7, 8 e 9 da planilha. |
 | Desclassificação por publicidade ou propaganda religiosa | 8.1.2 | Sem monetização; religiões de matriz africana tratadas só como história e cultura. |
 | Direitos autorais são responsabilidade do proponente | 10.2.5 | Todo material de terceiros sai antes da publicação. |
@@ -87,7 +87,7 @@ Seis critérios, cada um com duas perguntas. Cada pergunta vale de 0 a 5 (Ausent
 - Para a cota, é preciso enviar a autodeclaração (Anexo 2).
 - **Bônus de 2 pontos cada:** mulher cis, pessoa 60+, pessoa LGBTQIAPN+ e ações em área periférica do Anexo 11.
 - **Bônus de periferia:** o projeto precisa **informar explicitamente os locais** de acordo com a lista do Anexo 11 (item 5.2.4). Pela tabela do item 5.2.6, o proponente também precisa **morar** em área periférica. `[Confirmar por e-mail: pnab2ribeirao@gmail.com]`
-- **Se for pedir esse bônus**, nomeie no campo E os **bairros** do Anexo 11 onde serão os encontros, mesmo que as escolas só sejam escolhidas depois.
+- **Se for pedir esse bônus**, o local do lançamento precisa estar num bairro do Anexo 11, e o campo E deve nomear esse bairro.
 
 ### 2.4 Depois do resultado
 
@@ -117,9 +117,10 @@ Seis critérios, cada um com duas perguntas. Cada pergunta vale de 0 a 5 (Ausent
 | Orçamento | **Só contratação de serviços**, nenhum bem comprado |
 | Centro do projeto | **24 documentários, 5 partes cada, todas narradas**, com cerca de 100 palavras por parte |
 | Depoimentos locais e pesquisador(a) dedicado(a) | Ficam para **atualizações depois do lançamento** |
-| Cartas de anuência e de apoio | **Não haverá.** Os locais dos encontros são escolhidos no início da execução |
+| Cartas de anuência e de apoio | **Não haverá** |
+| Atividade presencial | **Só um evento: o lançamento**, aberto e gratuito, em **novembro** (mês da Consciência Negra), com roda de conversa e Libras |
 | Classificação indicativa | **12 anos** |
-| Contrapartida | Versão simples registrada (jogo gratuito, lançamento e 4 encontros); **a revisar depois** |
+| Contrapartida | Versão simples registrada (jogo gratuito e lançamento aberto); **a revisar depois** |
 | Tom dos textos | Primeira pessoa, sem jargão de jogos, como quem explica o projeto a alguém de fora da área |
 
 ---
@@ -129,11 +130,11 @@ Seis critérios, cada um com duas perguntas. Cada pergunta vale de 0 a 5 (Ausent
 | Critério | O que o projeto faz para tirar nota alta | Onde está |
 |---|---|---|
 | I — Coerência | Objeto claro (produzir o jogo e os documentários); sete etapas com entregas e comprovação; tudo na planilha tem uma etapa correspondente | Campos A e C; tabela de resultados |
-| II — Relevância | Tema raro nos jogos; Lei 10.639; aprender jogando; trabalho para artistas da cidade; encontros na periferia com barbeiros e trancistas locais | Campo B |
-| III — Integração e acessibilidade | Narração + texto + descrição das imagens nos 120 capítulos; Libras nos encontros; consultora com deficiência; R$ 3.300 na planilha; encontros na periferia; perguntas antes/depois | Campos H e I; itens 7–9 |
+| II — Relevância | Tema raro nos jogos; Lei 10.639; aprender jogando; trabalho para artistas da cidade; lançamento no mês da Consciência Negra, com roda de conversa com barbeiro e trancista locais | Campo B |
+| III — Integração e acessibilidade | Narração + texto + descrição das imagens nos 120 capítulos; Libras no lançamento; consultora com deficiência; R$ 2.500 na planilha; lançamento em bairro da periferia | Campos H e I; itens 7–9 |
 | IV — Portfólio | Histórico cultural em Ribeirão Preto; protótipo em vídeo; **documentário-piloto** pronto; documentação do jogo | Parte 10 |
 | V — Viabilidade | Protótipo já funcionando; cronograma com margem; planilha só de serviços, com unidades concretas e orçamentos reais | Partes 8 e 9 |
-| VI — Equipe | Uma pessoa para cada função, com minicurrículo compatível; 8 de 11 da cidade | Parte 7 |
+| VI — Equipe | Uma pessoa para cada função, com minicurrículo compatível; pelo menos 10 de 13 da cidade | Parte 7 |
 
 **As três ações que mais aumentam a nota:**
 1. **Documentário-piloto produzido** (uma parte ilustrada e narrada) no terceiro vídeo e no portfólio. Transforma a promessa em prova.
@@ -206,9 +207,9 @@ Detalhes do desenho técnico em [13](13-acervo-minidocumentarios.md).
 
 ### Apresentação resumida do projeto
 
-*Versão final (≈690 caracteres com espaços). Versão curta, para campos de até 300 caracteres, logo abaixo.*
+*Versão final (≈660 caracteres com espaços). Versão curta, para campos de até 300 caracteres, logo abaixo.*
 
-> Cada Corte, uma História é um jogo gratuito, para celular e computador, que estou criando em Ribeirão Preto. Nele, a pessoa cuida de uma barbearia afro num bairro, recebe os moradores e faz os cortes que eles pedem. A cada corte, ela libera um pequeno documentário narrado sobre aquele penteado: de onde ele veio, quem usou, o que significa para a identidade negra e como vive no Brasil. São 24 penteados, das tranças nagô ao Black Power e ao degradê, que juntos contam a história da estética negra. O jogo terá recursos de acessibilidade, será lançado com um evento aberto e quatro encontros gratuitos em bairros da periferia, e virá acompanhado de um guia para professores.
+> Cada Corte, uma História é um jogo gratuito, para celular e computador, que estou criando em Ribeirão Preto. Nele, a pessoa cuida de uma barbearia afro num bairro, recebe os moradores e faz os cortes que eles pedem. A cada corte, ela libera um pequeno documentário narrado sobre aquele penteado: de onde ele veio, quem usou, o que significa para a identidade negra e como vive no Brasil. São 24 penteados, das tranças nagô ao Black Power e ao degradê, que juntos contam a história da estética negra. O jogo terá recursos de acessibilidade, será lançado num evento aberto e gratuito em novembro, mês da Consciência Negra, e virá acompanhado de um guia para professores.
 
 **Versão curta (≈220 caracteres):**
 
@@ -230,7 +231,7 @@ Detalhes do desenho técnico em [13](13-acervo-minidocumentarios.md).
 > - produzir os 24 documentários, com roteiro, revisão por especialista em cultura afro-brasileira, ilustrações, narração e trilha sonora;
 > - terminar o jogo e deixá-lo acessível;
 > - publicá-lo de graça para celular e computador;
-> - fazer um lançamento aberto e quatro encontros em escolas e espaços culturais de bairros da periferia de Ribeirão Preto, onde as pessoas jogam e conversam sobre o tema;
+> - fazer um lançamento aberto e gratuito em novembro, mês da Consciência Negra, num bairro da periferia de Ribeirão Preto, onde as pessoas jogam e conversam sobre o tema;
 > - criar um guia gratuito para professores.
 
 ### B. Relevância e justificativa
@@ -245,7 +246,7 @@ Detalhes do desenho técnico em [13](13-acervo-minidocumentarios.md).
 >
 > O projeto também pode ajudar as escolas. A Lei 10.639/2003 tornou obrigatório o ensino da história e da cultura afro-brasileira, mas os professores ainda têm pouco material que prenda a atenção dos alunos. Os 24 documentários e o guia gratuito para professores poderão ser usados nas aulas de História, Artes e Sociologia.
 >
-> Para Ribeirão Preto, o projeto gera trabalho para quem faz cultura na cidade: ilustração, narração, música, Libras, consultoria e vídeo. Os encontros gratuitos acontecem em bairros da periferia e são conduzidos por barbeiros e trancistas daqui, que conhecem esse assunto na prática e raramente são chamados a falar dele em um projeto cultural.
+> Para Ribeirão Preto, o projeto gera trabalho para quem faz cultura na cidade: ilustração, narração, música, Libras, consultoria e vídeo. O lançamento gratuito, em novembro, terá uma roda de conversa com um barbeiro e uma trancista daqui, que conhecem esse assunto na prática e raramente são chamados a falar dele em um projeto cultural.
 >
 > O projeto não começa do zero. O jogo já funciona, os textos sobre os 24 penteados já estão escritos e, junto com esta proposta, envio um primeiro documentário, sobre o Black Power, para mostrar como o resultado vai ficar. O apoio do edital é o que falta para transformar esse protótipo numa obra completa, gratuita e acessível a toda a cidade.
 
@@ -263,13 +264,13 @@ Detalhes do desenho técnico em [13](13-acervo-minidocumentarios.md).
 >
 > 4. Acessibilidade (meses 5 a 8). Além da narração com texto na tela e da descrição das ilustrações, o jogo terá opção de letras maiores, sinais que não dependem só de cor e um modo sem pressa. Uma consultora com deficiência testa o jogo e orienta a equipe. O trailer terá Libras, legendas e audiodescrição.
 >
-> 5. Testes e publicação (meses 7 a 9). Antes de publicar, um grupo de estudantes, barbeiros e trancistas e a consultora de acessibilidade testam o jogo, inclusive em celulares simples, e eu faço os ajustes. Depois, o jogo é publicado de graça na Google Play, para celulares Android, e no itch.io, um site de jogos independentes para computador. Não terá propaganda nem compras.
+> 5. Testes e publicação (meses 7 a 10). Antes de publicar, um grupo de estudantes, barbeiros e trancistas e a consultora de acessibilidade testam o jogo, inclusive em celulares simples, e eu faço os ajustes. Depois, o jogo é publicado de graça na Google Play, para celulares Android, e no itch.io, um site de jogos independentes para computador. Não terá propaganda nem compras.
 >
-> 6. Lançamento e encontros "Jogar e Conversar" (meses 9 a 11). No mês da publicação faço um lançamento aberto ao público, de preferência em novembro, mês da Consciência Negra, se as datas permitirem. Depois vêm quatro encontros gratuitos, de cerca de duas horas, em escolas públicas e espaços culturais de bairros da periferia. Em cada um, o público joga nos computadores levados pelo projeto, assiste às partes dos documentários que liberou e participa de uma roda de conversa com um(a) barbeiro(a) ou trancista da cidade sobre os penteados e o que eles representam. No começo e no fim, os participantes respondem a algumas perguntas rápidas, para eu saber o que aprenderam. Todos os encontros terão intérprete de Libras e serão em locais acessíveis.
+> 6. Lançamento (novembro). O jogo será lançado num evento aberto e gratuito em novembro, mês da Consciência Negra, num espaço acessível de um bairro da periferia. O público vai poder jogar nos computadores levados pelo projeto, assistir a trechos dos documentários e participar de uma roda de conversa com um barbeiro e uma trancista da cidade sobre a história dos penteados e o que eles representam. O evento terá intérpretes de Libras. Quem quiser responde a algumas perguntas rápidas sobre o que achou e o que aprendeu.
 >
-> 7. Guia para professores (meses 6 e 7). Com a ajuda de um(a) consultor(a) pedagógico(a), vou preparar um guia gratuito que mostra como usar os documentários nas aulas de História, Artes e Sociologia, com uma atividade pronta de 50 minutos. Ele estará disponível em PDF acessível e terá 40 exemplares impressos, entregues às escolas que participarem dos encontros.
+> 7. Guia para professores (meses 6 e 7). Com a ajuda de um(a) consultor(a) pedagógico(a), vou preparar um guia gratuito que mostra como usar os documentários nas aulas de História, Artes e Sociologia, com uma atividade pronta de 50 minutos. Ele estará disponível em PDF acessível e terá 40 exemplares impressos, distribuídos no lançamento e entregues a escolas públicas da cidade.
 >
-> No último mês, reúno as listas de presença, fotos, links e o resultado das perguntas para o relatório final.
+> No último mês, reúno a lista de presença do lançamento, fotos, links, números de download e o resultado das perguntas para o relatório final.
 
 **Tabela de resultados** (colar no campo C, ou no N se faltar espaço):
 
@@ -280,7 +281,7 @@ Detalhes do desenho técnico em [13](13-acervo-minidocumentarios.md).
 | 3 — Sem direitos de terceiros | Todo o material de terceiros substituído | Lista pública de créditos |
 | 4 — Acessibilidade | Narração, texto e descrição das imagens nas 120 partes; opções no jogo; trailer acessível | Vídeo, trailer publicado e relatório da consultoria |
 | 5 — Publicação | Jogo gratuito em 2 lojas | Links públicos |
-| 6 — Lançamento e encontros | 1 lançamento e 4 encontros, com cerca de 200 participantes | Listas de presença, fotos e resultado das perguntas |
+| 6 — Lançamento | 1 evento aberto em novembro, com cerca de 100 participantes | Lista de presença, fotos, vídeo e resultado das perguntas |
 | 7 — Guia para professores | 1 guia em PDF e 40 exemplares impressos | Link do PDF e comprovante de entrega |
 
 ### D. Perfil do público-alvo e classificação indicativa
@@ -291,7 +292,7 @@ Detalhes do desenho técnico em [13](13-acervo-minidocumentarios.md).
 >
 > O primeiro são os estudantes do ensino fundamental II e do ensino médio das escolas públicas de Ribeirão Preto. É a idade em que muitos jovens começam a se perguntar sobre o próprio cabelo e a própria identidade, e em que os jogos fazem parte do dia a dia. Junto com eles, os professores, que vão poder usar os documentários e o guia gratuito nas aulas.
 >
-> O segundo são os moradores dos bairros da periferia da cidade, onde vão acontecer os encontros gratuitos. Como o projeto leva os computadores, ninguém fica de fora por não ter um aparelho em casa.
+> O segundo são os moradores dos bairros da periferia da cidade. O lançamento vai acontecer num desses bairros e, como o projeto leva os computadores, ninguém fica de fora por não ter um aparelho em casa.
 >
 > O terceiro é a comunidade negra de Ribeirão Preto, de todas as idades. Quem viveu os bailes black dos anos 1970 vai reconhecer muita coisa nos documentários, e quem é mais novo vai descobrir de onde vêm os cortes que usa hoje.
 >
@@ -303,29 +304,31 @@ Detalhes do desenho técnico em [13](13-acervo-minidocumentarios.md).
 
 ### E. Local de realização e justificativa
 
-> O jogo será produzido em Ribeirão Preto, pela equipe que mora na cidade.
+*Versão final (≈1.260 caracteres com espaços). Preencha os `[COLCHETES]`.*
+
+> O jogo será produzido em Ribeirão Preto, pela equipe que mora na cidade. Depois de pronto, poderá ser baixado de graça por qualquer pessoa, em qualquer lugar: pela Google Play, no celular, ou pelo itch.io, no computador.
 >
-> Depois de pronto, pode ser baixado de graça por qualquer pessoa, pela Google Play (celular) ou pelo itch.io (computador).
+> A atividade presencial do projeto será o lançamento do jogo, aberto ao público e gratuito, em novembro, mês da Consciência Negra. Vai acontecer em `[LOCAL]`, no bairro `[BAIRRO]`, em Ribeirão Preto.
 >
-> O lançamento vai acontecer em `[LOCAL — espaço acessível, ex.: biblioteca, centro cultural, CEU]`. Os quatro encontros serão em escolas públicas e espaços culturais dos bairros `[BAIRRO 1]`, `[BAIRRO 2]`, `[BAIRRO 3]` e `[BAIRRO 4]`, que constam na lista de áreas periféricas do Anexo 11 do edital. Os locais exatos serão escolhidos e agendados no início do projeto.
+> Escolhi novembro porque é o mês em que a cidade e as escolas mais falam sobre a história e a cultura negra, e o jogo trata exatamente disso. Lançar nesse período ajuda a atrair estudantes, professores e a comunidade, e dá ao lançamento um sentido que vai além de apresentar um jogo novo.
 >
-> Escolhi esses bairros porque é onde o acesso a produções culturais digitais costuma ser menor e onde o tema pode fazer mais diferença. O projeto leva os computadores (alugados), então ninguém precisa ter celular ou computador para participar.
+> Escolhi um espaço `[público/cultural]` num bairro da periferia porque é onde o acesso a produções culturais digitais costuma ser menor. O local tem entrada acessível e banheiro adaptado.
+>
+> No lançamento, o público vai poder jogar nos computadores levados pelo projeto, então ninguém precisa ter celular ou computador. Também vai assistir a trechos dos documentários e participar de uma roda de conversa com um barbeiro e uma trancista da cidade sobre a história dos penteados e o que eles representam. O evento terá intérpretes de Libras.
 
 ### F. Expectativa de público
 
-*Versão final (≈1.320 caracteres com espaços).*
+*Versão final (≈1.240 caracteres com espaços).*
 
-> Espero alcançar diretamente cerca de 900 pessoas durante o projeto. Explico de onde vem esse número.
+> Espero alcançar diretamente cerca de 800 pessoas durante o projeto. Explico de onde vem esse número.
 >
-> No lançamento aberto ao público, espero receber cerca de 80 pessoas, contando estudantes, famílias, barbeiros, trancistas e quem se interessa por cultura negra na cidade.
->
-> Nos quatro encontros "Jogar e Conversar", a ideia é trabalhar com grupos de cerca de 30 pessoas, o tamanho de uma turma de escola. Assim todo mundo consegue jogar e participar da roda de conversa. São cerca de 120 pessoas no total.
+> No lançamento, aberto ao público e gratuito, em novembro, espero receber cerca de 100 pessoas, contando estudantes, professores, famílias, barbeiros, trancistas e quem se interessa por cultura negra na cidade. Por ser no mês da Consciência Negra, o evento conversa com a programação das escolas e de coletivos da cidade, o que ajuda a trazer público.
 >
 > O jogo será gratuito e ficará disponível para qualquer pessoa. Espero cerca de 500 downloads nos três primeiros meses depois da publicação, contando celular e computador.
 >
-> O guia para professores terá cerca de 200 downloads e 40 exemplares impressos, entregues às escolas que participarem dos encontros. Cada professor que usar o guia leva o conteúdo para as suas turmas, então o alcance real deve ser maior.
+> O guia para professores terá cerca de 200 downloads e 40 exemplares impressos, distribuídos no lançamento e entregues a escolas públicas da cidade. Cada professor que usar o guia leva o conteúdo para as suas turmas, então o alcance real deve ser maior.
 >
-> Somando tudo, são cerca de 200 pessoas nas atividades presenciais e 700 pelo jogo e pelo guia. Não contei quem vai ver os vídeos curtos nas redes sociais nem os alunos alcançados pelos professores, porque são números difíceis de prever. Vou acompanhar tudo pelas listas de presença dos encontros e pelos números de download das lojas e do guia.
+> Somando tudo, são cerca de 100 pessoas no lançamento e 700 pelo jogo e pelo guia. Não contei quem vai ver os vídeos curtos nas redes sociais nem os alunos alcançados pelos professores, porque são números difíceis de prever. Vou acompanhar tudo pela lista de presença do lançamento e pelos números de download das lojas e do guia.
 
 ### G. Plano de divulgação
 
@@ -333,7 +336,7 @@ Detalhes do desenho técnico em [13](13-acervo-minidocumentarios.md).
 > - **Vídeos curtos nas redes sociais:** trechos dos documentários, com legendas e descrição das imagens. É o melhor jeito de mostrar o que o jogo tem de especial.
 > - **Trailer:** vídeo de apresentação com Libras, legendas e audiodescrição.
 > - **Imprensa local:** material de divulgação para jornais, rádios e sites de Ribeirão Preto.
-> - **Escolas:** convite para os encontros e envio do guia aos professores da rede pública.
+> - **Escolas:** convite para o lançamento e envio do guia aos professores da rede pública.
 > - **Barbearias e salões da cidade:** cartazes com um código para baixar o jogo pelo celular.
 > - **Eventos de cultura negra:** divulgação nas redes e nas atividades do mês da Consciência Negra.
 >
@@ -341,34 +344,34 @@ Detalhes do desenho técnico em [13](13-acervo-minidocumentarios.md).
 
 ### H. Proposta de acessibilidade
 
-*Versão final (≈2.110 caracteres com espaços).*
+*Versão final (≈2.100 caracteres com espaços).*
 
-> Quero que o jogo e as atividades possam ser aproveitados pelo maior número de pessoas possível, por isso a acessibilidade entrou no projeto desde o começo.
+> Quero que o jogo e o lançamento possam ser aproveitados pelo maior número de pessoas possível, por isso a acessibilidade entrou no projeto desde o começo.
 >
 > Nos documentários, a narração e o texto aparecem juntos na tela. Quem é surdo ou tem deficiência auditiva acompanha pela leitura, e quem tem baixa visão ou dificuldade para ler acompanha pela voz. Além disso, a narração descreve cada ilustração, como se contasse para alguém o que está na tela. Assim, pessoas cegas também conseguem acompanhar as histórias.
 >
 > No jogo, os textos usam linguagem simples e há opção de letras maiores. Os sinais importantes não dependem só de cor, pensando em quem tem daltonismo. Para quem tem dificuldade de movimento nas mãos, haverá um modo sem pressa, em que o tempo para acertar o corte é maior. Dá para jogar com teclado, mouse ou tocando na tela.
 >
-> Na divulgação, o trailer do jogo terá janela de Libras, legendas e audiodescrição. As imagens publicadas nas redes terão descrição, os vídeos terão legenda, e o guia para professores será um PDF que funciona com leitores de tela. Todo o material vai informar quais recursos de acessibilidade o jogo e os encontros oferecem.
+> Na divulgação, o trailer do jogo terá janela de Libras, legendas e audiodescrição. As imagens publicadas nas redes terão descrição, os vídeos terão legenda, e o guia para professores será um PDF que funciona com leitores de tela. Todo o material vai informar quais recursos de acessibilidade o jogo e o lançamento oferecem.
 >
-> Nos encontros e no lançamento, só vou usar locais com entrada acessível para cadeira de rodas e pessoas com mobilidade reduzida e com banheiro adaptado. Todos terão intérprete de Libras.
+> O lançamento será num local com entrada acessível para cadeira de rodas e pessoas com mobilidade reduzida e com banheiro adaptado. Terá dois intérpretes de Libras, que se revezam durante o evento, como é recomendado para atividades mais longas.
 >
-> Também vou contratar uma pessoa com deficiência como consultora de acessibilidade. Ela vai testar o jogo antes da publicação, apontar o que precisa melhorar e orientar a equipe sobre como receber bem o público com deficiência nos encontros. Para mim, é importante que essa avaliação venha de quem vive essas barreiras no dia a dia.
+> Também vou contratar uma pessoa com deficiência como consultora de acessibilidade. Ela vai testar o jogo antes da publicação, apontar o que precisa melhorar e orientar a equipe sobre como receber bem o público com deficiência no lançamento. Para mim, é importante que essa avaliação venha de quem vive essas barreiras no dia a dia.
 >
-> No orçamento, a acessibilidade tem R$ 3.300,00 reservados: consultoria de acessibilidade (R$ 800,00), intérprete de Libras nos cinco eventos (R$ 1.500,00) e a versão acessível do trailer (R$ 1.000,00). A narração dos documentários e a descrição das ilustrações já estão incluídas nos itens de narração e roteiro.
+> No orçamento, a acessibilidade tem R$ 2.500,00 reservados: consultoria de acessibilidade (R$ 800,00), dois intérpretes de Libras no lançamento (R$ 700,00) e a versão acessível do trailer (R$ 1.000,00). A narração dos documentários e a descrição das ilustrações já estão incluídas nos itens de narração e roteiro.
 
 ### I. Proposta de democratização de acesso
 
 > - O jogo será **totalmente gratuito**, sem propaganda, sem compras e sem coleta de dados pessoais para fins comerciais.
-> - O lançamento e os encontros serão **gratuitos**, em escolas públicas e espaços culturais de bairros da periferia. O projeto leva os equipamentos, então ninguém precisa ter celular ou computador.
+> - O lançamento será **gratuito e aberto ao público**, num bairro da periferia, em novembro. O projeto leva os equipamentos, então ninguém precisa ter celular ou computador para jogar.
 > - O **guia para professores** será gratuito, digital e impresso, e poderá ser usado livremente.
 > - A **versão para computador** poderá ser instalada em laboratórios de informática de escolas e bibliotecas.
 > - O jogo será **testado em celulares simples**, os mais comuns entre jovens de baixa renda.
-> - **Barbeiros e trancistas da cidade** serão contratados para conduzir as rodas de conversa, valorizando quem conhece o assunto na prática.
+> - **Um barbeiro e uma trancista da cidade** serão contratados para a roda de conversa do lançamento, valorizando quem conhece o assunto na prática.
 
 **Contrapartida social** *(versão simples registrada; será revista depois — usar no campo I, ou no N se a plataforma pedir à parte)*:
 
-> Como contrapartida, o projeto *AfroBarber - Cada Corte, uma História* oferece à comunidade de Ribeirão Preto, gratuitamente: o jogo, sem propaganda nem compras, na Google Play e no itch.io; um lançamento aberto ao público, com o jogo disponível para jogar e intérprete de Libras; e quatro encontros com o jogo e roda de conversa em escolas públicas ou espaços culturais de bairros da periferia, com equipamentos levados pelo projeto e intérprete de Libras.
+> Como contrapartida, o projeto *AfroBarber - Cada Corte, uma História* oferece à comunidade de Ribeirão Preto, gratuitamente: o jogo, sem propaganda nem compras, na Google Play e no itch.io; e um lançamento aberto ao público, em novembro, num bairro da periferia, com o jogo disponível para jogar, roda de conversa e intérpretes de Libras.
 
 ### J. Ficha técnica
 Ver [parte 7](#7-ficha-técnica).
@@ -394,7 +397,7 @@ Ver [parte 10](#10-portfólio-e-vídeos).
 
 ## 7. Ficha técnica
 
-Pelo menos 70% da equipe precisa morar em Ribeirão Preto: **8 de 11 pessoas**. CPF e endereço vão no formulário; os comprovantes de residência são pedidos na habilitação. Se algum serviço for prestado por empresa (Libras, contabilidade), confirmar com a Secretaria como ele conta na proporção.
+Pelo menos 70% da equipe precisa morar em Ribeirão Preto. Com 13 pessoas (dois intérpretes de Libras e duas pessoas na roda de conversa), são **pelo menos 10**. CPF e endereço vão no formulário; os comprovantes de residência são pedidos na habilitação. Se algum serviço for prestado por empresa (Libras, contabilidade), confirmar com a Secretaria como ele conta na proporção.
 
 | # | Nome | Função | Mora em RP | Minicurrículo (3 a 5 linhas) |
 |---|---|---|---|---|
@@ -405,8 +408,8 @@ Pelo menos 70% da equipe precisa morar em Ribeirão Preto: **8 de 11 pessoas**. 
 | 5 | `[ ]` | Consultoria em cultura afro-brasileira | `[ ]` | `[ ]` |
 | 6 | `[ ]` | Consultoria pedagógica (guia para professores) | `[ ]` | `[ ]` |
 | 7 | `[ ]` | Consultoria de acessibilidade (pessoa com deficiência) | `[ ]` | `[ ]` |
-| 8 | `[ ]` | Intérprete de Libras | `[ ]` | `[ ]` |
-| 9 | `[ ]` | Rodas de conversa (barbeiro/a ou trancista) | `[ ]` | `[ ]` |
+| 8 | `[ ]` · `[ ]` | Intérpretes de Libras (2) | `[ ]` | `[ ]` |
+| 9 | `[ ]` · `[ ]` | Roda de conversa do lançamento (barbeiro e trancista) | `[ ]` | `[ ]` |
 | 10 | `[ ]` | Edição de vídeo e design gráfico | `[ ]` | `[ ]` |
 | 11 | `[ ]` | Contabilidade e apoio à prestação de contas | `[ ]` | `[ ]` |
 
@@ -431,18 +434,17 @@ Meses contados a partir do recebimento do recurso.
 | 9 | Troca do material de terceiros por material próprio ou de uso livre | 3 | Mês 2 | Mês 5 | Proponente |
 | 10 | Personagens do bairro, ajustes finais e marcas institucionais no jogo | 2 | Mês 4 | Mês 6 | Proponente |
 | 11 | Recursos de acessibilidade no jogo | 4 | Mês 5 | Mês 7 | Proponente + consultoria de acessibilidade |
-| 12 | Guia para professores e perguntas dos encontros | 6, 7 | Mês 6 | Mês 7 | Consultoria pedagógica |
+| 12 | Guia para professores e perguntas do lançamento | 6, 7 | Mês 6 | Mês 7 | Consultoria pedagógica |
 | 13 | Testes com estudantes, barbeiros(as) e pessoa com deficiência, inclusive em celulares simples; ajustes | 4, 5 | Mês 7 | Mês 8 | Toda a equipe |
 | 14 | Trailer com Libras, legendas e audiodescrição; peças de divulgação | 4 | Mês 8 | Mês 8 | Vídeo e design, Libras |
-| 15 | Escolha e agendamento dos locais do lançamento e dos encontros | 6 | Mês 7 | Mês 8 | Proponente |
-| 16 | **Publicação gratuita** (Google Play e itch.io) | 5 | Mês 9 | Mês 9 | Proponente |
+| 15 | Reserva do local e organização do lançamento | 6 | Mês 7 | Mês 9 | Proponente |
+| 16 | **Publicação gratuita** (Google Play e itch.io) | 5 | Mês 9 | Mês 10 | Proponente |
 | 17 | Divulgação | — | Mês 8 | Mês 11 | Proponente + vídeo e design |
-| 18 | **Lançamento aberto ao público** | 6 | Mês 9 | Mês 9 | Toda a equipe |
-| 19 | **Quatro encontros "Jogar e Conversar"** | 6 | Mês 10 | Mês 11 | Proponente, rodas de conversa, Libras |
-| 20 | Correções depois do lançamento e organização das comprovações | — | Mês 10 | Mês 11 | Proponente |
-| 21 | **Relatório de Objeto da Execução Cultural** (Anexo 8) | — | Mês 12 | Mês 12 | Proponente + contabilidade |
+| 18 | **Lançamento aberto ao público, em novembro** | 6 | Novembro | Novembro | Toda a equipe, roda de conversa, Libras |
+| 19 | Correções depois do lançamento e organização das comprovações | — | Mês 10 | Mês 11 | Proponente |
+| 20 | **Relatório de Objeto da Execução Cultural** (Anexo 8) | — | Mês 12 | Mês 12 | Proponente + contabilidade |
 
-**Margem de segurança:** a produção termina no mês 8 e a publicação é no mês 9, deixando 3 meses para lançamento, encontros e imprevistos.
+**Novembro fixo:** o lançamento é em novembro, mês da Consciência Negra. Se o recurso for recebido entre dezembro de 2026 e fevereiro de 2027, novembro de 2027 cai entre os meses 10 e 12 do projeto, depois da publicação. `[Ao transcrever no Anexo 3, trocar "Novembro" pelo número do mês correspondente, quando a data de recebimento for conhecida.]` A produção termina no mês 8, o que deixa folga para imprevistos.
 
 ---
 
@@ -452,19 +454,19 @@ Meses contados a partir do recebimento do recurso.
 
 | # | Item | Descrição / justificativa | Unid. | Qtd. | Unit. (R$) | Total (R$) | Referência de preço |
 |---|---|---|---|---|---|---|---|
-| 1 | Direção geral, roteiro e programação | Roteiro das 120 partes (com descrição das ilustrações), documentários dentro do jogo, conclusão do jogo, acessibilidade no jogo, publicação e coordenação (proponente) | mês | 6 | 1.375,00 | 8.250,00 | `[ ]` |
-| 2 | Ilustração | 24 ilustrações principais + 10 de apoio (mapas, épocas, linha do tempo) | ilustração | 34 | 150,00 | 5.100,00 | `[ ]` |
+| 1 | Direção geral, roteiro e programação | Roteiro das 120 partes (com descrição das ilustrações), documentários dentro do jogo, conclusão do jogo, acessibilidade no jogo, publicação, lançamento e coordenação (proponente) | mês | 7 | 1.250,00 | 8.750,00 | `[ ]` |
+| 2 | Ilustração | 24 ilustrações principais + 10 de apoio (mapas, épocas, linha do tempo) | ilustração | 34 | 175,00 | 5.950,00 | `[ ]` |
 | 3 | Narração e edição de áudio | Narração das 120 partes, edição e acabamento | minuto finalizado | 80 | 47,50 | 3.800,00 | `[ ]` |
 | 4 | Trilha sonora original | Uma música por época | faixa | 5 | 400,00 | 2.000,00 | `[ ]` |
 | 5 | Consultoria em cultura afro-brasileira | Revisão das 120 partes e das fontes | hora | 40 | 50,00 | 2.000,00 | `[ ]` |
-| 6 | Consultoria pedagógica | Guia para professores e perguntas dos encontros | hora | 16 | 50,00 | 800,00 | `[ ]` |
+| 6 | Consultoria pedagógica | Guia para professores e perguntas do lançamento | hora | 16 | 50,00 | 800,00 | `[ ]` |
 | 7 | Consultoria de acessibilidade | Pessoa com deficiência; testes e orientação da equipe | hora | 16 | 50,00 | 800,00 | `[ ]` |
-| 8 | Intérprete de Libras | Lançamento + 4 encontros | diária | 5 | 300,00 | 1.500,00 | `[ ]` |
+| 8 | Intérpretes de Libras | Dois intérpretes em revezamento no lançamento | intérprete | 2 | 350,00 | 700,00 | `[ ]` |
 | 9 | Acessibilidade do trailer | Libras, legendas e audiodescrição | serviço | 1 | 1.000,00 | 1.000,00 | `[ ]` |
-| 10 | Rodas de conversa | Barbeiro(a) ou trancista convidado(a) | encontro | 4 | 250,00 | 1.000,00 | `[ ]` |
-| 11 | Locação de equipamentos | Notebooks, projetor e som para o lançamento e os encontros | diária | 5 | 200,00 | 1.000,00 | `[ ]` |
-| 12 | Transporte | Equipe e equipamentos até os locais | deslocamento | 5 | 70,00 | 350,00 | `[ ]` |
-| 13 | Impressão do guia para professores | Exemplares para as escolas participantes | exemplar | 40 | 10,00 | 400,00 | `[ ]` |
+| 10 | Roda de conversa | Barbeiro e trancista convidados para o lançamento | convidado | 2 | 300,00 | 600,00 | `[ ]` |
+| 11 | Locação de equipamentos | Notebooks, projetor e som para o lançamento | diária | 1 | 1.000,00 | 1.000,00 | `[ ]` |
+| 12 | Transporte | Equipamentos locados e equipe até o local do lançamento (ida e volta) | deslocamento | 2 | 100,00 | 200,00 | `[ ]` |
+| 13 | Impressão do guia para professores | Exemplares distribuídos no lançamento e a escolas públicas | exemplar | 40 | 10,00 | 400,00 | `[ ]` |
 | 14 | Impressão de cartazes | Cartazes com código para baixar o jogo | cartaz | 20 | 5,00 | 100,00 | `[ ]` |
 | 15 | Edição de vídeo | Trailer + 7 vídeos curtos de divulgação | vídeo | 8 | 100,00 | 800,00 | `[ ]` |
 | 16 | Design gráfico | Identidade visual e peças de divulgação acessíveis | peça | 10 | 50,00 | 500,00 | `[ ]` |
@@ -473,15 +475,15 @@ Meses contados a partir do recebimento do recurso.
 
 | Grupo | Itens | Total (R$) | % |
 |---|---|---|---|
-| Produção artística (documentários e jogo) | 1–6 | 21.950,00 | 73,2% |
-| Acessibilidade | 7–9 | 3.300,00 | 11,0% |
-| Lançamento, encontros e guia | 10–14 | 2.850,00 | 9,5% |
+| Produção artística (documentários e jogo) | 1–6 | 23.300,00 | 77,7% |
+| Acessibilidade | 7–9 | 2.500,00 | 8,3% |
+| Lançamento e guia | 10–14 | 2.300,00 | 7,7% |
 | Divulgação | 15–16 | 1.300,00 | 4,3% |
 | Contabilidade | 17 | 600,00 | 2,0% |
 
 **Cuidados com a planilha:**
 - **Se um orçamento real vier diferente,** ajuste outro item para o total continuar em R$ 30.000,00 exatos.
-- **Sua remuneração (item 1)** é a mais sensível: R$ 8.250 por 6 meses de roteiro e programação está abaixo do mercado. Se sobrar dinheiro de outro item, aumente este, para a comissão ver que o trabalho é viável.
+- **Sua remuneração (item 1)** é a mais sensível: R$ 8.750 por 7 meses de roteiro, programação e organização do lançamento está abaixo do mercado. Se sobrar dinheiro de outro item, aumente este, para a comissão ver que o trabalho é viável.
 - **Referência de preço:** use pelo menos um orçamento por item, tabelas de sindicatos ou associações, ou valores pagos em editais PNAB anteriores.
 - **Custos que não entram na planilha:** os de preparar a inscrição (item 13.5), como gravar os vídeos, produzir o piloto e emitir documentos.
 
@@ -591,10 +593,10 @@ Se algo ainda não existir no jogo, diga em voz ou legenda que está "em desenvo
 | Risco | Como evitar |
 |---|---|
 | **Portfólio não comprovar 2 anos de atuação cultural em Ribeirão Preto** | É o maior risco: sem isso, a proposta não é aceita. Reúna tudo que houver: trabalhos, publicações, divulgações, cursos, participações. O jogo, iniciado em 2026, não comprova 2 anos sozinho. |
-| Comissão ler o projeto como "evento" | O texto sempre diz que o objeto é **produzir** o jogo e os documentários; lançamento e encontros são a ação pública. |
+| Comissão ler o projeto como "evento" | O texto sempre diz que o objeto é **produzir** o jogo e os documentários; o lançamento é a ação pública. |
 | Corte de itens da planilha por preço fora do mercado | Orçamentos reais para cada item. |
 | Remuneração do proponente baixa demais | Se possível, aumentar o item 1 com sobras de outros itens. |
-| Menos de 70% da equipe morando em Ribeirão Preto | Priorizar profissionais da cidade; conferir antes de enviar (8 de 11). |
+| Menos de 70% da equipe morando em Ribeirão Preto | Priorizar profissionais da cidade; conferir antes de enviar (pelo menos 10 de 13). |
 | Vídeos mostrarem bugs ou material de terceiros | Gravar só depois de corrigir tudo e trocar nomes, marcas e músicas. |
 | Informação histórica errada | Revisão da consultoria cultural antes de gravar; fontes em cada documentário. |
 | Atraso nas ilustrações ou na narração | Produção em lotes de 6 penteados; publicação só no mês 9, com 3 meses de folga. |
@@ -612,7 +614,7 @@ Se algo ainda não existir no jogo, diga em voz ou legenda que está "em desenvo
 | 2 | **Equipe:** nomes, CPF, endereço, cidade e minicurrículo | Campo J e critério VI |
 | 3 | **Cota:** pessoas negras ou ampla concorrência (e Anexo 2, se for cota) | Classificação |
 | 4 | **Bônus:** algum se aplica? Mora em área do Anexo 11? | Até +6 pontos |
-| 5 | **Bairros** do Anexo 11 para os encontros e **local** do lançamento | Campo E e bônus de periferia |
+| 5 | **Local e bairro** do lançamento (de preferência num bairro do Anexo 11, com acessibilidade) | Campo E e bônus de periferia |
 | 6 | **Orçamentos reais** para os 17 itens | Critério V e planilha |
 | 7 | **Anexos 3 e 4** oficiais (baixar no site da Prefeitura) | Formato obrigatório de envio |
 | 8 | **Vídeos** gravados e publicados (não listados) | Portfólio e campos A e N |
@@ -664,19 +666,19 @@ Se algo ainda não existir no jogo, diga em voz ou legenda que está "em desenvo
 **Requisitos**
 - [ ] Portfólio comprova 2 anos de atuação cultural em Ribeirão Preto.
 - [ ] Proponente está na ficha técnica.
-- [ ] Pelo menos 8 das 11 pessoas da equipe moram em Ribeirão Preto.
+- [ ] Pelo menos 10 das 13 pessoas da equipe moram em Ribeirão Preto.
 - [ ] Anexo 2 enviado, se houver cota ou bônus.
 
 **Formulário**
 - [ ] Campos A a N preenchidos com os textos da parte 6.
 - [ ] Nenhum `[COLCHETE]` restante.
-- [ ] Bairros do Anexo 11 nomeados no campo E (se pedir o bônus de periferia).
+- [ ] Local e bairro do lançamento nomeados no campo E (bairro do Anexo 11, se pedir o bônus de periferia).
 - [ ] Textos lidos em voz alta e ajustados ao seu jeito de falar.
 
 **Planilha e cronograma**
 - [ ] Planilha soma **exatamente R$ 30.000,00**, só com serviços.
 - [ ] Cada item tem orçamento ou referência de preço.
-- [ ] Acessibilidade na planilha (itens 7, 8 e 9) e no texto (campo H).
+- [ ] Acessibilidade na planilha (itens 7, 8 e 9, R$ 2.500,00) e no texto (campo H).
 - [ ] Cronograma e planilha transcritos nos Anexos 3 e 4 oficiais.
 
 **Portfólio e vídeos**
