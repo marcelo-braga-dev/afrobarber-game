@@ -412,21 +412,21 @@ Ver [parte 10](#10-portfólio-e-vídeos).
 
 | Nome | Função | Mora em RP |
 |---|---|---|
-| `[NOME COMPLETO]` | Proponente. Criação, direção, roteiro dos documentários e programação do jogo | Sim |
+| `[NOME COMPLETO]` | Proponente. Criação, direção, roteiro dos documentários e programação do jogo | Sim, há 3 anos |
 
-### Minicurrículo — versão para o formulário (≈1.000 caracteres)
+### Minicurrículo — versão para o formulário (≈890 caracteres)
 
-> Sou desenvolvedor de software e moro em Ribeirão Preto há `[X]` anos. Trabalho com programação desde `[ANO]` `[e tenho formação em NOME DO CURSO, INSTITUIÇÃO]`. `[Uma frase sobre a experiência profissional principal: onde trabalha ou trabalhou, com que tipo de sistema.]`
+> Sou desenvolvedor de software e moro em Ribeirão Preto há 3 anos. Trabalho há 6 anos com programação, desenvolvendo sistemas e jogos.
 >
-> Sou o criador do *AfroBarber - Cada Corte, uma História*. Desenvolvi sozinho, com recursos próprios, todo o protótipo do jogo: a barbearia, os clientes, o momento do corte, a parte de gestão e a Biblioteca de Cortes, que reúne textos sobre a história de 24 penteados negros. Também escrevi toda a documentação do projeto, do desenho do jogo ao conteúdo cultural.
+> Sou uma pessoa negra e sempre gostei de barbearia, de cortes e da cultura negra. Ao mesmo tempo, quase nunca vi essa cultura representada nos jogos, e quando aparecia, era sem destaque. Foi daí que nasceu o *AfroBarber - Cada Corte, uma História*: eu quis criar o jogo que eu gostaria de ter jogado.
 >
-> `[Uma ou duas frases sobre a atuação cultural em Ribeirão Preto: projetos, eventos, oficinas, coletivos de que participou e desde quando.]`
+> Desenvolvi sozinho, com recursos próprios, todo o protótipo: a barbearia, os clientes, o momento do corte, a parte de gestão e a Biblioteca de Cortes, que reúne textos sobre a história de 24 penteados negros. Também escrevi toda a documentação do projeto, do desenho do jogo ao conteúdo cultural.
 >
 > No projeto, sou responsável pela direção geral, pelo roteiro dos 24 documentários, pela programação do jogo e pela organização do lançamento.
 
-### Minicurrículo — versão curta (≈450 caracteres, se o campo for pequeno)
+### Minicurrículo — versão curta (≈440 caracteres, se o campo for pequeno)
 
-> Desenvolvedor de software, morador de Ribeirão Preto há `[X]` anos e programador desde `[ANO]`. Criei e programei sozinho o protótipo do jogo *AfroBarber - Cada Corte, uma História*, incluindo os textos sobre a história de 24 penteados negros. `[Atuação cultural em Ribeirão Preto desde ANO.]` No projeto, cuido da direção, do roteiro dos documentários, da programação e do lançamento.
+> Desenvolvedor de software há 6 anos, com experiência em sistemas e jogos, e morador de Ribeirão Preto há 3 anos. Pessoa negra, criei o *AfroBarber - Cada Corte, uma História* por paixão pela barbearia e pela cultura negra, que quase nunca vejo representada nos jogos. Desenvolvi sozinho o protótipo e os textos sobre 24 penteados negros. No projeto, cuido da direção, do roteiro dos documentários, da programação e do lançamento.
 
 ### Prestadores de serviço (fora da ficha técnica)
 
@@ -641,7 +641,7 @@ Se algo ainda não existir no jogo, diga em voz ou legenda que está "em desenvo
 | # | Pendência | Para quê |
 |---|---|---|
 | 1 | **Portfólio** com a atuação cultural em Ribeirão Preto desde `[ano]` | Requisito de inscrição e critério IV |
-| 2 | **Minicurrículo:** preencher os `[COLCHETES]` da parte 7 | Campo J e critério VI |
+| 2 | **Minicurrículo:** pronto (parte 7); falta só a atuação cultural na cidade, se houver | Campo J e critério VI |
 | 3 | **Cota:** pessoas negras ou ampla concorrência (e Anexo 2, se for cota) | Classificação |
 | 4 | **Bônus:** algum se aplica? Mora em área do Anexo 11? | Até +6 pontos |
 | 5 | **Local e bairro** do lançamento (de preferência num bairro do Anexo 11, com acessibilidade) | Campo E e bônus de periferia |
