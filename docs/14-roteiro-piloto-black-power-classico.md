@@ -7,6 +7,8 @@
 | **Corte** | Black Power Clássico (`req_black_power_classico`) · Afro Clássico · anos 1960–1970 · dificuldade 2 |
 | **Relacionados** | [13 Desenho do acervo](13-acervo-minidocumentarios.md) · [12 Projeto do edital](12-projeto-edital-008-2026.md) · [06 Universo cultural](06-universo-cultural.md) |
 
+> **Documento substituído.** O planejamento completo e o texto final do projeto estão em [15 — Projeto completo para o Edital 008/2026](15-edital-008-2026-projeto-completo.md). Este arquivo fica como histórico.
+
 > **Para que serve este piloto:** mostrar aos pareceristas como vai ficar cada um dos 24 documentários, e servir de modelo para escrever os outros 23. Para o portfólio, basta o roteiro completo dos 5 capítulos e **um capítulo produzido** (ilustração + narração + trilha). Sugestão: produzir o **Capítulo 4**, que é o mais forte e o que mais fala do Brasil.
 
 ## Como ler este roteiro

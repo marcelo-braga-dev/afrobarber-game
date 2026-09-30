@@ -12,6 +12,8 @@
 | **Nome do projeto** | **Cada Corte, uma História** (no texto: *AfroBarber - Cada Corte, uma História*) |
 | **Planejamento** | [11 — Planejamento da inscrição](11-proposta-edital-008-2026-rp.md) · [13 — Desenho do acervo](13-acervo-minidocumentarios.md) · [14 — Roteiro-piloto](14-roteiro-piloto-black-power-classico.md) |
 
+> **Documento substituído.** O planejamento completo e o texto final do projeto estão em [15 — Projeto completo para o Edital 008/2026](15-edital-008-2026-projeto-completo.md). Este arquivo fica como histórico.
+
 > **Como usar:** cada seção abaixo corresponde a um campo do formulário (item 4.2.1 do edital, letras A a N). Os textos dentro das caixas de citação são para copiar no formulário; o que está fora delas são notas de trabalho. Preencha os `[COLCHETES]` e confira o limite de caracteres de cada campo na plataforma. O cronograma (§K) e a planilha (§L) vão nos modelos oficiais (Anexos 3 e 4).
 
 > **Decisões desta versão:**
