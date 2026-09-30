@@ -52,7 +52,7 @@
 
 | Regra | Item do edital | O que significa para nós |
 |---|---|---|
-| Aceita "produtos culturais inéditos… e demais bens culturais", **desde que tenham ação pública de lançamento ou fruição** | 2.1.2.1 b | O jogo é o produto; o lançamento e os encontros são a ação pública obrigatória. |
+| Aceita "produtos culturais inéditos… e demais bens culturais", **desde que tenham ação pública de lançamento ou fruição** | 2.1.2.1 b | O jogo é o produto; o lançamento é a ação pública obrigatória. |
 | **Não aceita** projetos cujo objeto principal seja evento, nem só circulação de obra existente | 2.1.2.1, parágrafo único | O texto sempre diz que o objeto é **produzir** o jogo e os documentários. |
 | Orçamento **exatamente** R$ 30.000,00 | 2.1.3 | A planilha fecha no centavo. |
 | Parcela única; execução em até 12 meses | 2.1.4, 2.4.1 | Cronograma de 12 meses. |
@@ -630,7 +630,7 @@ Se algo ainda não existir no jogo, diga em voz ou legenda que está "em desenvo
 | Quando | O que fazer |
 |---|---|
 | 30/09 a 02/10 | Confirmar o novo prazo; baixar os Anexos 1 a 11; perguntar por e-mail sobre o bônus de periferia; decidir cota e bônus; começar o portfólio |
-| 03/10 a 06/10 | Fechar a equipe e os minicurrículos; pedir orçamentos; escolher os bairros do Anexo 11 |
+| 03/10 a 06/10 | Fechar a equipe e os minicurrículos; pedir orçamentos; escolher o local e o bairro do lançamento (Anexo 11) |
 | 03/10 a 08/10 | Corrigir os bugs do protótipo; trocar nomes, marcas e músicas de terceiros; produzir a Parte 4 do piloto |
 | 07/10 a 09/10 | Gravar e publicar os 3 vídeos (não listados, com legendas) |
 | 08/10 a 10/10 | Preencher o formulário com os textos da parte 6; transcrever cronograma e planilha nos Anexos 3 e 4; fechar o portfólio em PDF |
