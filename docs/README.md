@@ -31,6 +31,7 @@ Todos os números foram levantados diretamente do projeto (código, assets e `Ga
 | 11 | [Proposta — Edital PNAB 008/2026 (Ribeirão Preto)](11-proposta-edital-008-2026-rp.md) | Planejamento da inscrição na Modalidade I (R$ 30 mil): regras, pendências, campos A–N, equipe, cronograma, orçamento | Proponente |
 | 12 | [Projeto "Cada Corte, uma História" — Edital PNAB 008/2026](12-projeto-edital-008-2026.md) | Texto do projeto pronto para o formulário: campos A–N, cronograma (Anexo 3), planilha (Anexo 4), portfólio e checklist | Proponente |
 | 13 | [Acervo "Cada Corte, uma História"](13-acervo-minidocumentarios.md) | Desenho dos 24 minidocumentários narrados (120 capítulos): estrutura, destravamento pela prática, linha do tempo, produção, roteiro e atualizações após o lançamento | Direção, roteiro, arte, áudio, programação |
+| 14 | [Roteiro-piloto — Black Power Clássico](14-roteiro-piloto-black-power-classico.md) | Roteiro completo dos 5 capítulos do documentário-piloto, com audiodescrição integrada, fontes e ficha de produção | Direção, roteiro, consultoria cultural, ilustração, narração |
 
 ### Por onde começar
 
