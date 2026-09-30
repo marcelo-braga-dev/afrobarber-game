@@ -368,12 +368,19 @@ Detalhes do desenho técnico em [13](13-acervo-minidocumentarios.md).
 
 ### I. Proposta de democratização de acesso
 
-> - O jogo será **totalmente gratuito**, sem propaganda, sem compras e sem coleta de dados pessoais para fins comerciais.
-> - O lançamento será **gratuito e aberto ao público**, num bairro da periferia, em novembro. O projeto leva os equipamentos, então ninguém precisa ter celular ou computador para jogar.
-> - O **guia para professores** será gratuito, digital e impresso, e poderá ser usado livremente.
-> - A **versão para computador** poderá ser instalada em laboratórios de informática de escolas e bibliotecas.
-> - O jogo será **testado em celulares simples**, os mais comuns entre jovens de baixa renda.
-> - **Um barbeiro e uma trancista da cidade** serão contratados para a roda de conversa do lançamento, valorizando quem conhece o assunto na prática.
+*Versão final (≈1.690 caracteres com espaços).*
+
+> O jogo será totalmente gratuito. Não terá propaganda, compras dentro do jogo nem coleta de dados pessoais para fins comerciais. Qualquer pessoa poderá baixar e jogar, sem pagar nada, antes, durante ou depois do projeto.
+>
+> Sei que nem todo mundo tem um celular novo ou um computador em casa. Por isso, o jogo será testado em celulares simples, que são os mais comuns entre jovens de baixa renda, e terá também uma versão para computador, que pode ser instalada nos laboratórios de informática de escolas e bibliotecas públicas.
+>
+> O lançamento será gratuito e aberto ao público, num bairro da periferia de Ribeirão Preto, em novembro. O projeto vai levar os computadores para o evento, então ninguém precisa ter um aparelho para jogar e conhecer os documentários.
+>
+> O guia para professores também será gratuito, em PDF e em versão impressa, distribuída no lançamento e em escolas públicas da cidade. Assim, o conteúdo pode chegar a alunos que talvez nunca baixassem o jogo por conta própria.
+>
+> Os textos do jogo e dos documentários são escritos em linguagem simples, para que qualquer pessoa entenda, sem precisar conhecer o assunto antes. Os recursos de acessibilidade, como narração, texto na tela e descrição das ilustrações, também ampliam quem pode aproveitar o jogo.
+>
+> Por fim, a roda de conversa do lançamento será conduzida por um barbeiro e uma trancista da cidade, contratados pelo projeto. Quem conhece a estética negra na prática, no dia a dia das barbearias e salões, também é parte da cultura, e merece ser ouvido e remunerado por isso.
 
 **Contrapartida social** *(versão simples registrada; será revista depois — usar no campo I, ou no N se a plataforma pedir à parte)*:
 
