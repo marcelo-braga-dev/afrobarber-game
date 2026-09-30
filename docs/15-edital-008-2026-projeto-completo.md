@@ -332,15 +332,21 @@ Detalhes do desenho técnico em [13](13-acervo-minidocumentarios.md).
 
 ### G. Plano de divulgação
 
-> - **Identidade visual:** o projeto terá uma identidade visual própria, "Cada Corte, uma História", usada em todo o material e no próprio jogo.
-> - **Vídeos curtos nas redes sociais:** trechos dos documentários, com legendas e descrição das imagens. É o melhor jeito de mostrar o que o jogo tem de especial.
-> - **Trailer:** vídeo de apresentação com Libras, legendas e audiodescrição.
-> - **Imprensa local:** material de divulgação para jornais, rádios e sites de Ribeirão Preto.
-> - **Escolas:** convite para o lançamento e envio do guia aos professores da rede pública.
-> - **Barbearias e salões da cidade:** cartazes com um código para baixar o jogo pelo celular.
-> - **Eventos de cultura negra:** divulgação nas redes e nas atividades do mês da Consciência Negra.
+*Versão final (≈1.960 caracteres com espaços).*
+
+> A divulgação vai acontecer em três momentos: durante a produção, no mês do lançamento e depois dele.
 >
-> Todo o material de divulgação e o próprio jogo terão as marcas da Prefeitura de Ribeirão Preto e do Governo Federal, seguindo o manual do Ministério da Cultura. O material será acessível: imagens com descrição, vídeos com legenda e texto em linguagem simples.
+> Durante a produção, vou mostrar nas redes sociais do projeto como o jogo está sendo feito: os primeiros desenhos, a gravação da narração, trechos das músicas. Assim, quando o jogo ficar pronto, já vai ter gente esperando por ele.
+>
+> No mês do lançamento, em novembro, a divulgação fica mais forte. Vou publicar o trailer do jogo e uma série de vídeos curtos com trechos dos documentários, cada um contando um pouco da história de um penteado. Vou enviar o convite e o material de divulgação para jornais, rádios e sites de Ribeirão Preto, para escolas públicas e para coletivos e espaços de cultura negra da cidade, aproveitando a programação do mês da Consciência Negra. Barbearias e salões vão receber cartazes com um código para baixar o jogo pelo celular. Afinal, é na cadeira do barbeiro que esse assunto já circula.
+>
+> Depois do lançamento, continuo publicando os vídeos curtos e envio o guia para professores da rede pública, para que o jogo e os documentários sejam usados em sala de aula.
+>
+> O projeto terá uma identidade visual própria, com o nome "Cada Corte, uma História", usada em todo o material e dentro do próprio jogo. Todas as peças e o jogo terão as marcas da Prefeitura de Ribeirão Preto e do Governo Federal, seguindo o manual do Ministério da Cultura.
+>
+> O material de divulgação também será acessível. O trailer terá janela de Libras, legendas e audiodescrição. Os vídeos curtos terão legenda, as imagens terão descrição e os textos serão escritos em linguagem simples. Toda peça vai informar quais recursos de acessibilidade o jogo e o lançamento oferecem.
+>
+> Ao todo, serão produzidos o trailer, sete vídeos curtos, dez peças gráficas e vinte cartazes.
 
 ### H. Proposta de acessibilidade
 
